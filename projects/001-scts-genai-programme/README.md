@@ -1,79 +1,173 @@
 # SCTS GenAI Programme
 
-Project ID: 001
-Created: 2026-01-17
+**Project ID:** 001
+**Created:** 2026-01-17
+**Status:** Alpha Phase Complete
+**Governance Score:** 82/100 (Grade B)
 
 ## Overview
 
-[Project description to be added]
+The Scottish Courts and Tribunals Service (SCTS) GenAI Programme is a transformative initiative to enhance court operations through responsible AI deployment. The programme introduces:
 
-## Workflow
+- **Document Intelligence** - AI-powered document classification and entity extraction
+- **Speech Services** - Real-time transcription with speaker diarisation
+- **Translation Services** - Multilingual support for 10 priority languages
+- **Cognitive Search** - Semantic search across court documents
 
-Use ArcKit commands to generate project artifacts in the recommended order:
+**Key Design Principles:**
+- Human-in-the-loop for all consequential decisions
+- AI augments but never replaces judicial decision-making
+- UK data residency (Azure UK South/West)
+- Zero modifications to court records by AI
 
-### Discovery Phase
-1. `/arckit.stakeholders` - Analyze stakeholder drivers and goals
-2. `/arckit.risk` - Create risk register
-3. `/arckit.sobc` - Create Strategic Outline Business Case
+**Technology Platform:** Microsoft Azure AI Services (via G-Cloud)
+**3-Year TCO:** £716K
 
-### Alpha Phase
-4. `/arckit.requirements` - Define comprehensive requirements
-5. `/arckit.data-model` - Design data model and GDPR compliance
-6. `/arckit.wardley` - Create Wardley maps for strategic planning
-7. `/arckit.research` - Research technology options (if needed)
-8. `/arckit.sow` - Generate Statement of Work for vendor procurement (if needed)
-9. `/arckit.evaluate` - Create vendor evaluation framework (if needed)
+## Project Artifacts
 
-### Beta Phase
-10. `/arckit.hld-review` - Review High-Level Design
-11. `/arckit.dld-review` - Review Detailed Design
-12. `/arckit.traceability` - Generate requirements traceability matrix
+### Foundation & Governance
+| Artifact | Description | Status |
+|----------|-------------|--------|
+| [stakeholder-drivers.md](stakeholder-drivers.md) | 13 stakeholders, 6 goals, 5 outcomes | ✅ Complete |
+| [risk-register.md](risk-register.md) | 20 risks, Orange Book compliant | ✅ Complete |
+| [principles-compliance-assessment-2026-01-20.md](principles-compliance-assessment-2026-01-20.md) | 20 principles assessed (12 GREEN, 7 AMBER) | ✅ Complete |
 
-### Compliance (as needed)
-- `/arckit.secure` - UK Government Secure by Design review
-- `/arckit.tcop` - Technology Code of Practice assessment
-- `/arckit.ai-playbook` - AI Playbook compliance (for AI systems)
+### Requirements & Data
+| Artifact | Description | Status |
+|----------|-------------|--------|
+| [requirements.md](requirements.md) | 49 requirements (6 BR, 15 FR, 22 NFR, 6 INT) | ✅ Complete |
+| [data-model.md](data-model.md) | 9 entities, 67 attributes, GDPR compliant | ✅ Complete |
+| [traceability-matrix.md](traceability-matrix.md) | Requirements to design traceability (72%) | ✅ Complete |
+
+### Research & Decisions
+| Artifact | Description | Status |
+|----------|-------------|--------|
+| [research-findings.md](research-findings.md) | Build vs Buy analysis, Azure AI recommended | ✅ Complete |
+| [decisions/ADR-001-azure-ai-platform-selection.md](decisions/ADR-001-azure-ai-platform-selection.md) | Azure AI platform decision | ✅ Complete |
+
+### Design & Delivery
+| Artifact | Description | Status |
+|----------|-------------|--------|
+| [high-level-design.md](high-level-design.md) | C4 architecture, microservices on AKS | ✅ Complete |
+| [project-plan.md](project-plan.md) | 18-month roadmap, 6 phases | ✅ Complete |
+| [backlog.md](backlog.md) | 184 user stories, 22 sprints | ✅ Complete |
+
+### Compliance & Privacy
+| Artifact | Description | Status |
+|----------|-------------|--------|
+| [dpia.md](dpia.md) | DPIA - MEDIUM residual risk | ✅ Complete |
+| [atrs-record.md](atrs-record.md) | Algorithmic transparency (Tier 1 & 2) | ✅ Complete |
+| [ai-playbook-assessment.md](ai-playbook-assessment.md) | UK AI Playbook - 79%, approved with conditions | ✅ Complete |
+| [secure-by-design-assessment.md](secure-by-design-assessment.md) | NCSC CAF - 10/14 principles | ✅ Complete |
+
+### Analysis & Reporting
+| Artifact | Description | Status |
+|----------|-------------|--------|
+| [analysis-report.md](analysis-report.md) | Governance analysis - 82/100, Grade B | ✅ Complete |
+| [PROJECT-STORY.md](PROJECT-STORY.md) | Comprehensive project narrative | ✅ Complete |
+| [CLIENT-EMAIL-ARTIFACT-OVERVIEW.md](CLIENT-EMAIL-ARTIFACT-OVERVIEW.md) | Client communication - all artifacts explained | ✅ Complete |
+| [CLIENT-ARTIFACT-SUMMARY-TABLE.md](CLIENT-ARTIFACT-SUMMARY-TABLE.md) | Executive summary tables | ✅ Complete |
 
 ## Project Structure
 
-Documents will be created in this directory as you run ArcKit commands:
-
 ```
 001-scts-genai-programme/
-├── README.md (this file)
-├── stakeholder-analysis.md (from /arckit.stakeholders)
-├── risk-register.md (from /arckit.risk)
-├── sobc.md (from /arckit.sobc)
-├── requirements.md (from /arckit.requirements)
-├── data-model.md (from /arckit.data-model)
-├── sow.md (from /arckit.sow)
-├── evaluation-criteria.md (from /arckit.evaluate)
-├── traceability-matrix.md (from /arckit.traceability)
-├── hld-review-YYYYMMDD.md (from /arckit.hld-review)
-├── dld-review-YYYYMMDD.md (from /arckit.dld-review)
-├── wardley-maps/ (from /arckit.wardley)
-└── vendors/ (vendor proposals)
+├── README.md                              # This file
+├── stakeholder-drivers.md                 # Stakeholder analysis
+├── requirements.md                        # Business & technical requirements
+├── research-findings.md                   # Technology research
+├── data-model.md                          # Data entities & GDPR
+├── dpia.md                                # Data Protection Impact Assessment
+├── atrs-record.md                         # Algorithmic Transparency Record
+├── risk-register.md                       # Risk management (Orange Book)
+├── secure-by-design-assessment.md         # NCSC CAF security assessment
+├── ai-playbook-assessment.md              # UK AI Playbook compliance
+├── high-level-design.md                   # Solution architecture (C4)
+├── project-plan.md                        # Delivery roadmap
+├── backlog.md                             # Sprint backlog
+├── traceability-matrix.md                 # Requirements traceability
+├── analysis-report.md                     # Governance analysis
+├── principles-compliance-assessment-*.md  # Architecture principles compliance
+├── PROJECT-STORY.md                       # Complete project narrative
+├── CLIENT-EMAIL-ARTIFACT-OVERVIEW.md      # Client communication
+├── CLIENT-ARTIFACT-SUMMARY-TABLE.md       # Executive summary
+└── decisions/
+    └── ADR-001-azure-ai-platform-selection.md  # Architecture decisions
 ```
 
 ## Status
 
-Track your progress through the workflow:
+### Discovery Phase ✅
+- [x] Stakeholder analysis complete (13 stakeholders, 6 goals)
+- [x] Risk register created (20 risks, 37% score reduction)
+- [x] Architecture principles established (20 principles)
 
-**Discovery Phase:**
-- [ ] Stakeholder analysis complete
-- [ ] Risk register created
-- [ ] Business case approved
+### Alpha Phase ✅
+- [x] Requirements defined (49 requirements)
+- [x] Data model designed (9 entities, GDPR compliant)
+- [x] Technology research complete (Azure AI selected)
+- [x] DPIA completed (MEDIUM residual risk)
+- [x] AI Playbook assessment (79%, approved with conditions)
+- [x] Secure by Design assessment (NCSC CAF 10/14)
+- [x] ATRS record created (Tier 1 & 2)
 
-**Alpha Phase:**
-- [ ] Requirements defined
-- [ ] Data model designed
-- [ ] Vendor procurement started (if needed)
+### Beta Phase (In Progress)
+- [x] High-Level Design complete
+- [ ] Detailed Design (DLD) - pending
+- [x] Traceability matrix validated (72% coverage)
+- [ ] Penetration testing - pending
+- [ ] Bias audit for 10 languages - pending
 
-**Beta Phase:**
-- [ ] HLD reviewed and approved
-- [ ] DLD reviewed and approved
-- [ ] Traceability matrix validated
+### Pre-Production (Planned)
+- [ ] DPIA approval from DPO/SIRO
+- [ ] Penetration testing complete
+- [ ] SIEM implementation
+- [ ] Staff training programme
 
-**Live Phase:**
-- [ ] Implementation complete
-- [ ] Production deployment
+### Live Phase (Planned)
+- [ ] PoC deployment (Q2 2026)
+- [ ] Pilot rollout (Q3 2026)
+- [ ] Production deployment (Q4 2026)
+
+## Key Metrics
+
+| Metric | Value |
+|--------|-------|
+| **Governance Score** | 82/100 (Grade B) |
+| **Principles Compliance** | 60% GREEN, 35% AMBER |
+| **Requirements Coverage** | 100% to HLD |
+| **Traceability Score** | 72% |
+| **AI Playbook Score** | 79% |
+| **NCSC CAF Score** | 10/14 principles |
+| **Risk Reduction** | 37% (inherent to residual) |
+
+## Critical Actions Required
+
+Before production deployment:
+
+1. **DPIA Approval** - Obtain DPO and SIRO sign-off
+2. **Bias Audit** - Complete testing for 10 translation languages
+3. **Penetration Testing** - Execute security validation
+4. **EqIA** - Complete Equality Impact Assessment
+5. **SIEM** - Implement security monitoring
+
+## Timeline
+
+| Phase | Duration | Target |
+|-------|----------|--------|
+| Discovery & Foundation | 2 months | Feb 2026 |
+| Document Intelligence MVP | 4 months | Jun 2026 |
+| Speech & Translation | 4 months | Oct 2026 |
+| Cognitive Search | 3 months | Jan 2027 |
+| Integration & Hardening | 3 months | Apr 2027 |
+| Go-Live & Transition | 2 months | Jul 2027 |
+
+## Contact
+
+- **Programme Owner:** Chief Digital Information Officer, SCTS
+- **Technical Lead:** Senior AI Technical Architect
+- **DPO:** Data Protection Officer, SCTS
+
+---
+
+*Generated using the ArcKit Architecture Governance Framework*
