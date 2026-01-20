@@ -263,33 +263,20 @@ pie title Project Phase Time Distribution (Hours)
 ```mermaid
 timeline
     title SCTS GenAI Programme Key Milestones
-    2026-01-17 08:37 : Project Initiated
-                     : 20 Architecture Principles
-                     : 13 Stakeholders Analysed
-    2026-01-17 08:46 : Requirements Defined
-                     : 49 Total Requirements
-    2026-01-17 09:05 : Technology Research Complete
-                     : Azure AI Recommended
-                     : AI Playbook 79%
-    2026-01-17 09:21 : Data Governance Complete
-                     : DPIA MEDIUM Risk
-                     : 9 Data Entities
-    2026-01-17 09:34 : Security Assessment
-                     : NCSC CAF Compliant
-    2026-01-17 09:58 : Risk Register Complete
-                     : 20 Risks Identified
-    2026-01-17 11:21 : High-Level Design
-                     : C4 Architecture
-                     : 18-month Roadmap
-    2026-01-18 11:29 : ADR-001 Approved
-                     : Azure AI Platform
-                     : £716K TCO
-    2026-01-18 11:50 : Delivery Plan Ready
-                     : 184 User Stories
-                     : 22 Sprints
-    2026-01-18 12:41 : Governance Verified
-                     : 82/100 Score
-                     : Grade B
+    section Day 1 Morning (17 Jan)
+        08.37 Project Start : 20 Architecture Principles : 13 Stakeholders
+        08.46 Requirements : 49 Total Requirements
+        09.05 Research : Azure AI Recommended : AI Playbook 79%
+    section Day 1 Midday (17 Jan)
+        09.21 Data Governance : DPIA MEDIUM Risk : 9 Entities
+        09.34 Security : NCSC CAF Compliant
+        09.58 Risk Register : 20 Risks Identified
+        10.27 Traceability : Initial Matrix
+        11.21 HLD Complete : C4 Architecture : 18-month Roadmap
+    section Day 2 (18 Jan)
+        11.29 ADR-001 : Azure AI Platform : 716K TCO
+        11.50 Backlog : 184 User Stories : 22 Sprints
+        12.41 Governance : 82/100 Score : Grade B
 ```
 
 ---
