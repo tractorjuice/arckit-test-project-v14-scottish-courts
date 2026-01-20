@@ -50,6 +50,8 @@ The Scottish Courts and Tribunals Service (SCTS) GenAI Programme is a transforma
 | Artifact | Description | Status |
 |----------|-------------|--------|
 | [high-level-design.md](projects/001-scts-genai-programme/high-level-design.md) | C4 architecture, microservices on AKS | ✅ Complete |
+| [devops-strategy.md](projects/001-scts-genai-programme/devops-strategy.md) | CI/CD, IaC, GitOps, DevSecOps | ✅ Complete |
+| [mlops-strategy.md](projects/001-scts-genai-programme/mlops-strategy.md) | ML lifecycle, model monitoring, responsible AI | ✅ Complete |
 | [project-plan.md](projects/001-scts-genai-programme/project-plan.md) | 18-month roadmap, 6 phases | ✅ Complete |
 | [backlog.md](projects/001-scts-genai-programme/backlog.md) | 184 user stories, 22 sprints | ✅ Complete |
 
@@ -84,6 +86,7 @@ projects/001-scts-genai-programme/
 ├── secure-by-design-assessment.md         # NCSC CAF security assessment
 ├── ai-playbook-assessment.md              # UK AI Playbook compliance
 ├── high-level-design.md                   # Solution architecture (C4)
+├── mlops-strategy.md                      # ML operations strategy
 ├── project-plan.md                        # Delivery roadmap
 ├── backlog.md                             # Sprint backlog
 ├── traceability-matrix.md                 # Requirements traceability
