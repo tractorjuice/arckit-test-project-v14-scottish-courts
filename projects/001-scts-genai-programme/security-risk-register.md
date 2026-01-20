@@ -79,48 +79,77 @@ This security-specific risk register supplements the general risk register (ARC-
 
 ### Inherent Risk Matrix (Before Controls)
 
+```mermaid
+quadrantChart
+    title Inherent Security Risk Matrix
+    x-axis Low Impact --> High Impact
+    y-axis Low Likelihood --> High Likelihood
+    quadrant-1 Critical
+    quadrant-2 High
+    quadrant-3 Low
+    quadrant-4 Medium
+
+    SEC-003: [0.9, 0.8]
+    SEC-005: [0.9, 0.8]
+    SEC-006: [0.7, 0.95]
+    SEC-001: [0.7, 0.8]
+    SEC-004: [0.7, 0.8]
+    SEC-002: [0.7, 0.6]
+    SEC-009: [0.7, 0.6]
+    SEC-007: [0.5, 0.6]
+    SEC-008: [0.5, 0.6]
+    SEC-010: [0.5, 0.6]
+    SEC-011: [0.5, 0.8]
+    SEC-012: [0.5, 0.8]
+    SEC-013: [0.3, 0.4]
+    SEC-014: [0.7, 0.4]
+    SEC-015: [0.3, 0.6]
 ```
-LIKELIHOOD ↑
-     5 | Almost Certain |       |       |       | SEC-006 |       |
-       |                |-------|-------|-------|---------|-------|
-     4 | Likely         |       |       | SEC-011| SEC-001 | SEC-003|
-       |                |       |       | SEC-012| SEC-004 | SEC-005|
-       |                |-------|-------|-------|---------|-------|
-     3 | Possible       |       | SEC-015| SEC-007| SEC-002|       |
-       |                |       |       | SEC-008| SEC-009|       |
-       |                |       |       | SEC-010|        |       |
-       |                |-------|-------|-------|---------|-------|
-     2 | Unlikely       |       | SEC-013|       | SEC-014|       |
-       |                |-------|-------|-------|---------|-------|
-     1 | Rare           |       |       |       |        |       |
-       |________________|_______|_______|_______|________|_______|
-                            1       2       3       4       5
-                        Negligible Minor  Moderate Major Catastrophic
-                                      IMPACT →
-```
+
+**Inherent Risk Positions:**
+| Zone | Risks | Score Range |
+|------|-------|-------------|
+| **Critical (Red)** | SEC-003, SEC-005, SEC-006 | 20-25 |
+| **High (Orange)** | SEC-001, SEC-002, SEC-004, SEC-009, SEC-011, SEC-012 | 13-19 |
+| **Medium (Yellow)** | SEC-007, SEC-008, SEC-010, SEC-014, SEC-015 | 6-12 |
+| **Low (Green)** | SEC-013 | 1-5 |
 
 ### Residual Risk Matrix (After Controls)
 
+```mermaid
+quadrantChart
+    title Residual Security Risk Matrix
+    x-axis Low Impact --> High Impact
+    y-axis Low Likelihood --> High Likelihood
+    quadrant-1 Critical
+    quadrant-2 High
+    quadrant-3 Low
+    quadrant-4 Medium
+
+    SEC-003: [0.9, 0.6]
+    SEC-001: [0.7, 0.6]
+    SEC-007: [0.7, 0.6]
+    SEC-002: [0.7, 0.4]
+    SEC-005: [0.7, 0.4]
+    SEC-004: [0.7, 0.4]
+    SEC-006: [0.3, 0.6]
+    SEC-011: [0.5, 0.6]
+    SEC-008: [0.5, 0.4]
+    SEC-012: [0.3, 0.4]
+    SEC-013: [0.3, 0.4]
+    SEC-009: [0.7, 0.2]
+    SEC-010: [0.5, 0.2]
+    SEC-014: [0.5, 0.2]
+    SEC-015: [0.1, 0.4]
 ```
-LIKELIHOOD ↑
-     5 | Almost Certain |       |       |       |        |       |
-       |                |-------|-------|-------|--------|-------|
-     4 | Likely         |       |       |       |        |       |
-       |                |-------|-------|-------|--------|-------|
-     3 | Possible       |       | SEC-006| SEC-001| SEC-003|       |
-       |                |       | SEC-011| SEC-007|        |       |
-       |                |-------|-------|-------|--------|-------|
-     2 | Unlikely       | SEC-015| SEC-012| SEC-002| SEC-005|       |
-       |                |       | SEC-013| SEC-004|        |       |
-       |                |       |       | SEC-008|        |       |
-       |                |-------|-------|-------|--------|-------|
-     1 | Rare           |       | SEC-014| SEC-009|        |       |
-       |                |       |       | SEC-010|        |       |
-       |________________|_______|_______|_______|________|_______|
-                            1       2       3       4       5
-                        Negligible Minor  Moderate Major Catastrophic
-                                      IMPACT →
-```
+
+**Residual Risk Positions:**
+| Zone | Risks | Score Range |
+|------|-------|-------------|
+| **Critical (Red)** | None | 20-25 |
+| **High (Orange)** | SEC-003 | 13-19 |
+| **Medium (Yellow)** | SEC-001, SEC-002, SEC-004, SEC-005, SEC-006, SEC-007, SEC-008, SEC-011 | 6-12 |
+| **Low (Green)** | SEC-009, SEC-010, SEC-012, SEC-013, SEC-014, SEC-015 | 1-5 |
 
 **Risk Movement Analysis:**
 - ✅ **Significant Improvement**: SEC-003 (20→15), SEC-005 (20→8), SEC-006 (20→6)
