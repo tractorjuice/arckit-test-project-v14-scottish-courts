@@ -42,32 +42,33 @@ This Requirements Traceability Matrix (RTM) provides bidirectional traceability 
 
 ### Coverage Summary
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                    REQUIREMENTS TRACEABILITY COVERAGE                        │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  Stakeholder Drivers ──────────────────────────────── 100% ████████████████ │
-│                        ↓                                                     │
-│  Goals & Outcomes ─────────────────────────────────── 100% ████████████████ │
-│                        ↓                                                     │
-│  Business Requirements ────────────────────────────── 100% ████████████████ │
-│                        ↓                                                     │
-│  Functional Requirements ──────────────────────────── 100% ████████████████ │
-│                        ↓                                                     │
-│  Non-Functional Requirements ──────────────────────── 100% ████████████████ │
-│                        ↓                                                     │
-│  Data Model Entities ──────────────────────────────── 100% ████████████████ │
-│                        ↓                                                     │
-│  High-Level Design ───────────────────────────────── 100% ████████████████ │
-│                        ↓                                                     │
-│  Architecture Decisions (ADRs) ───────────────────── 100% ████████████████ │
-│                        ↓                                                     │
-│  Detailed Design ─────────────────────────────────── N/A  ░░░░░░░░░░░░░░░░ │
-│                        ↓                                                     │
-│  Test Cases ──────────────────────────────────────── 0%   ░░░░░░░░░░░░░░░░ │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph coverage["Requirements Traceability Coverage"]
+        SD["**Stakeholder Drivers**<br/>100% ✅"]
+        GO["**Goals & Outcomes**<br/>100% ✅"]
+        BR["**Business Requirements**<br/>100% ✅"]
+        FR["**Functional Requirements**<br/>100% ✅"]
+        NFR["**Non-Functional Requirements**<br/>100% ✅"]
+        DM["**Data Model Entities**<br/>100% ✅"]
+        HLD["**High-Level Design**<br/>100% ✅"]
+        ADR["**Architecture Decisions**<br/>100% ✅"]
+        DLD["**Detailed Design**<br/>N/A ⏳"]
+        TC["**Test Cases**<br/>0% ❌"]
+    end
+
+    SD --> GO --> BR --> FR --> NFR --> DM --> HLD --> ADR --> DLD --> TC
+
+    style SD fill:#22c55e,color:#fff
+    style GO fill:#22c55e,color:#fff
+    style BR fill:#22c55e,color:#fff
+    style FR fill:#22c55e,color:#fff
+    style NFR fill:#22c55e,color:#fff
+    style DM fill:#22c55e,color:#fff
+    style HLD fill:#22c55e,color:#fff
+    style ADR fill:#22c55e,color:#fff
+    style DLD fill:#fbbf24,color:#000
+    style TC fill:#ef4444,color:#fff
 ```
 
 ### Traceability Scope

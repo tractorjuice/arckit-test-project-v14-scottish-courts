@@ -77,26 +77,42 @@ Strong alignment on justice mission and ethical AI principles. Moderate tension 
 
 ### Stakeholder Power-Interest Grid
 
+```mermaid
+quadrantChart
+    title Stakeholder Power-Interest Grid
+    x-axis Low Interest --> High Interest
+    y-axis Low Power --> High Power
+    quadrant-1 Keep Satisfied
+    quadrant-2 Manage Closely
+    quadrant-3 Monitor
+    quadrant-4 Keep Informed
+
+    Lord President: [0.35, 0.95]
+    Chief Executive: [0.40, 0.90]
+    CDiO: [0.45, 0.85]
+    Legal Services Director: [0.35, 0.80]
+    DPO: [0.40, 0.75]
+    Scottish Government: [0.70, 0.90]
+    Cabinet Secretary: [0.75, 0.85]
+    ICO: [0.80, 0.75]
+    Finance Director: [0.85, 0.70]
+    Court Admin Managers: [0.35, 0.40]
+    Clerks of Court: [0.30, 0.35]
+    Faculty of Advocates: [0.25, 0.30]
+    Law Society: [0.20, 0.30]
+    Court Users: [0.15, 0.25]
+    Witnesses Victims: [0.10, 0.20]
+    Interpreter Services: [0.75, 0.25]
+    HR Director: [0.80, 0.30]
 ```
-HIGH POWER
-    │
-    │  [Manage Closely]              │  [Keep Satisfied]
-    │  - Lord President              │  - Scottish Government
-    │  - Chief Executive             │  - Cabinet Secretary
-    │  - CDiO                        │  - ICO
-    │  - Legal Services Director     │  - Finance Director
-    │  - DPO                         │
-────┼────────────────────────────────┼─────────────────────────
-    │  [Keep Informed]               │  [Monitor]
-    │  - Court Admin Managers        │  - Interpreter Services
-    │  - Clerks of Court             │  - HR Director
-    │  - Faculty of Advocates        │
-    │  - Law Society                 │
-    │  - Court Users / Public        │
-    │  - Witnesses / Victims         │
-    │                                │
-LOW POWER ───────────────────────────────────────────── HIGH INTEREST
-```
+
+**Quadrant Summary:**
+| Quadrant | Strategy | Stakeholders |
+|----------|----------|--------------|
+| **Manage Closely** | High engagement, regular updates | Lord President, Chief Executive, CDiO, Legal Services Director, DPO |
+| **Keep Satisfied** | Address concerns promptly | Scottish Government, Cabinet Secretary, ICO, Finance Director |
+| **Keep Informed** | Regular communications | Court Admin Managers, Clerks, Faculty of Advocates, Law Society, Court Users, Witnesses |
+| **Monitor** | Minimal effort | Interpreter Services, HR Director |
 
 ---
 

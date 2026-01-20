@@ -1282,18 +1282,27 @@ Training materials, user documentation, and operational handover for court staff
 
 ## Appendix B: Epic Dependency Graph
 
-```
-Epic 5: Platform Infrastructure (Sprint 1)
-    │
-    ├──► Epic 4: Security & Compliance (Sprints 1-8, cross-cutting)
-    │
-    ├──► Epic 1: Document Intelligence (Sprints 2-3)
-    │         │
-    │         └──► Epic 3: Cognitive Search (Sprint 6)
-    │
-    └──► Epic 2: Real-Time Translation (Sprints 4-5)
-                  │
-                  └──► Epic 6: Staff Training (Sprints 9-10)
+```mermaid
+flowchart TB
+    E5["**Epic 5: Platform Infrastructure**<br/>Sprint 1"]
+    E4["**Epic 4: Security & Compliance**<br/>Sprints 1-8, cross-cutting"]
+    E1["**Epic 1: Document Intelligence**<br/>Sprints 2-3"]
+    E2["**Epic 2: Real-Time Translation**<br/>Sprints 4-5"]
+    E3["**Epic 3: Cognitive Search**<br/>Sprint 6"]
+    E6["**Epic 6: Staff Training**<br/>Sprints 9-10"]
+
+    E5 --> E4
+    E5 --> E1
+    E5 --> E2
+    E1 --> E3
+    E2 --> E6
+
+    style E5 fill:#3b82f6,color:#fff
+    style E4 fill:#ef4444,color:#fff
+    style E1 fill:#22c55e,color:#fff
+    style E2 fill:#22c55e,color:#fff
+    style E3 fill:#a855f7,color:#fff
+    style E6 fill:#fbbf24,color:#000
 ```
 
 ---
