@@ -387,34 +387,27 @@ For technical specialists, detailed information is provided in **Tier 2** below.
 
 The SCTS GenAI Platform comprises four primary AI capabilities:
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    SCTS GenAI Platform                          │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
-│  │   Document      │  │    Speech       │  │   Translation   │ │
-│  │  Intelligence   │  │   Services      │  │    Services     │ │
-│  │                 │  │                 │  │                 │ │
-│  │  - Classification│  │  - Transcription│  │  - Real-time   │ │
-│  │  - Entity Extract│  │  - Speaker ID   │  │  - 10 languages│ │
-│  │  - OCR          │  │  - Confidence   │  │  - Legal terms  │ │
-│  └────────┬────────┘  └────────┬────────┘  └────────┬────────┘ │
-│           │                    │                    │           │
-│  ┌────────┴────────────────────┴────────────────────┴────────┐ │
-│  │                    Cognitive Search                        │ │
-│  │  - Semantic search  - Citation detection  - Similarity     │ │
-│  └────────────────────────────────────────────────────────────┘ │
-│                                                                 │
-│  ┌────────────────────────────────────────────────────────────┐ │
-│  │         Integration Layer (APIs, Event Queues)             │ │
-│  └────────────────────────────────────────────────────────────┘ │
-│                                                                 │
-│  ┌────────────────────────────────────────────────────────────┐ │
-│  │     Audit & Governance (Logging, Access Control, RBAC)     │ │
-│  └────────────────────────────────────────────────────────────┘ │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Platform["SCTS GenAI Platform"]
+        subgraph Services["AI Capabilities"]
+            DocInt["**Document Intelligence**<br/>- Classification<br/>- Entity Extraction<br/>- OCR"]
+            Speech["**Speech Services**<br/>- Transcription<br/>- Speaker ID<br/>- Confidence"]
+            Trans["**Translation Services**<br/>- Real-time<br/>- 10 languages<br/>- Legal terms"]
+        end
+
+        CogSearch["**Cognitive Search**<br/>Semantic search | Citation detection | Similarity"]
+
+        Integration["**Integration Layer**<br/>APIs, Event Queues"]
+
+        Audit["**Audit & Governance**<br/>Logging, Access Control, RBAC"]
+
+        DocInt --> CogSearch
+        Speech --> CogSearch
+        Trans --> CogSearch
+        CogSearch --> Integration
+        Integration --> Audit
+    end
 ```
 
 ### 10.2 AI Capabilities Detail
@@ -521,24 +514,20 @@ The SCTS GenAI Platform comprises four primary AI capabilities:
 
 ### 10.4 Data Flow
 
+```mermaid
+flowchart LR
+    DocReceived["Document<br/>Received"] --> Upload["Upload<br/>System"]
+    Upload --> AIProc["AI<br/>Processing"]
+    AIProc --> Human["Human<br/>Review"]
+    AIProc --> AuditLog["Audit<br/>Log"]
+    Human --> CaseFile["Case<br/>File"]
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  Document   │────▶│   Upload    │────▶│  AI        │────▶│   Human    │
-│  Received   │     │   System    │     │  Processing│     │   Review   │
-└─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
-                                               │                   │
-                                               ▼                   ▼
-                                        ┌─────────────┐     ┌─────────────┐
-                                        │   Audit    │     │   Case     │
-                                        │   Log      │     │   File     │
-                                        └─────────────┘     └─────────────┘
 
-Data Flow Notes:
+**Data Flow Notes:**
 - All data encrypted in transit (TLS 1.3) and at rest (AES-256)
 - AI outputs stored separately from authoritative court records
 - Audit log captures: user, action, input reference, output, model version, human decision
 - No data leaves UK jurisdiction
-```
 
 ---
 
@@ -841,37 +830,22 @@ All data processing occurs within UK jurisdiction:
 
 ### 17.1 Governance Structure
 
-```
-┌─────────────────────────────────────────┐
-│        Scottish Ministers               │
-│     (Cabinet Secretary for Justice)     │
-└───────────────────┬─────────────────────┘
-                    │
-┌───────────────────▼─────────────────────┐
-│           SCTS Board                    │
-│        (Strategic Oversight)            │
-└───────────────────┬─────────────────────┘
-                    │
-┌───────────────────▼─────────────────────┐
-│          Chief Executive                │
-│     (Senior Responsible Owner)          │
-└───────────────────┬─────────────────────┘
-                    │
-        ┌───────────┼───────────┐
-        ▼           ▼           ▼
-┌───────────┐ ┌───────────┐ ┌───────────┐
-│   CDiO    │ │  Legal    │ │   DPO     │
-│Programme  │ │ Services  │ │  Privacy  │
-│  Owner    │ │Compliance │ │Compliance │
-└─────┬─────┘ └───────────┘ └───────────┘
-      │
-      ▼
-┌───────────┐
-│Senior AI  │
-│ Architect │
-│ Technical │
-│   Lead    │
-└───────────┘
+```mermaid
+flowchart TB
+    Ministers["**Scottish Ministers**<br/>Cabinet Secretary for Justice"]
+    Board["**SCTS Board**<br/>Strategic Oversight"]
+    CE["**Chief Executive**<br/>Senior Responsible Owner"]
+    CDiO["**CDiO**<br/>Programme Owner"]
+    Legal["**Legal Services**<br/>Compliance"]
+    DPO["**DPO**<br/>Privacy Compliance"]
+    Architect["**Senior AI Architect**<br/>Technical Lead"]
+
+    Ministers --> Board
+    Board --> CE
+    CE --> CDiO
+    CE --> Legal
+    CE --> DPO
+    CDiO --> Architect
 ```
 
 ### 17.2 Governance Checkpoints
