@@ -825,7 +825,7 @@ flowchart LR
 
     subgraph "Build"
         PR[PR Validation]
-        Build[Docker Build]
+        DockerBuild[Docker Build]
         SAST[Security Scan]
         Test[Unit Tests]
     end
@@ -841,8 +841,8 @@ flowchart LR
     end
 
     Git --> PR
-    PR --> Build
-    Build --> SAST
+    PR --> DockerBuild
+    DockerBuild --> SAST
     SAST --> Test
     Test --> ACR
     ACR --> Dev
