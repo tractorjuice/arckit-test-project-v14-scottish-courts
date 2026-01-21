@@ -63,6 +63,7 @@ The Scottish Courts and Tribunals Service (SCTS) GenAI Programme is a transforma
 | [atrs-record.md](projects/001-scts-genai-programme/atrs-record.md) | Algorithmic transparency (Tier 1 & 2) | ✅ Complete |
 | [ai-playbook-assessment.md](projects/001-scts-genai-programme/ai-playbook-assessment.md) | UK AI Playbook - 79%, approved with conditions | ✅ Complete |
 | [secure-by-design-assessment.md](projects/001-scts-genai-programme/secure-by-design-assessment.md) | NCSC CAF - 10/14 principles | ✅ Complete |
+| [tcop-review.md](projects/001-scts-genai-programme/tcop-review.md) | Technology Code of Practice - 11/13 points | ✅ Complete |
 
 ### Analysis & Reporting
 | Artifact | Description | Status |
@@ -86,6 +87,7 @@ projects/001-scts-genai-programme/
 ├── security-risk-register.md              # Security risks (NCSC CAF)
 ├── secure-by-design-assessment.md         # NCSC CAF security assessment
 ├── ai-playbook-assessment.md              # UK AI Playbook compliance
+├── tcop-review.md                         # Technology Code of Practice review
 ├── high-level-design.md                   # Solution architecture (C4)
 ├── mlops-strategy.md                      # ML operations strategy
 ├── operational-readiness.md               # Operational readiness pack
