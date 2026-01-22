@@ -33,26 +33,6 @@
           "category": "Discovery"
         },
         {
-          "path": "projects/001-scts-genai-programme/risk-register.md",
-          "title": "Risk Register",
-          "category": "Governance"
-        },
-        {
-          "path": "projects/001-scts-genai-programme/security-risk-register.md",
-          "title": "Security Risk Register",
-          "category": "Governance"
-        },
-        {
-          "path": "projects/001-scts-genai-programme/traceability-matrix.md",
-          "title": "Traceability Matrix",
-          "category": "Governance"
-        },
-        {
-          "path": "projects/001-scts-genai-programme/principles-compliance-assessment-2026-01-21.md",
-          "title": "Principles Compliance (2026-01-21)",
-          "category": "Governance"
-        },
-        {
           "path": "projects/001-scts-genai-programme/project-plan.md",
           "title": "Project Plan",
           "category": "Planning"
@@ -73,13 +53,43 @@
           "category": "Architecture"
         },
         {
+          "path": "projects/001-scts-genai-programme/risk-register.md",
+          "title": "Risk Register",
+          "category": "Governance"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/security-risk-register.md",
+          "title": "Security Risk Register",
+          "category": "Governance"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/traceability-matrix.md",
+          "title": "Traceability Matrix",
+          "category": "Governance"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/principles-compliance-assessment-2026-01-21.md",
+          "title": "Principles Compliance (2026-01-21)",
+          "category": "Governance"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/principles-compliance-assessment-2026-01-20.md",
+          "title": "Principles Compliance (2026-01-20)",
+          "category": "Governance"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/analysis-report.md",
+          "title": "Analysis Report",
+          "category": "Governance"
+        },
+        {
           "path": "projects/001-scts-genai-programme/tcop-review.md",
           "title": "TCoP Assessment",
           "category": "Compliance"
         },
         {
           "path": "projects/001-scts-genai-programme/secure-by-design-assessment.md",
-          "title": "Secure by Design",
+          "title": "Secure by Design Assessment",
           "category": "Compliance"
         },
         {
@@ -120,18 +130,23 @@
         {
           "path": "projects/001-scts-genai-programme/PROJECT-STORY.md",
           "title": "Project Story",
-          "category": "Summary"
+          "category": "Reporting"
         },
         {
-          "path": "projects/001-scts-genai-programme/analysis-report.md",
-          "title": "Analysis Report",
-          "category": "Summary"
+          "path": "projects/001-scts-genai-programme/CLIENT-ARTIFACT-SUMMARY-TABLE.md",
+          "title": "Artifact Summary Table",
+          "category": "Reporting"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/CLIENT-EMAIL-ARTIFACT-OVERVIEW.md",
+          "title": "Email Artifact Overview",
+          "category": "Reporting"
         }
       ],
       "diagrams": [
         {
           "path": "projects/001-scts-genai-programme/wardley-maps/current-state-procurement.md",
-          "title": "Wardley Map - Procurement Strategy"
+          "title": "Wardley Map: Current State Procurement"
         }
       ],
       "decisions": [
