@@ -16,6 +16,7 @@ This is **arckit-test-project-v14-scottish-courts** - a test repository demonstr
 | **Phase** | Alpha Complete |
 | **Governance Score** | 82/100 (Grade B) |
 | **Artifacts** | 25+ documents |
+| **ArcKit Version** | 0.11.0 |
 
 ## Repository Structure
 
@@ -40,7 +41,13 @@ projects/001-scts-genai-programme/   # Generated artifacts
 ├── tcop-review.md                   # Technology Code of Practice
 ├── secure-by-design-assessment.md   # NCSC CAF
 ├── ai-playbook-assessment.md        # UK AI Playbook (79%)
+├── atrs-record.md                   # Algorithmic Transparency Record
 ├── backlog.md                       # 184 user stories
+├── devops-strategy.md               # CI/CD and infrastructure
+├── mlops-strategy.md                # ML lifecycle management
+├── finops-strategy.md               # Cloud cost governance
+├── operational-readiness.md         # Runbooks, DR/BCP, support model
+├── traceability-matrix.md           # Requirements traceability
 ├── decisions/ADR-*.md               # Architecture decisions
 ├── wardley-maps/                    # Strategic maps
 └── PROJECT-STORY.md                 # Complete narrative
@@ -85,6 +92,14 @@ source-documents/              # Input reference documents
 /arckit.ai-playbook     # AI Playbook compliance
 /arckit.atrs            # Algorithmic Transparency Record
 /arckit.service-assessment  # GDS Service Standard (14 points)
+```
+
+**Operations & Delivery:**
+```
+/arckit.devops          # CI/CD pipelines, IaC, container orchestration
+/arckit.mlops           # ML model lifecycle, training, serving, monitoring
+/arckit.finops          # Cloud cost management, optimization, forecasting
+/arckit.operationalize  # Runbooks, DR/BCP, on-call, support model
 ```
 
 ## Slash Command Pattern
