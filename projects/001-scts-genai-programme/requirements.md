@@ -4,16 +4,16 @@
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-REQ-v1.0 |
+| **Document ID** | ARC-001-REQ-v1.1 |
 | **Document Type** | Business and Technical Requirements |
 | **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL |
 | **Status** | DRAFT |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Created Date** | 2026-01-17 |
-| **Last Modified** | 2026-01-17 |
+| **Last Modified** | 2026-01-25 |
 | **Review Cycle** | Monthly |
-| **Next Review Date** | 2026-02-17 |
+| **Next Review Date** | 2026-02-25 |
 | **Owner** | Chief Digital Information Officer, SCTS |
 | **Reviewed By** | [PENDING] |
 | **Approved By** | [PENDING] |
@@ -24,6 +24,7 @@
 | Version | Date | Author | Changes | Approved By | Approval Date |
 |---------|------|--------|---------|-------------|---------------|
 | 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.requirements` command | [PENDING] | [PENDING] |
+| 1.1 | 2026-01-25 | ArcKit AI | Added Azure AI Services platform requirements, enterprise AI strategy, PoC specifications, speaker recognition, and technology evaluation requirements | [PENDING] | [PENDING] |
 
 ## Document Purpose
 
@@ -48,6 +49,8 @@ The programme must balance innovation ambition with the conservative risk appeti
 - **OBJ-3**: Implement cognitive search enabling semantic search, case law citation, and document similarity analysis
 - **OBJ-4**: Establish enterprise AI platform capabilities that can be extended to future use cases
 - **OBJ-5**: Maintain zero AI-related court record integrity incidents throughout the programme
+- **OBJ-6**: Define enterprise-wide approach to AI delivery aligned with organisational strategy and architecture principles
+- **OBJ-7**: Evaluate and integrate diverse AI technologies (cloud, hybrid, open-source, vendor) to meet business needs
 
 ### Expected Outcomes
 
@@ -55,16 +58,20 @@ The programme must balance innovation ambition with the conservative risk appeti
 - **O-2**: Operational efficiency gains - 25% improvement in cases processed per FTE (Traces to Goal G-1, G-3)
 - **O-3**: Maintained judicial confidence - Zero incidents affecting judicial independence or court records (Traces to Goal G-4)
 - **O-4**: Regulatory compliance and trust - 100% compliance with Scottish Government AI Strategy and UK GDPR (Traces to Goal G-5)
+- **O-5**: Strategic AI capability - Reusable AI platform patterns for future SCTS initiatives
 
 ### Project Scope
 
 **In Scope**:
-- Document Intelligence for civil and criminal case documents
-- Speech-to-text transcription with multilingual support
-- Translation services for court proceedings (AI-assisted with human oversight)
-- Cognitive search across court document repositories
+- Document Intelligence for civil and criminal case documents using Azure AI Document Intelligence
+- Speech-to-text transcription with multilingual support using Azure AI Speech
+- Speaker recognition and diarisation for court proceedings
+- Translation services for court proceedings using Azure AI Translator
+- Cognitive search across court document repositories using Azure AI Search
 - Integration with existing case management systems
 - AI platform infrastructure and governance framework
+- Enterprise AI strategy and architecture patterns
+- Technical PoCs for multilingual transcription, document parsing, and cognitive search
 
 **Out of Scope**:
 - AI for judicial decision-making or case outcome prediction
@@ -83,6 +90,9 @@ The programme must balance innovation ambition with the conservative risk appeti
 | Chief Digital Information Officer | Programme Owner | CDi Function | Day-to-day leadership |
 | Lord President | Judicial Oversight | Judiciary | Judicial confidence |
 | Senior AI Technical Architect | Technical Lead | CDi Function | Architecture, PoC delivery |
+| Enterprise Architect | Architecture Alignment | CDi Function | Integration oversight |
+| Data Architect | Data Strategy | CDi Function | Data model, governance |
+| Solution Architects | Implementation | CDi Function | Solution design |
 | Legal Services Director | Compliance | Corporate Services | Legal risk assessment |
 | Data Protection Officer | Privacy Compliance | Corporate Services | DPIA, UK GDPR |
 | Finance Director | Budget Approval | Corporate Services | ROI validation |
@@ -214,6 +224,48 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ---
 
+### BR-007: Define Enterprise AI Strategy and Governance
+
+**Description**: The programme must establish an enterprise-wide approach to AI delivery that ensures alignment with organisational strategy, architecture principles, and compliance requirements while driving innovation and informing strategic decisions.
+
+**Rationale**: AI capabilities must be deployed consistently across SCTS, following established patterns and governance. Ad-hoc AI implementations create technical debt, compliance risk, and inconsistent user experience. This addresses stakeholder driver SD-3 (CDiO strategic leadership) and SD-4 (AI Architect technical excellence).
+
+**Success Criteria**:
+- Publish enterprise AI strategy document approved by SCTS Leadership
+- Establish AI governance board with defined decision rights
+- Create reusable AI architecture patterns for future initiatives
+- Document technology evaluation criteria for AI platform selection
+- Achieve alignment sign-off from Enterprise, Data, and Solution Architects
+
+**Priority**: MUST_HAVE
+
+**Stakeholder**: Chief Digital Information Officer (Traces to Outcome O-5)
+
+**Principle Alignment**: Aligns with Principle 1 (Strategic Alignment), Principle 7 (Technology Agnosticism)
+
+---
+
+### BR-008: Evaluate and Integrate Diverse AI Technologies
+
+**Description**: The programme must evaluate and integrate diverse AI technologies and platforms—including cloud, on-premises, hybrid, open-source, and vendor solutions—to meet different business needs while ensuring seamless embedding within the broader technology ecosystem.
+
+**Rationale**: No single AI platform meets all requirements. SCTS must evaluate options objectively based on capability, cost, compliance, and integration fit. Collaboration with enterprise, data, and solution architects ensures AI capabilities integrate properly with existing systems.
+
+**Success Criteria**:
+- Complete technology evaluation for each AI capability area (document, speech, translation, search)
+- Document build vs buy decisions with rationale
+- Validate selected platforms meet UK data residency requirements
+- Demonstrate successful integration with existing SCTS technology ecosystem
+- Establish vendor management framework for AI service providers
+
+**Priority**: MUST_HAVE
+
+**Stakeholder**: Senior AI Technical Architect (Traces to Outcome O-5)
+
+**Principle Alignment**: Aligns with Principle 6 (Interoperability), Principle 7 (Technology Agnosticism)
+
+---
+
 ## Functional Requirements
 
 ### User Personas
@@ -264,11 +316,11 @@ The programme must balance innovation ambition with the conservative risk appeti
 **Preconditions**:
 - Document received (physical or digital)
 - Clerk logged into case management system
-- AI Document Intelligence service available
+- Azure AI Document Intelligence service available
 
 **Main Flow**:
 1. Clerk uploads or scans document into system
-2. System sends document to AI Document Intelligence service
+2. System sends document to Azure AI Document Intelligence service
 3. AI extracts document type, key entities, and metadata
 4. AI returns classification with confidence score
 5. System displays AI classification for clerk review
@@ -302,14 +354,14 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 **Preconditions**:
 - Court session scheduled with non-English speaking participant
-- Language identified and supported by AI translation
+- Language identified and supported by Azure AI Translator
 - Human interpreter on standby for complex matters
 
 **Main Flow**:
 1. Clerk activates translation service for session
-2. System begins real-time speech capture
-3. AI transcribes speech to text in source language
-4. AI translates text to target language
+2. System begins real-time speech capture via Azure AI Speech
+3. AI transcribes speech to text in source language with speaker diarisation
+4. AI translates text to target language via Azure AI Translator
 5. System displays translated text on participant's screen
 6. Participant can flag translation issues
 7. Session ends; transcript saved with translation
@@ -343,12 +395,12 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 **Preconditions**:
 - User authenticated with appropriate access permissions
-- Search index up to date with court documents
+- Azure AI Search index up to date with court documents
 - User has valid search query
 
 **Main Flow**:
 1. User enters search query in natural language
-2. System processes query using semantic understanding
+2. System processes query using Azure AI Search semantic understanding
 3. AI returns ranked results with relevance scores
 4. User reviews results and previews documents
 5. User selects relevant documents for detailed review
@@ -375,11 +427,110 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ---
 
+#### UC-4: Technical PoC - Multilingual Speech Transcription and Translation
+
+**Actor**: Senior AI Technical Architect
+
+**Preconditions**:
+- Azure AI Speech and Azure AI Translator services provisioned
+- Test audio samples available in multiple languages
+- Legal terminology glossary compiled
+
+**Main Flow**:
+1. Architect configures Azure AI Speech for target languages
+2. System processes test audio samples
+3. AI transcribes speech with speaker diarisation
+4. AI applies custom legal terminology model
+5. System translates transcripts via Azure AI Translator
+6. Architect evaluates accuracy against human benchmarks
+7. Results documented for stakeholder review
+
+**Postconditions**:
+- Accuracy metrics documented for each language pair
+- Technical feasibility assessment completed
+- Go/no-go recommendation for production
+
+**Success Criteria for PoC**:
+- Speech-to-text accuracy ≥ 90% for clear audio
+- Translation accuracy ≥ 80% for general content
+- Legal terminology accuracy ≥ 75% (with custom glossary)
+- End-to-end latency < 5 seconds
+
+**Priority**: HIGH
+
+---
+
+#### UC-5: Technical PoC - Intelligent Document Parsing and Metadata Extraction
+
+**Actor**: Senior AI Technical Architect
+
+**Preconditions**:
+- Azure AI Document Intelligence service provisioned
+- Sample court documents available (civil and criminal)
+- Document type taxonomy defined
+
+**Main Flow**:
+1. Architect configures Azure AI Document Intelligence custom models
+2. System processes sample documents across all types
+3. AI extracts document structure, entities, and metadata
+4. AI classifies documents against taxonomy
+5. Architect evaluates extraction accuracy
+6. System generates confidence distribution analysis
+7. Results documented for stakeholder review
+
+**Postconditions**:
+- Extraction accuracy metrics per document type
+- Custom model training requirements identified
+- Production readiness assessment completed
+
+**Success Criteria for PoC**:
+- Document type classification ≥ 90% accuracy
+- Key entity extraction (parties, dates, case numbers) ≥ 85% accuracy
+- Structured data extraction ≥ 80% accuracy
+- Processing time < 10 seconds per document
+
+**Priority**: HIGH
+
+---
+
+#### UC-6: Technical PoC - Cognitive Search Across Structured and Unstructured Documents
+
+**Actor**: Senior AI Technical Architect
+
+**Preconditions**:
+- Azure AI Search service provisioned
+- Document corpus indexed (minimum 10,000 documents)
+- Test queries compiled with expected results
+
+**Main Flow**:
+1. Architect configures Azure AI Search with semantic ranking
+2. System indexes sample document corpus
+3. AI generates embeddings for semantic search
+4. Architect executes test query set
+5. System returns ranked results with relevance scores
+6. Architect evaluates precision and recall metrics
+7. Results documented for stakeholder review
+
+**Postconditions**:
+- Search quality metrics documented
+- Index configuration optimised
+- Scaling requirements understood
+
+**Success Criteria for PoC**:
+- Precision@10 ≥ 70% for test queries
+- Recall@100 ≥ 80% for test queries
+- Query response time < 2 seconds
+- Index refresh latency < 15 minutes
+
+**Priority**: HIGH
+
+---
+
 ### Functional Requirements Detail
 
 #### FR-001: Document Upload and Ingestion
 
-**Description**: The system must accept documents in multiple formats for AI processing.
+**Description**: The system must accept documents in multiple formats for AI processing via Azure AI Document Intelligence.
 
 **Relates To**: BR-001, UC-1
 
@@ -402,17 +553,23 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ---
 
-#### FR-002: AI Document Classification
+#### FR-002: AI Document Classification using Azure AI Document Intelligence
 
-**Description**: The system must automatically classify documents by type and extract key metadata.
+**Description**: The system must automatically classify documents by type and extract key metadata using Azure AI Document Intelligence custom models.
 
-**Relates To**: BR-001, UC-1
+**Relates To**: BR-001, UC-1, UC-5
 
 **Acceptance Criteria**:
-- [ ] Given a civil court document, when processed, then correct document type identified (claim, defence, evidence, etc.)
+- [ ] Given a civil court document, when processed by Azure AI Document Intelligence, then correct document type identified (claim, defence, evidence, etc.)
 - [ ] Given a criminal court document, when processed, then correct document type identified (indictment, plea, judgement, etc.)
 - [ ] Given any document, when processed, then key entities extracted (parties, dates, case numbers, amounts)
 - [ ] Given low-quality scan, when processed, then quality warning displayed with confidence score
+
+**Azure AI Document Intelligence Capabilities**:
+- Custom classification models for SCTS document taxonomy
+- Prebuilt models for common document types (invoices, receipts, IDs)
+- Custom extraction models for court-specific entities
+- Layout analysis for table and structure extraction
 
 **Data Requirements**:
 - **Inputs**: Document content, document format
@@ -423,7 +580,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 **Complexity**: HIGH
 
-**Dependencies**: FR-001 (Document Upload), trained classification model
+**Dependencies**: FR-001 (Document Upload), Azure AI Document Intelligence custom model training
 
 ---
 
@@ -452,17 +609,24 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ---
 
-#### FR-004: Speech-to-Text Transcription
+#### FR-004: Speech-to-Text Transcription using Azure AI Speech
 
-**Description**: The system must transcribe spoken audio to text with support for multiple accents and languages.
+**Description**: The system must transcribe spoken audio to text with support for multiple accents and languages using Azure AI Speech service.
 
-**Relates To**: BR-002, UC-2
+**Relates To**: BR-002, UC-2, UC-4
 
 **Acceptance Criteria**:
-- [ ] Given clear audio in English, when transcribed, then 95% word accuracy achieved
+- [ ] Given clear audio in English, when transcribed via Azure AI Speech, then 95% word accuracy achieved
 - [ ] Given clear audio in supported non-English language, when transcribed, then 90% word accuracy achieved
 - [ ] Given audio with background noise, when transcribed, then confidence indicators shown for uncertain segments
 - [ ] Given multiple speakers, when transcribed, then speaker diarisation identifies different speakers
+
+**Azure AI Speech Capabilities**:
+- Real-time speech-to-text transcription
+- Batch transcription for recorded audio
+- Custom speech models for legal terminology
+- Speaker diarisation for multi-speaker scenarios
+- Pronunciation assessment (optional for interpreter training)
 
 **Data Requirements**:
 - **Inputs**: Audio stream or file, language code, speaker count (if known)
@@ -473,21 +637,54 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 **Complexity**: HIGH
 
-**Dependencies**: Audio capture infrastructure, supported language models
+**Dependencies**: Audio capture infrastructure, Azure AI Speech custom models
 
 ---
 
-#### FR-005: Real-Time Translation
+#### FR-004a: Speaker Recognition and Diarisation
 
-**Description**: The system must translate transcribed text between supported languages in near real-time.
+**Description**: The system must identify and distinguish between different speakers in court proceedings using Azure AI Speech speaker recognition.
 
 **Relates To**: BR-002, UC-2
 
 **Acceptance Criteria**:
-- [ ] Given English text, when translated to supported language, then translation appears within 2 seconds
-- [ ] Given legal terminology, when translated, then legal glossary applied for accuracy
+- [ ] Given audio with multiple speakers, when processed, then speakers distinguished with unique identifiers
+- [ ] Given enrolled speaker voice profile, when recognised, then speaker identity linked to transcript
+- [ ] Given unknown speaker, when detected, then assigned temporary identifier for session
+- [ ] Given speaker change, when detected, then transcript segmented appropriately
+
+**Azure AI Speech Speaker Recognition Capabilities**:
+- Speaker identification (who is speaking from enrolled profiles)
+- Speaker verification (confirm identity claim)
+- Speaker diarisation (segment by speaker without identification)
+- Text-independent and text-dependent recognition modes
+
+**Priority**: SHOULD_HAVE
+
+**Complexity**: HIGH
+
+**Dependencies**: FR-004 (Speech-to-Text), speaker enrollment process
+
+---
+
+#### FR-005: Real-Time Translation using Azure AI Translator
+
+**Description**: The system must translate transcribed text between supported languages in near real-time using Azure AI Translator.
+
+**Relates To**: BR-002, UC-2, UC-4
+
+**Acceptance Criteria**:
+- [ ] Given English text, when translated via Azure AI Translator to supported language, then translation appears within 2 seconds
+- [ ] Given legal terminology, when translated, then custom legal glossary applied for accuracy
 - [ ] Given translation, when displayed, then original text also available for comparison
 - [ ] Given uncertain translation, when detected, then flagged for human interpreter review
+
+**Azure AI Translator Capabilities**:
+- Real-time text translation (90+ languages)
+- Document translation (preserving formatting)
+- Custom Translator for domain-specific terminology
+- Transliteration for non-Latin scripts
+- Language detection
 
 **Data Requirements**:
 - **Inputs**: Source text, source language, target language
@@ -498,7 +695,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 **Complexity**: HIGH
 
-**Dependencies**: FR-004 (Transcription), translation models for supported languages
+**Dependencies**: FR-004 (Transcription), Azure AI Translator custom models for legal terminology
 
 ---
 
@@ -530,21 +727,29 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 **Complexity**: MEDIUM
 
-**Dependencies**: Language model availability
+**Dependencies**: Azure AI Speech and Translator language availability
 
 ---
 
-#### FR-007: Semantic Search
+#### FR-007: Semantic Search using Azure AI Search
 
-**Description**: The system must support natural language search queries with semantic understanding.
+**Description**: The system must support natural language search queries with semantic understanding using Azure AI Search.
 
-**Relates To**: BR-001, UC-3
+**Relates To**: BR-001, UC-3, UC-6
 
 **Acceptance Criteria**:
-- [ ] Given natural language query, when searched, then semantically relevant results returned
+- [ ] Given natural language query, when searched via Azure AI Search, then semantically relevant results returned
 - [ ] Given legal terminology query, when searched, then domain-specific understanding applied
 - [ ] Given ambiguous query, when searched, then related concepts suggested
 - [ ] Given search results, when displayed, then relevance score shown for each result
+
+**Azure AI Search Capabilities**:
+- Semantic ranking for natural language queries
+- Vector search with embeddings
+- Hybrid search (keyword + semantic)
+- Faceted navigation and filtering
+- Custom analyzers for legal terminology
+- Knowledge mining with AI enrichment
 
 **Data Requirements**:
 - **Inputs**: Search query text, filters (date range, case type, court level)
@@ -559,17 +764,24 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ---
 
-#### FR-008: Document Indexing
+#### FR-008: Document Indexing for Azure AI Search
 
-**Description**: The system must index documents for search with extracted text and metadata.
+**Description**: The system must index documents for search with extracted text and metadata using Azure AI Search indexers.
 
-**Relates To**: FR-007, UC-3
+**Relates To**: FR-007, UC-3, UC-6
 
 **Acceptance Criteria**:
 - [ ] Given new document added to case management, when indexed, then searchable within 15 minutes
 - [ ] Given document update, when re-indexed, then previous version marked and new version searchable
 - [ ] Given document deletion, when processed, then removed from search index
 - [ ] Given document with security classification, when indexed, then access restrictions preserved
+
+**Azure AI Search Indexing Capabilities**:
+- Automated indexers for blob storage, SQL, Cosmos DB
+- AI enrichment pipeline (OCR, entity extraction, key phrases)
+- Custom skills for SCTS-specific processing
+- Incremental indexing for large document sets
+- Field mappings and normalisation
 
 **Data Requirements**:
 - **Inputs**: Document content, metadata, security classification, case reference
@@ -580,7 +792,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 **Complexity**: MEDIUM
 
-**Dependencies**: Integration with case management (INT-001)
+**Dependencies**: Integration with case management (INT-001), Azure AI Search configuration
 
 ---
 
@@ -606,7 +818,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 #### FR-010: Document Similarity Analysis
 
-**Description**: The system must identify documents similar to a selected document.
+**Description**: The system must identify documents similar to a selected document using Azure AI Search vector similarity.
 
 **Relates To**: UC-3
 
@@ -619,7 +831,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 **Complexity**: HIGH
 
-**Dependencies**: FR-008 (Document Indexing), vector similarity capability
+**Dependencies**: FR-008 (Document Indexing), Azure AI Search vector search capability
 
 ---
 
@@ -728,6 +940,55 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ---
 
+#### FR-016: Technology Evaluation Framework
+
+**Description**: The system must support structured evaluation of AI technologies and platforms (cloud, on-premises, hybrid, open-source, vendor solutions).
+
+**Relates To**: BR-008
+
+**Acceptance Criteria**:
+- [ ] Given technology evaluation criteria, when documented, then covers capability, cost, compliance, integration
+- [ ] Given candidate technology, when evaluated, then scored against standard criteria
+- [ ] Given evaluation results, when compared, then objective recommendation generated
+- [ ] Given selected technology, when approved, then decision rationale documented in ADR
+
+**Evaluation Criteria**:
+- **Capability**: Feature completeness for use case requirements
+- **Cost**: Total cost of ownership (licensing, compute, storage, operations)
+- **Compliance**: UK data residency, GDPR, Scottish Government standards
+- **Integration**: API compatibility, authentication, data formats
+- **Scalability**: Growth capacity, performance under load
+- **Supportability**: Vendor support, community, documentation
+- **Lock-in Risk**: Portability, standards compliance, exit strategy
+
+**Priority**: MUST_HAVE
+
+**Complexity**: MEDIUM
+
+**Dependencies**: BR-007 (Enterprise AI Strategy)
+
+---
+
+#### FR-017: Architecture Collaboration Workflow
+
+**Description**: The system must support collaboration between enterprise, data, principal, and solution architects to ensure AI capabilities are seamlessly embedded within the broader technology ecosystem.
+
+**Relates To**: BR-007, BR-008
+
+**Acceptance Criteria**:
+- [ ] Given architecture decision, when required, then review workflow engages relevant architects
+- [ ] Given integration design, when proposed, then enterprise architect sign-off required
+- [ ] Given data model change, when proposed, then data architect sign-off required
+- [ ] Given solution design, when completed, then architecture compliance checklist verified
+
+**Priority**: SHOULD_HAVE
+
+**Complexity**: LOW
+
+**Dependencies**: Organisational process, not technical system
+
+---
+
 ---
 
 ## Non-Functional Requirements (NFRs)
@@ -819,7 +1080,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 - AI model backups: Daily
 - Configuration backups: With every change
 - Audit log backups: Real-time replication
-- Geographic backup: UK secondary region
+- Geographic backup: UK secondary region (Azure UK West)
 
 **Priority**: HIGH
 
@@ -923,7 +1184,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 - Data in transit: TLS 1.2+ minimum, TLS 1.3 preferred
 - Data at rest: AES-256 encryption for all data stores
-- Key management: Cloud provider key management with SCTS-managed keys
+- Key management: Azure Key Vault with SCTS-managed keys
 
 **Encryption Scope**:
 - [x] AI model storage encryption
@@ -943,10 +1204,10 @@ The programme must balance innovation ambition with the conservative risk appeti
 **Requirement**: All court data must remain within UK jurisdiction.
 
 **UK Data Residency Requirements**:
-- [x] All AI processing in UK data centres
+- [x] All AI processing in UK data centres (Azure UK South, UK West)
 - [x] No data transfer to non-UK locations
 - [x] AI model training on UK infrastructure only
-- [x] Third-party AI services must guarantee UK processing
+- [x] Azure AI services configured for UK region only
 - [x] Backup and DR sites within UK
 
 **Priority**: CRITICAL
@@ -1118,7 +1379,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 **Requirement**: Comprehensive monitoring and alerting for AI services.
 
 **Telemetry Requirements**:
-- **Logging**: Structured JSON logs, centralised aggregation
+- **Logging**: Structured JSON logs, centralised aggregation (Azure Monitor)
 - **Metrics**: Request volume, latency (p50/p95/p99), error rates, model confidence distributions
 - **Tracing**: Distributed tracing for end-to-end request flows
 - **Dashboards**: Real-time operational dashboards for AI services
@@ -1265,21 +1526,27 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ---
 
-### INT-006: Cloud AI Services Integration
+### INT-006: Azure AI Services Integration
 
-**Purpose**: Integrate with cloud cognitive services for AI processing.
+**Purpose**: Integrate with Azure AI services for AI processing.
 
 **Integration Type**: Real-time API
 
+**Azure AI Services**:
+- **Azure AI Document Intelligence**: Document classification, entity extraction, OCR
+- **Azure AI Speech**: Speech-to-text, text-to-speech, speaker recognition, diarisation
+- **Azure AI Translator**: Real-time translation, document translation, custom terminology
+- **Azure AI Search**: Semantic search, vector search, knowledge mining
+
 **Data Exchanged**:
-- **To Cloud AI**: Document content, audio streams (encrypted)
-- **From Cloud AI**: Classification, transcription, translation results
+- **To Azure AI**: Document content, audio streams (encrypted)
+- **From Azure AI**: Classification, transcription, translation, search results
 
-**Integration Pattern**: REST/gRPC API calls
+**Integration Pattern**: REST API calls via Azure SDK
 
-**Authentication**: API keys managed in secrets vault, rotated monthly
+**Authentication**: Managed Identity for Azure resources; API keys in Key Vault for development
 
-**Data Residency**: UK data centres only (contractual requirement)
+**Data Residency**: Azure UK South (primary), UK West (DR) - contractually guaranteed
 
 **Priority**: CRITICAL
 
@@ -1301,7 +1568,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 | Attribute | Type | Required | Description | Constraints |
 |-----------|------|----------|-------------|-------------|
 | request_id | UUID | Yes | Unique identifier | Primary key |
-| request_type | Enum | Yes | Type of AI operation | ['classification', 'transcription', 'translation', 'search'] |
+| request_type | Enum | Yes | Type of AI operation | ['classification', 'transcription', 'translation', 'search', 'speaker_recognition'] |
 | source_document_id | UUID | No | Reference to source document | Foreign key to DMS |
 | case_reference | String(50) | No | Court case reference | Case number format |
 | user_id | String(100) | Yes | User who initiated request | |
@@ -1309,6 +1576,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 | status | Enum | Yes | Processing status | ['pending', 'processing', 'completed', 'failed'] |
 | completed_at | Timestamp | No | Completion timestamp | UTC |
 | model_version | String(50) | Yes | AI model version used | Semantic version |
+| azure_service | String(100) | Yes | Azure AI service used | Service identifier |
 
 **Data Classification**: INTERNAL
 
@@ -1325,7 +1593,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 |-----------|------|----------|-------------|-------------|
 | result_id | UUID | Yes | Unique identifier | Primary key |
 | request_id | UUID | Yes | Link to processing request | Foreign key |
-| result_type | Enum | Yes | Type of result | ['classification', 'transcript', 'translation', 'search_results'] |
+| result_type | Enum | Yes | Type of result | ['classification', 'transcript', 'translation', 'search_results', 'speaker_profile'] |
 | result_data | JSON | Yes | Structured result | Schema per result_type |
 | confidence_score | Decimal(3,2) | Yes | AI confidence | 0.00 - 1.00 |
 | human_reviewed | Boolean | Yes | Whether human reviewed | |
@@ -1365,6 +1633,29 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ---
 
+#### Entity: Speaker Profile
+
+**Description**: Voice profile for speaker recognition (optional capability).
+
+**Attributes**:
+| Attribute | Type | Required | Description | Constraints |
+|-----------|------|----------|-------------|-------------|
+| profile_id | UUID | Yes | Unique identifier | Primary key |
+| person_id | UUID | Yes | Reference to person record | Foreign key |
+| profile_type | Enum | Yes | Recognition type | ['identification', 'verification'] |
+| enrollment_status | Enum | Yes | Enrollment state | ['pending', 'enrolled', 'expired'] |
+| created_at | Timestamp | Yes | Profile creation | UTC |
+| expires_at | Timestamp | Yes | Profile expiry | UTC |
+| consent_reference | UUID | Yes | Link to consent record | |
+
+**Data Classification**: CONFIDENTIAL (biometric data)
+
+**Data Retention**: 1 year from last use, then deleted
+
+**Note**: Speaker profiles are biometric data subject to enhanced protection under UK GDPR.
+
+---
+
 ### Data Quality Requirements
 
 **Data Accuracy**: AI classification accuracy target 90% (measured via human review feedback)
@@ -1400,13 +1691,15 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 **TC-1**: Must integrate with existing SCTS case management and document systems via their published APIs.
 
-**TC-2**: Must deploy within approved SCTS cloud environment (currently Microsoft Azure).
+**TC-2**: Must deploy within approved SCTS cloud environment (Microsoft Azure UK regions).
 
 **TC-3**: Must use SCTS identity system (Active Directory) for authentication.
 
-**TC-4**: All AI processing must occur in UK data centres only.
+**TC-4**: All AI processing must occur in UK data centres only (Azure UK South, UK West).
 
 **TC-5**: AI models must be updateable without core system redevelopment.
+
+**TC-6**: Must use Azure AI Services as primary AI platform (per strategic selection).
 
 ---
 
@@ -1426,7 +1719,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ### Assumptions
 
-**A-1**: Cloud AI services meeting UK data residency requirements are available.
+**A-1**: Azure AI services meeting UK data residency requirements are available and performant.
 
 **A-2**: Existing case management system APIs provide necessary document access.
 
@@ -1435,6 +1728,8 @@ The programme must balance innovation ambition with the conservative risk appeti
 **A-4**: Scottish Government AI Strategy guidance will remain stable during implementation.
 
 **A-5**: Network bandwidth sufficient for real-time audio/video processing in courtrooms.
+
+**A-6**: Azure AI Speech and Translator support required languages with acceptable accuracy.
 
 **Validation Plan**: Assumptions validated during PoC phase before production commitment.
 
@@ -1447,7 +1742,7 @@ The programme must balance innovation ambition with the conservative risk appeti
 ### Conflict C-1: Innovation Speed vs Legal Review Thoroughness
 
 **Conflicting Requirements**:
-- **Requirement A**: FR-001-015 - Deploy AI capabilities rapidly to demonstrate value
+- **Requirement A**: FR-001-017 - Deploy AI capabilities rapidly to demonstrate value
 - **Requirement B**: NFR-C-001-004 - Complete thorough compliance and legal review
 
 **Stakeholders Involved**:
@@ -1541,6 +1836,35 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 ---
 
+### Conflict C-4: Best-of-Breed vs Platform Consistency
+
+**Conflicting Requirements**:
+- **Requirement A**: BR-008 - Evaluate diverse AI technologies including open-source
+- **Requirement B**: TC-6 - Use Azure AI Services as primary platform
+
+**Stakeholders Involved**:
+- **AI Architect (SD-4)**: Wants flexibility to select best technology per use case
+- **Enterprise Architect**: Prefers platform standardisation for supportability
+
+**Nature of Conflict**: Best-of-breed approach could fragment the technology estate; platform lock-in limits options.
+
+**Resolution Strategy**: COMPROMISE
+
+**Decision**: Azure AI Services as primary platform with documented exception process for cases where Azure capability is insufficient. All exceptions require architecture review board approval.
+
+**Rationale**: Azure provides UK data residency, enterprise support, and integration with existing SCTS Microsoft estate. Exception process preserves flexibility for genuine gaps.
+
+**Impact on Requirements**:
+- TC-6: Added - Azure as primary platform
+- FR-016: Technology evaluation framework includes exception criteria
+- Added: Architecture review board as decision authority for exceptions
+
+**Stakeholder Management**:
+- AI Architect: Exception process preserved for genuine technical gaps
+- Enterprise Architect: Platform consistency maintained as default
+
+---
+
 ---
 
 ## Success Criteria and KPIs
@@ -1560,11 +1884,24 @@ The programme must balance innovation ambition with the conservative risk appeti
 
 | Metric | Target | Measurement Method |
 |--------|--------|-------------------|
-| AI service availability | 99.5% | Uptime monitoring |
+| AI service availability | 99.5% | Azure Monitor uptime |
 | Document classification accuracy | 90% | Human review feedback |
 | Translation accuracy | 85% (legal terms) | Human interpreter validation |
-| API response time (p95) | < 10 seconds | APM tooling |
+| API response time (p95) | < 10 seconds | Application Insights |
 | Search result relevance | 80% satisfaction | User surveys |
+
+### PoC Success Metrics
+
+| PoC | Metric | Target | Measurement Method |
+|-----|--------|--------|-------------------|
+| Document Intelligence | Classification accuracy | ≥ 90% | Sample document testing |
+| Document Intelligence | Entity extraction accuracy | ≥ 85% | Manual validation |
+| Speech Services | Transcription accuracy | ≥ 90% | Word error rate |
+| Speech Services | Speaker diarisation accuracy | ≥ 85% | Manual validation |
+| Translation | General translation accuracy | ≥ 80% | BLEU score |
+| Translation | Legal terminology accuracy | ≥ 75% | Legal expert review |
+| Cognitive Search | Precision@10 | ≥ 70% | Test query evaluation |
+| Cognitive Search | Query response time | < 2 seconds | Performance testing |
 
 ---
 
@@ -1576,9 +1913,10 @@ The programme must balance innovation ambition with the conservative risk appeti
 |------------|-------------|-------|-------------|--------|-------------------|
 | Senior AI Architect | Hire technical lead for programme | CDiO | 2026-Q1 | In progress | HIGH - delays all delivery |
 | Case Management API | API access for document retrieval | ICT Operations | 2026-Q2 | Not started | HIGH - blocks document processing |
-| Cloud AI Services | UK data residency contracts | Procurement | 2026-Q2 | In progress | HIGH - blocks AI development |
+| Azure AI Services | UK data residency contracts | Procurement | 2026-Q2 | In progress | HIGH - blocks AI development |
 | Legal Review | Compliance approval for speech services | Legal Services | 2026-Q3 | Not started | MEDIUM - delays Phase 2 |
 | DPIA Completion | Data protection approval | DPO | 2026-Q2 | Not started | HIGH - blocks production |
+| Architecture Sign-off | Enterprise/Data/Solution architect approval | CDiO | 2026-Q2 | Not started | MEDIUM - blocks detailed design |
 
 ### Risks
 
@@ -1587,9 +1925,10 @@ The programme must balance innovation ambition with the conservative risk appeti
 | R-1 | AI classification accuracy below target | MEDIUM | HIGH | Phased rollout with human review, feedback loop | AI Architect |
 | R-2 | Staff resistance to AI adoption | MEDIUM | HIGH | Early engagement, training, job security commitment | HR Director |
 | R-3 | Judicial loss of confidence | LOW | CRITICAL | Clear scope boundaries, regular briefings, conservative approach | Chief Executive |
-| R-4 | UK data residency not achievable | LOW | CRITICAL | Validate cloud provider contracts early, alternative providers | Procurement |
+| R-4 | UK data residency not achievable | LOW | CRITICAL | Validate Azure contracts early, alternative providers | Procurement |
 | R-5 | Integration complexity exceeds estimates | MEDIUM | MEDIUM | PoC validation, contingency budget | AI Architect |
 | R-6 | Translation accuracy insufficient | MEDIUM | HIGH | Human interpreter backup, accuracy testing, user consent | AI Architect |
+| R-7 | Azure AI service limitations | MEDIUM | MEDIUM | PoC validation, exception process for alternatives | AI Architect |
 
 ---
 
@@ -1601,10 +1940,12 @@ The programme must balance innovation ambition with the conservative risk appeti
 |-----------|-------------|-------------|--------------|
 | Requirements Approved | Stakeholder sign-off on this document | 2026-Q1 | This document |
 | Senior AI Architect Hired | Technical lead in place | 2026-Q1 | Recruitment |
-| Document Intelligence PoC | Working prototype for classification | 2026-Q2 | Architect, Cloud services |
+| Enterprise AI Strategy | Strategy document approved | 2026-Q1 | Architect |
+| Document Intelligence PoC | Working prototype for classification | 2026-Q2 | Architect, Azure services |
+| Speech Services PoC | Transcription/translation prototype | 2026-Q2 | Architect, Azure services |
+| Cognitive Search PoC | Search prototype with sample corpus | 2026-Q2 | Architect, Azure services |
 | DPIA Approved | Data protection approval | 2026-Q2 | DPO review |
 | Phase 1 Production | Document Intelligence live | 2026-Q3 | PoC success, DPIA |
-| Speech Services PoC | Translation prototype | 2026-Q3 | Phase 1 learnings |
 | Legal Review Complete | Approval for courtroom use | 2026-Q4 | Legal Services |
 | Phase 2 Production | Translation services live | 2027-Q1 | Legal approval |
 | Cognitive Search Live | Search capability deployed | 2027-Q2 | Document indexing |
@@ -1619,6 +1960,9 @@ The programme must balance innovation ambition with the conservative risk appeti
 |----------|------|--------|------|----------|
 | Chief Executive | Business Sponsor | [ ] Approved | | |
 | CDiO | Programme Owner | [ ] Approved | | |
+| Senior AI Technical Architect | Technical Lead | [ ] Approved | | |
+| Enterprise Architect | Architecture Alignment | [ ] Approved | | |
+| Data Architect | Data Strategy | [ ] Approved | | |
 | Legal Services Director | Compliance | [ ] Approved | | |
 | DPO | Privacy | [ ] Approved | | |
 | Lord President (delegate) | Judicial | [ ] Approved | | |
@@ -1646,9 +1990,15 @@ By signing below, stakeholders confirm that requirements are complete, understoo
 | PoC | Proof of Concept |
 | DPIA | Data Protection Impact Assessment |
 | UK GDPR | UK General Data Protection Regulation |
+| Azure AI Document Intelligence | Azure service for document classification and entity extraction |
+| Azure AI Speech | Azure service for speech-to-text, text-to-speech, and speaker recognition |
+| Azure AI Translator | Azure service for text translation |
+| Azure AI Search | Azure service for cognitive search with semantic ranking |
 | Cognitive Search | AI-powered semantic search with natural language understanding |
 | Document Intelligence | AI-powered document classification and entity extraction |
 | Human-in-the-Loop | Requirement for human oversight of AI decisions |
+| Speaker Diarisation | Identifying and separating different speakers in audio |
+| Speaker Recognition | Identifying who is speaking from voice characteristics |
 
 ### Appendix B: Reference Documents
 
@@ -1657,6 +2007,7 @@ By signing below, stakeholders confirm that requirements are complete, understoo
 - Scottish Government AI Strategy
 - Scottish Government Cyber Resilience Framework
 - Source document: Senior AI Technical Architect job specification
+- Azure AI Services documentation
 
 ### Appendix C: Requirements Traceability
 
@@ -1668,18 +2019,32 @@ By signing below, stakeholders confirm that requirements are complete, understoo
 | BR-004 | SD-8, SD-13 | G-5 | O-4 | P12, P13 |
 | BR-005 | SD-9 | - | O-2 | P18 |
 | BR-006 | SD-5, SD-6 | G-6 | O-2 | P19 |
+| BR-007 | SD-3, SD-4 | - | O-5 | P1, P7 |
+| BR-008 | SD-4 | - | O-5 | P6, P7 |
 | FR-001 to FR-003 | SD-5 | G-1 | O-2 | P4, P10 |
 | FR-004 to FR-006 | SD-11 | G-2 | O-1 | P3, P8 |
 | FR-007 to FR-010 | SD-4, SD-12 | G-3 | O-1, O-2 | P6, P16 |
 | FR-011 to FR-012 | SD-1, SD-7 | G-4 | O-3 | P2, P8, P17 |
+| FR-016 to FR-017 | SD-3, SD-4 | - | O-5 | P1, P6, P7 |
 | NFR-SEC-* | SD-8, SD-7 | G-5 | O-4 | P11, P15 |
 | NFR-C-* | SD-8, SD-13 | G-5 | O-4 | P12, P13 |
+
+### Appendix D: Azure AI Services Mapping
+
+| Capability | Azure Service | Key Features |
+|------------|---------------|--------------|
+| Document Classification | Azure AI Document Intelligence | Custom classification, prebuilt models, layout analysis |
+| Entity Extraction | Azure AI Document Intelligence | Custom extraction, key-value pairs, tables |
+| Speech-to-Text | Azure AI Speech | Real-time transcription, batch processing, custom models |
+| Speaker Recognition | Azure AI Speech | Speaker identification, verification, diarisation |
+| Translation | Azure AI Translator | Real-time translation, custom terminology, 90+ languages |
+| Cognitive Search | Azure AI Search | Semantic ranking, vector search, AI enrichment |
 
 ---
 
 **Generated by**: ArcKit `/arckit.requirements` command
-**Generated on**: 2026-01-17 GMT
-**ArcKit Version**: 0.6.0
+**Generated on**: 2026-01-25 GMT
+**ArcKit Version**: 0.11.0
 **Project**: SCTS GenAI Programme (Project 001)
 **AI Model**: Claude Opus 4.5
-**Generation Context**: Based on source document (Senior AI Technical Architect job specification), architecture principles, and stakeholder drivers analysis
+**Generation Context**: Updated based on Senior AI Technical Architect key responsibilities, adding Azure AI Services platform requirements, enterprise AI strategy, PoC specifications, and technology evaluation framework
