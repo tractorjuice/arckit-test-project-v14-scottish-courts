@@ -235,7 +235,7 @@
             letter-spacing: 0.05em;
         }
 
-        /* Main Content - Full Width */
+        /* Main Content - Full Width, Left Aligned */
         .app-content-wrapper {
             flex: 1;
             display: flex;
@@ -245,7 +245,7 @@
 
         .app-content {
             flex: 1;
-            padding: 2rem 3rem;
+            padding: 2rem 2rem 2rem 2.5rem;
             overflow-y: auto;
             min-width: 0;
         }
@@ -254,17 +254,18 @@
             max-width: 100%;
         }
 
-        /* Table of Contents Sidebar */
+        /* Table of Contents Sidebar (Left of Content) */
         .app-toc {
             width: var(--toc-width);
             min-width: var(--toc-width);
             padding: 1.5rem 1rem;
-            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             height: calc(100vh - var(--header-height));
             overflow-y: auto;
             font-size: 0.8125rem;
+            background: var(--background-light);
         }
 
         .app-toc-title {
@@ -288,12 +289,11 @@
 
         .app-toc-list a {
             display: block;
-            padding: 0.25rem 0;
+            padding: 0.25rem 0.75rem 0.25rem 0;
             color: var(--text-muted);
             text-decoration: none;
-            border-left: 2px solid transparent;
-            padding-left: 0.75rem;
-            margin-left: -0.75rem;
+            border-right: 2px solid transparent;
+            margin-right: -1rem;
             transition: color 0.15s, border-color 0.15s;
         }
 
@@ -303,11 +303,11 @@
 
         .app-toc-list a.active {
             color: var(--primary-color);
-            border-left-color: var(--primary-color);
+            border-right-color: var(--primary-color);
         }
 
         .app-toc-list .toc-h3 {
-            padding-left: 1.5rem;
+            padding-left: 0.75rem;
             font-size: 0.75rem;
         }
 
@@ -362,8 +362,8 @@
 
         /* Welcome Screen */
         .app-welcome {
-            text-align: center;
-            padding: 4rem 2rem;
+            text-align: left;
+            padding: 2rem 0;
         }
 
         .app-welcome h1 {
@@ -373,15 +373,14 @@
         .app-welcome p {
             color: var(--text-muted);
             max-width: 600px;
-            margin: 0 auto 2rem;
+            margin: 0 0 2rem 0;
         }
 
         .app-welcome-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
             text-align: left;
         }
 
@@ -407,6 +406,7 @@
             font-size: 0.75rem;
             color: var(--text-muted);
             margin-top: 2rem;
+            text-align: left;
         }
 
         .app-keyboard-hint kbd {
@@ -762,6 +762,14 @@
                 ▶
             </button>
 
+            <!-- Table of Contents (Left Side) -->
+            <aside class="app-toc" id="toc" aria-label="Table of contents">
+                <div class="app-toc-title">On this page</div>
+                <ul class="app-toc-list" id="toc-list">
+                    <!-- Populated by JavaScript -->
+                </ul>
+            </aside>
+
             <!-- Main Content -->
             <main class="app-content" id="main-content">
                 <div class="app-content-inner" id="content">
@@ -794,14 +802,6 @@
                     </div>
                 </div>
             </main>
-
-            <!-- Table of Contents -->
-            <aside class="app-toc" id="toc" aria-label="Table of contents">
-                <div class="app-toc-title">On this page</div>
-                <ul class="app-toc-list" id="toc-list">
-                    <!-- Populated by JavaScript -->
-                </ul>
-            </aside>
         </div>
     </div>
 
