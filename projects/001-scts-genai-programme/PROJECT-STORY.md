@@ -417,8 +417,8 @@ flowchart LR
         INT[6 INT]
     end
 
-    subgraph Research
-        Research[Technology<br/>Research]
+    subgraph ResearchPhase[Research]
+        TechResearch[Technology<br/>Research]
         Decision[BUY Decision<br/>Azure AI]
     end
 
@@ -426,8 +426,8 @@ flowchart LR
     BR --> FR
     FR --> NFR
     FR --> INT
-    FR --> Research
-    Research --> Decision
+    FR --> TechResearch
+    TechResearch --> Decision
 
     style Foundation fill:#fff4e6
     style Requirements fill:#e6f3ff
