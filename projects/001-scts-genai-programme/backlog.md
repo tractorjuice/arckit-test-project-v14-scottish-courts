@@ -1,85 +1,80 @@
 # Product Backlog: SCTS GenAI Programme
 
-## Document Information
+> **Template Status**: Beta | **Version**: 0.11.2 | **Command**: `/arckit.backlog`
+
+## Document Control
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-BACKLOG-v1.0 |
-| **Project** | SCTS GenAI Programme (Project 001) |
+| **Document ID** | ARC-001-BLOG-v1.1 |
 | **Document Type** | Product Backlog |
+| **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL |
-| **Version** | 1.0 |
 | **Status** | DRAFT |
-| **Date** | 2026-01-17 |
+| **Version** | 1.1 |
+| **Created Date** | 2026-01-17 |
+| **Last Modified** | 2026-01-27 |
+| **Review Cycle** | Monthly |
+| **Next Review Date** | 2026-02-27 |
 | **Owner** | Chief Digital Information Officer, SCTS |
+| **Reviewed By** | PENDING |
+| **Approved By** | PENDING |
+| **Distribution** | CDi Function, Development Team, Scrum Masters |
 
-**Generated**: 2026-01-17
-**Team Velocity**: 20 points/sprint
-**Sprint Length**: 2 weeks
-**Total Sprints Planned**: 8
+## Revision History
+
+| Version | Date | Author | Changes | Approved By | Approval Date |
+|---------|------|--------|---------|-------------|---------------|
+| 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.backlog` command | PENDING | PENDING |
+| 1.1 | 2026-01-27 | ArcKit AI | Updated to template v0.11.2 format | PENDING | PENDING |
 
 ---
 
 ## Executive Summary
 
-### Backlog Overview
-
-| Metric | Value |
-|--------|-------|
-| **Total Stories** | 45 |
-| **Total Epics** | 6 |
-| **Total Technical Tasks** | 28 |
-| **Total Story Points** | 298 |
-| **Estimated Duration** | 15 sprints (30 weeks) |
+**Total Stories**: 45
+**Total Epics**: 6
+**Total Story Points**: 298
+**Estimated Duration**: 15 sprints (30 weeks)
 
 ### Priority Breakdown
+- Must Have: 25 stories (172 points) - 58%
+- Should Have: 14 stories (89 points) - 30%
+- Could Have: 6 stories (37 points) - 12%
 
-| Priority | Stories | Points | Percentage |
-|----------|---------|--------|------------|
-| Must Have | 25 | 172 | 58% |
-| Should Have | 14 | 89 | 30% |
-| Could Have | 6 | 37 | 12% |
-
-### Sprint Allocation (Sprints 1-8)
-
-| Sprint | Theme | Points | Stories |
-|--------|-------|--------|---------|
-| 1 | Platform Foundation | 20 | 5 |
-| 2 | Document Intelligence Core | 20 | 5 |
-| 3 | Document Intelligence UI | 20 | 5 |
-| 4 | Speech Services | 20 | 5 |
-| 5 | Translation Services | 20 | 5 |
-| 6 | Cognitive Search | 20 | 5 |
-| 7 | Integration & Governance | 20 | 5 |
-| 8 | Hardening & UAT Prep | 20 | 5 |
-| **Total Sprints 1-8** | | **160** | **40** |
-| **Remaining** | Future sprints | 138 | 33 |
+### Epic Breakdown
+1. Document Intelligence (58 points, 10 stories)
+2. Real-Time Translation (53 points, 10 stories)
+3. Cognitive Search (47 points, 9 stories)
+4. Security & Compliance (52 points, 12 stories)
+5. Platform Infrastructure (48 points, 11 stories)
+6. Staff Training & Adoption (40 points, 10 stories)
 
 ---
 
 ## How to Use This Backlog
 
-### For Product Owners
+### For Product Owners:
 1. Review epic priorities - adjust based on business needs
 2. Refine story acceptance criteria before sprint planning
 3. Validate user stories with court staff
 4. Adjust sprint sequence based on stakeholder priorities
 
-### For Development Teams
+### For Development Teams:
 1. Review stories in upcoming sprint (Sprint Planning)
 2. Break down stories into tasks if needed
 3. Estimate effort using team velocity
 4. Identify technical blockers early
 5. Update story status as work progresses
 
-### For Scrum Masters
+### For Scrum Masters:
 1. Track velocity after each sprint
 2. Adjust future sprint loading based on actual velocity
 3. Monitor dependency chains
 4. Escalate blockers early
 5. Facilitate backlog refinement sessions
 
-### Backlog Refinement Schedule
+### Backlog Refinement Schedule:
 - **Weekly**: Review and refine next 2 sprints
 - **Bi-weekly**: Groom backlog beyond 2 sprints
 - **Monthly**: Reassess epic priorities
@@ -109,20 +104,16 @@ Deploy AI-powered document classification and entity extraction to reduce manual
 - Full audit trail for GDPR compliance
 
 **Stories in this Epic**:
-| Story ID | Title | Points | Sprint |
-|----------|-------|--------|--------|
-| STORY-001 | Document upload and validation | 5 | 2 |
-| STORY-002 | AI document classification | 8 | 2 |
-| STORY-003 | Human review workflow | 5 | 3 |
-| STORY-004 | AI output labelling | 3 | 3 |
-| STORY-005 | Audit trail for AI operations | 5 | 3 |
-| STORY-006 | Quality feedback mechanism | 3 | 7 |
-| STORY-007 | Manual fallback mode | 5 | 7 |
-| TASK-INT-001 | Case Management integration | 8 | 2 |
-| TASK-INT-002 | Document Management integration | 8 | 2 |
-| TASK-NFR-001 | Document processing response time | 5 | 3 |
-
-**Total**: 58 points across 10 items
+1. Story-001: Document upload and validation (5 points) - Sprint 2
+2. Story-002: AI document classification (8 points) - Sprint 2
+3. Story-003: Human review workflow (5 points) - Sprint 3
+4. Story-004: AI output labelling (3 points) - Sprint 3
+5. Story-005: Audit trail for AI operations (5 points) - Sprint 3
+6. Story-006: Quality feedback mechanism (3 points) - Sprint 7
+7. Story-007: Manual fallback mode (5 points) - Sprint 7
+8. Task-INT-001: Case Management integration (8 points) - Sprint 2
+9. Task-INT-002: Document Management integration (8 points) - Sprint 2
+10. Task-NFR-001: Document processing response time (5 points) - Sprint 3
 
 ---
 
@@ -147,20 +138,16 @@ Enable multilingual court access through AI-assisted transcription and real-time
 - Human interpreter escalation available
 
 **Stories in this Epic**:
-| Story ID | Title | Points | Sprint |
-|----------|-------|--------|--------|
-| STORY-008 | Speech-to-text transcription | 8 | 4 |
-| STORY-009 | Speaker diarisation | 5 | 4 |
-| STORY-010 | Real-time translation | 8 | 5 |
-| STORY-011 | Legal terminology glossary | 5 | 5 |
-| STORY-012 | Language configuration | 3 | 5 |
-| STORY-013 | Consent management | 5 | 5 |
-| STORY-014 | Human interpreter escalation | 5 | 7 |
-| TASK-INT-004 | Court Scheduling integration | 5 | 4 |
-| TASK-INT-005 | Interpreter Booking integration | 5 | 7 |
-| TASK-NFR-002 | Translation latency optimisation | 4 | 5 |
-
-**Total**: 53 points across 10 items
+1. Story-008: Speech-to-text transcription (8 points) - Sprint 4
+2. Story-009: Speaker diarisation (5 points) - Sprint 4
+3. Story-010: Real-time translation (8 points) - Sprint 5
+4. Story-011: Legal terminology glossary (5 points) - Sprint 5
+5. Story-012: Language configuration (3 points) - Sprint 5
+6. Story-013: Consent management (5 points) - Sprint 5
+7. Story-014: Human interpreter escalation (5 points) - Sprint 7
+8. Task-INT-004: Court Scheduling integration (5 points) - Sprint 4
+9. Task-INT-005: Interpreter Booking integration (5 points) - Sprint 7
+10. Task-NFR-002: Translation latency optimisation (4 points) - Sprint 5
 
 ---
 
@@ -184,19 +171,15 @@ Implement semantic search across court documentation enabling natural language q
 - Document similarity analysis available
 
 **Stories in this Epic**:
-| Story ID | Title | Points | Sprint |
-|----------|-------|--------|--------|
-| STORY-015 | Document indexing | 5 | 6 |
-| STORY-016 | Semantic search | 8 | 6 |
-| STORY-017 | Search filters and facets | 5 | 6 |
-| STORY-018 | Case law citation detection | 5 | 6 |
-| STORY-019 | Document similarity analysis | 8 | 9 |
-| STORY-020 | Search results ranking | 5 | 9 |
-| STORY-021 | Search analytics | 3 | 9 |
-| TASK-NFR-003 | Search response time | 5 | 6 |
-| TASK-NFR-004 | Data volume scaling | 3 | 6 |
-
-**Total**: 47 points across 9 items
+1. Story-015: Document indexing (5 points) - Sprint 6
+2. Story-016: Semantic search (8 points) - Sprint 6
+3. Story-017: Search filters and facets (5 points) - Sprint 6
+4. Story-018: Case law citation detection (5 points) - Sprint 6
+5. Story-019: Document similarity analysis (8 points) - Sprint 9
+6. Story-020: Search results ranking (5 points) - Sprint 9
+7. Story-021: Search analytics (3 points) - Sprint 9
+8. Task-NFR-003: Search response time (5 points) - Sprint 6
+9. Task-NFR-004: Data volume scaling (3 points) - Sprint 6
 
 ---
 
@@ -220,23 +203,19 @@ Implement zero-trust security architecture, UK GDPR compliance, court record pro
 - Audit logging for 7 years
 - Penetration testing passed
 
-**Technical Tasks in this Epic**:
-| Task ID | Title | Points | Sprint |
-|---------|-------|--------|--------|
-| TASK-NFR-SEC-001 | Azure AD SSO implementation | 5 | 1 |
-| TASK-NFR-SEC-002 | RBAC authorization | 5 | 1 |
-| TASK-NFR-SEC-003 | Data encryption (rest + transit) | 5 | 1 |
-| TASK-NFR-SEC-004 | UK data residency enforcement | 3 | 1 |
-| TASK-NFR-SEC-005 | Vulnerability management | 5 | 8 |
-| TASK-NFR-SEC-006 | Court record protection | 5 | 2 |
-| TASK-NFR-C-001 | GDPR consent tracking | 5 | 5 |
-| TASK-NFR-C-002 | Immutable audit logging | 5 | 3 |
-| TASK-NFR-C-003 | Scottish Gov standards compliance | 3 | 8 |
-| TASK-NFR-C-004 | AI transparency implementation | 3 | 7 |
-| TASK-NFR-U-001 | WCAG 2.2 AA accessibility | 5 | 8 |
-| TASK-NFR-U-002 | Multilingual interface | 3 | 5 |
-
-**Total**: 52 points across 12 items
+**Stories in this Epic**:
+1. Task-NFR-SEC-001: Azure AD SSO implementation (5 points) - Sprint 1
+2. Task-NFR-SEC-002: RBAC authorization (5 points) - Sprint 1
+3. Task-NFR-SEC-003: Data encryption (rest + transit) (5 points) - Sprint 1
+4. Task-NFR-SEC-004: UK data residency enforcement (3 points) - Sprint 1
+5. Task-NFR-SEC-005: Vulnerability management (5 points) - Sprint 8
+6. Task-NFR-SEC-006: Court record protection (5 points) - Sprint 2
+7. Task-NFR-C-001: GDPR consent tracking (5 points) - Sprint 5
+8. Task-NFR-C-002: Immutable audit logging (5 points) - Sprint 3
+9. Task-NFR-C-003: Scottish Gov standards compliance (3 points) - Sprint 8
+10. Task-NFR-C-004: AI transparency implementation (3 points) - Sprint 7
+11. Task-NFR-U-001: WCAG 2.2 AA accessibility (5 points) - Sprint 8
+12. Task-NFR-U-002: Multilingual interface (3 points) - Sprint 5
 
 ---
 
@@ -259,22 +238,18 @@ Establish Azure infrastructure including AKS cluster, API Management, databases,
 - Monitoring dashboards live
 - DR environment ready
 
-**Technical Tasks in this Epic**:
-| Task ID | Title | Points | Sprint |
-|---------|-------|--------|--------|
-| TASK-INFRA-001 | AKS cluster setup | 8 | 1 |
-| TASK-INFRA-002 | Azure API Management | 5 | 1 |
-| TASK-INFRA-003 | Azure SQL Database | 3 | 1 |
-| TASK-INFRA-004 | Azure Blob Storage | 2 | 1 |
-| TASK-INFRA-005 | Azure Redis Cache | 3 | 1 |
-| TASK-INFRA-006 | Azure AI Search provisioning | 3 | 6 |
-| TASK-INFRA-007 | CI/CD pipeline (Azure DevOps) | 5 | 1 |
-| TASK-INFRA-008 | Monitoring (Azure Monitor) | 5 | 1 |
-| TASK-INFRA-009 | Disaster recovery setup | 5 | 8 |
-| TASK-INT-003 | Identity Provider integration | 5 | 1 |
-| TASK-INT-006 | Azure AI Services integration | 4 | 2 |
-
-**Total**: 48 points across 11 items
+**Stories in this Epic**:
+1. Task-INFRA-001: AKS cluster setup (8 points) - Sprint 1
+2. Task-INFRA-002: Azure API Management (5 points) - Sprint 1
+3. Task-INFRA-003: Azure SQL Database (3 points) - Sprint 1
+4. Task-INFRA-004: Azure Blob Storage (2 points) - Sprint 1
+5. Task-INFRA-005: Azure Redis Cache (3 points) - Sprint 1
+6. Task-INFRA-006: Azure AI Search provisioning (3 points) - Sprint 6
+7. Task-INFRA-007: CI/CD pipeline (Azure DevOps) (5 points) - Sprint 1
+8. Task-INFRA-008: Monitoring (Azure Monitor) (5 points) - Sprint 1
+9. Task-INFRA-009: Disaster recovery setup (5 points) - Sprint 8
+10. Task-INT-003: Identity Provider integration (5 points) - Sprint 1
+11. Task-INT-006: Azure AI Services integration (4 points) - Sprint 2
 
 ---
 
@@ -298,30 +273,22 @@ Training materials, user documentation, and operational handover for court staff
 - Support model established
 
 **Stories in this Epic**:
-| Story ID | Title | Points | Sprint |
-|----------|-------|--------|--------|
-| STORY-022 | User training portal | 5 | 9 |
-| STORY-023 | In-app guidance tooltips | 3 | 9 |
-| STORY-024 | Video tutorials | 5 | 10 |
-| STORY-025 | Admin documentation | 3 | 10 |
-| STORY-026 | Operational runbooks | 5 | 8 |
-| STORY-027 | Support knowledge base | 3 | 10 |
-| TASK-NFR-M-001 | Observability dashboards | 5 | 8 |
-| TASK-NFR-M-002 | Model governance procedures | 5 | 8 |
-| TASK-NFR-M-003 | API documentation | 3 | 7 |
-| TASK-OPS-001 | Hypercare support plan | 3 | 8 |
-
-**Total**: 40 points across 10 items
+1. Story-022: User training portal (5 points) - Sprint 9
+2. Story-023: In-app guidance tooltips (3 points) - Sprint 9
+3. Story-024: Video tutorials (5 points) - Sprint 10
+4. Story-025: Admin documentation (3 points) - Sprint 10
+5. Story-026: Operational runbooks (5 points) - Sprint 8
+6. Story-027: Support knowledge base (3 points) - Sprint 10
+7. Task-NFR-M-001: Observability dashboards (5 points) - Sprint 8
+8. Task-NFR-M-002: Model governance procedures (5 points) - Sprint 8
+9. Task-NFR-M-003: API documentation (3 points) - Sprint 7
+10. Task-OPS-001: Hypercare support plan (3 points) - Sprint 8
 
 ---
 
-## Prioritised Backlog
+## Prioritized Backlog
 
-### User Stories (GDS Format)
-
----
-
-#### STORY-001: Document upload and validation
+### Story-001: Document upload and validation
 
 **As a** Court Clerk
 **I want** to upload court documents in multiple formats
@@ -336,9 +303,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when virus scan is performed before processing begins
 
 **Technical Tasks**:
-- TASK-001-A: Implement file upload API endpoint (2 points)
-- TASK-001-B: Configure Azure Blob Storage with encryption (1 point)
-- TASK-001-C: Implement virus scanning integration (2 points)
+- Task-001-A: Implement file upload API endpoint (2 points)
+- Task-001-B: Configure Azure Blob Storage with encryption (1 point)
+- Task-001-C: Implement virus scanning integration (2 points)
 
 **Requirements Traceability**: FR-001, NFR-SEC-003
 **Component**: Document Service
@@ -349,7 +316,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-002: AI document classification
+### Story-002: AI document classification
 
 **As a** Court Clerk
 **I want** documents to be automatically classified by AI
@@ -363,9 +330,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when low-quality scans show quality warning with confidence impact
 
 **Technical Tasks**:
-- TASK-002-A: Integrate Azure Document Intelligence API (3 points)
-- TASK-002-B: Train custom classification model for Scottish documents (3 points)
-- TASK-002-C: Implement entity extraction pipeline (2 points)
+- Task-002-A: Integrate Azure Document Intelligence API (3 points)
+- Task-002-B: Train custom classification model for Scottish documents (3 points)
+- Task-002-C: Implement entity extraction pipeline (2 points)
 
 **Requirements Traceability**: FR-002, BR-001
 **Component**: Document Service
@@ -376,7 +343,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-003: Human review workflow
+### Story-003: Human review workflow
 
 **As a** Court Clerk
 **I want** to review and approve AI classifications
@@ -390,9 +357,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when both original AI classification and my decision are logged
 
 **Technical Tasks**:
-- TASK-003-A: Build review queue UI component (2 points)
-- TASK-003-B: Implement classification override API (2 points)
-- TASK-003-C: Create confidence threshold configuration (1 point)
+- Task-003-A: Build review queue UI component (2 points)
+- Task-003-B: Implement classification override API (2 points)
+- Task-003-C: Create confidence threshold configuration (1 point)
 
 **Requirements Traceability**: FR-003, BR-003, P-2 (Human-in-the-Loop)
 **Component**: Web Application, Document Service
@@ -403,7 +370,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-004: AI output labelling
+### Story-004: AI output labelling
 
 **As a** Legal Professional
 **I want** AI-generated outputs to be clearly labelled
@@ -417,8 +384,8 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when labels are accessible (screen reader compatible)
 
 **Technical Tasks**:
-- TASK-004-A: Create AI label component library (2 points)
-- TASK-004-B: Implement labelling in all AI output views (1 point)
+- Task-004-A: Create AI label component library (2 points)
+- Task-004-B: Implement labelling in all AI output views (1 point)
 
 **Requirements Traceability**: FR-011, BR-003, P-8 (AI Transparency)
 **Component**: Web Application
@@ -429,7 +396,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-005: Audit trail for AI operations
+### Story-005: Audit trail for AI operations
 
 **As an** AI Administrator
 **I want** comprehensive audit logs for all AI operations
@@ -443,9 +410,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when authorised users can query audit history by date, user, or operation type
 
 **Technical Tasks**:
-- TASK-005-A: Design audit log schema (1 point)
-- TASK-005-B: Implement audit logging service (2 points)
-- TASK-005-C: Build audit query API and UI (2 points)
+- Task-005-A: Design audit log schema (1 point)
+- Task-005-B: Implement audit logging service (2 points)
+- Task-005-C: Build audit query API and UI (2 points)
 
 **Requirements Traceability**: FR-012, NFR-C-002, BR-004
 **Component**: Audit Service
@@ -456,7 +423,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-006: Quality feedback mechanism
+### Story-006: Quality feedback mechanism
 
 **As a** Court Clerk
 **I want** to provide feedback on AI output quality
@@ -469,8 +436,8 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when consistent error patterns trigger alerts for model review
 
 **Technical Tasks**:
-- TASK-006-A: Create feedback component (1 point)
-- TASK-006-B: Implement feedback analytics (2 points)
+- Task-006-A: Create feedback component (1 point)
+- Task-006-B: Implement feedback analytics (2 points)
 
 **Requirements Traceability**: FR-013, P-10 (Data Quality)
 **Component**: Web Application, Audit Service
@@ -481,7 +448,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-007: Manual fallback mode
+### Story-007: Manual fallback mode
 
 **As a** Court Clerk
 **I want** to continue working when AI services are unavailable
@@ -495,9 +462,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when fallback events are logged for operational review
 
 **Technical Tasks**:
-- TASK-007-A: Implement circuit breaker pattern (2 points)
-- TASK-007-B: Create fallback UI components (2 points)
-- TASK-007-C: Configure health checks and alerts (1 point)
+- Task-007-A: Implement circuit breaker pattern (2 points)
+- Task-007-B: Create fallback UI components (2 points)
+- Task-007-C: Configure health checks and alerts (1 point)
 
 **Requirements Traceability**: FR-014, BR-003, P-5 (Resilience)
 **Component**: All Services
@@ -508,7 +475,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-008: Speech-to-text transcription
+### Story-008: Speech-to-text transcription
 
 **As a** Court Clerk
 **I want** courtroom audio transcribed to text in real-time
@@ -522,9 +489,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when transcription can be paused and resumed during proceedings
 
 **Technical Tasks**:
-- TASK-008-A: Integrate Azure Speech Services (3 points)
-- TASK-008-B: Implement WebSocket audio streaming (3 points)
-- TASK-008-C: Create transcription UI with real-time display (2 points)
+- Task-008-A: Integrate Azure Speech Services (3 points)
+- Task-008-B: Implement WebSocket audio streaming (3 points)
+- Task-008-C: Create transcription UI with real-time display (2 points)
 
 **Requirements Traceability**: FR-004, BR-002
 **Component**: Speech Service
@@ -535,7 +502,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-009: Speaker diarisation
+### Story-009: Speaker diarisation
 
 **As a** Court Clerk
 **I want** different speakers identified in the transcript
@@ -548,9 +515,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when speaker labels persist across the session
 
 **Technical Tasks**:
-- TASK-009-A: Enable Azure Speech diarisation feature (2 points)
-- TASK-009-B: Create speaker labelling interface (2 points)
-- TASK-009-C: Store speaker mappings per session (1 point)
+- Task-009-A: Enable Azure Speech diarisation feature (2 points)
+- Task-009-B: Create speaker labelling interface (2 points)
+- Task-009-C: Store speaker mappings per session (1 point)
 
 **Requirements Traceability**: FR-004
 **Component**: Speech Service
@@ -561,7 +528,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-010: Real-time translation
+### Story-010: Real-time translation
 
 **As a** Court User (non-English speaker)
 **I want** court proceedings translated in real-time
@@ -575,9 +542,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when translation quality meets 85% accuracy for legal terms
 
 **Technical Tasks**:
-- TASK-010-A: Integrate Azure Translator API (3 points)
-- TASK-010-B: Implement legal glossary custom training (3 points)
-- TASK-010-C: Create dual-language display interface (2 points)
+- Task-010-A: Integrate Azure Translator API (3 points)
+- Task-010-B: Implement legal glossary custom training (3 points)
+- Task-010-C: Create dual-language display interface (2 points)
 
 **Requirements Traceability**: FR-005, BR-002
 **Component**: Speech Service
@@ -588,7 +555,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-011: Legal terminology glossary
+### Story-011: Legal terminology glossary
 
 **As an** AI Administrator
 **I want** to manage legal terminology translations
@@ -602,9 +569,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when glossary can be exported/imported for backup
 
 **Technical Tasks**:
-- TASK-011-A: Create glossary management API (2 points)
-- TASK-011-B: Build glossary admin interface (2 points)
-- TASK-011-C: Configure Azure Translator custom dictionary (1 point)
+- Task-011-A: Create glossary management API (2 points)
+- Task-011-B: Build glossary admin interface (2 points)
+- Task-011-C: Configure Azure Translator custom dictionary (1 point)
 
 **Requirements Traceability**: FR-005
 **Component**: Speech Service
@@ -615,7 +582,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-012: Language configuration
+### Story-012: Language configuration
 
 **As an** AI Administrator
 **I want** to configure supported languages
@@ -628,8 +595,8 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when language demand data generates prioritisation recommendations
 
 **Technical Tasks**:
-- TASK-012-A: Create language configuration service (2 points)
-- TASK-012-B: Build language metrics dashboard (1 point)
+- Task-012-A: Create language configuration service (2 points)
+- Task-012-B: Build language metrics dashboard (1 point)
 
 **Requirements Traceability**: FR-006
 **Component**: Speech Service
@@ -640,7 +607,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-013: Consent management for translation
+### Story-013: Consent management for translation
 
 **As a** Court User
 **I want** to consent to AI translation before proceedings
@@ -654,9 +621,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when consent records are retained for 7 years (GDPR)
 
 **Technical Tasks**:
-- TASK-013-A: Create consent capture workflow (2 points)
-- TASK-013-B: Build consent management API (2 points)
-- TASK-013-C: Implement consent status display (1 point)
+- Task-013-A: Create consent capture workflow (2 points)
+- Task-013-B: Build consent management API (2 points)
+- Task-013-C: Implement consent status display (1 point)
 
 **Requirements Traceability**: FR-015, BR-004, NFR-C-001
 **Component**: Speech Service, Web Application
@@ -667,7 +634,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-014: Human interpreter escalation
+### Story-014: Human interpreter escalation
 
 **As a** Court Clerk
 **I want** to escalate to a human interpreter when AI translation is insufficient
@@ -681,9 +648,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when AI can resume if human interpreter departs
 
 **Technical Tasks**:
-- TASK-014-A: Create escalation trigger API (2 points)
-- TASK-014-B: Integrate with interpreter booking system (2 points)
-- TASK-014-C: Build handover UI and logging (1 point)
+- Task-014-A: Create escalation trigger API (2 points)
+- Task-014-B: Integrate with interpreter booking system (2 points)
+- Task-014-C: Build handover UI and logging (1 point)
 
 **Requirements Traceability**: FR-015, BC-2
 **Component**: Speech Service
@@ -694,7 +661,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-015: Document indexing
+### Story-015: Document indexing
 
 **As an** AI Administrator
 **I want** documents indexed for search automatically
@@ -708,9 +675,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when index statistics show document count and freshness
 
 **Technical Tasks**:
-- TASK-015-A: Configure Azure AI Search indexer (2 points)
-- TASK-015-B: Create incremental indexing pipeline (2 points)
-- TASK-015-C: Implement security filtering (1 point)
+- Task-015-A: Configure Azure AI Search indexer (2 points)
+- Task-015-B: Create incremental indexing pipeline (2 points)
+- Task-015-C: Implement security filtering (1 point)
 
 **Requirements Traceability**: FR-008, INT-002
 **Component**: Search Service
@@ -721,7 +688,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-016: Semantic search
+### Story-016: Semantic search
 
 **As a** Legal Professional
 **I want** to search court documents using natural language
@@ -735,9 +702,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when search results include highlighted matching snippets
 
 **Technical Tasks**:
-- TASK-016-A: Implement Azure AI Search semantic configuration (3 points)
-- TASK-016-B: Create search API with query parsing (3 points)
-- TASK-016-C: Build search results UI with highlighting (2 points)
+- Task-016-A: Implement Azure AI Search semantic configuration (3 points)
+- Task-016-B: Create search API with query parsing (3 points)
+- Task-016-C: Build search results UI with highlighting (2 points)
 
 **Requirements Traceability**: FR-007, BR-001
 **Component**: Search Service, Web Application
@@ -748,7 +715,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-017: Search filters and facets
+### Story-017: Search filters and facets
 
 **As a** Legal Professional
 **I want** to filter search results by case attributes
@@ -762,9 +729,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when facet counts update dynamically as filters applied
 
 **Technical Tasks**:
-- TASK-017-A: Configure search facets (2 points)
-- TASK-017-B: Build filter UI components (2 points)
-- TASK-017-C: Implement facet count aggregation (1 point)
+- Task-017-A: Configure search facets (2 points)
+- Task-017-B: Build filter UI components (2 points)
+- Task-017-C: Implement facet count aggregation (1 point)
 
 **Requirements Traceability**: FR-007
 **Component**: Search Service, Web Application
@@ -775,7 +742,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-018: Case law citation detection
+### Story-018: Case law citation detection
 
 **As a** Legal Professional
 **I want** case citations identified and linked in documents
@@ -788,9 +755,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when documents list all detected citations in metadata panel
 
 **Technical Tasks**:
-- TASK-018-A: Implement citation regex patterns (2 points)
-- TASK-018-B: Create citation link resolution service (2 points)
-- TASK-018-C: Build citation UI components (1 point)
+- Task-018-A: Implement citation regex patterns (2 points)
+- Task-018-B: Create citation link resolution service (2 points)
+- Task-018-C: Build citation UI components (1 point)
 
 **Requirements Traceability**: FR-009
 **Component**: Search Service, Web Application
@@ -801,7 +768,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-019: Document similarity analysis
+### Story-019: Document similarity analysis
 
 **As a** Legal Professional
 **I want** to find documents similar to one I'm viewing
@@ -814,9 +781,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when cross-case-type similarities are identified where relevant
 
 **Technical Tasks**:
-- TASK-019-A: Implement vector similarity search (4 points)
-- TASK-019-B: Create similarity explanation logic (2 points)
-- TASK-019-C: Build similar documents UI panel (2 points)
+- Task-019-A: Implement vector similarity search (4 points)
+- Task-019-B: Create similarity explanation logic (2 points)
+- Task-019-C: Build similar documents UI panel (2 points)
 
 **Requirements Traceability**: FR-010
 **Component**: Search Service
@@ -827,7 +794,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-020: Search results ranking
+### Story-020: Search results ranking
 
 **As a** Legal Professional
 **I want** search results ranked by relevance
@@ -840,9 +807,9 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when ranking can be tuned per search type
 
 **Technical Tasks**:
-- TASK-020-A: Configure semantic ranking profiles (2 points)
-- TASK-020-B: Implement relevance explanation (2 points)
-- TASK-020-C: Create ranking configuration admin (1 point)
+- Task-020-A: Configure semantic ranking profiles (2 points)
+- Task-020-B: Implement relevance explanation (2 points)
+- Task-020-C: Create ranking configuration admin (1 point)
 
 **Requirements Traceability**: FR-007
 **Component**: Search Service
@@ -853,7 +820,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-021: Search analytics
+### Story-021: Search analytics
 
 **As an** AI Administrator
 **I want** to see how users are searching
@@ -866,8 +833,8 @@ Training materials, user documentation, and operational handover for court staff
 - It's done when analytics dashboard shows search trends
 
 **Technical Tasks**:
-- TASK-021-A: Implement search logging (1 point)
-- TASK-021-B: Create analytics dashboard (2 points)
+- Task-021-A: Implement search logging (1 point)
+- Task-021-B: Create analytics dashboard (2 points)
 
 **Requirements Traceability**: FR-007
 **Component**: Search Service
@@ -878,7 +845,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-022: User training portal
+### Story-022: User training portal
 
 **As a** Court Clerk
 **I want** access to training materials for AI tools
@@ -899,7 +866,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-023: In-app guidance tooltips
+### Story-023: In-app guidance tooltips
 
 **As a** Court Clerk
 **I want** contextual help when using AI features
@@ -920,7 +887,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-024: Video tutorials
+### Story-024: Video tutorials
 
 **As a** Court Clerk
 **I want** video tutorials for complex workflows
@@ -941,7 +908,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-025: Admin documentation
+### Story-025: Admin documentation
 
 **As an** AI Administrator
 **I want** comprehensive admin documentation
@@ -962,7 +929,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-026: Operational runbooks
+### Story-026: Operational runbooks
 
 **As an** ICT Operations Manager
 **I want** runbooks for operational procedures
@@ -984,7 +951,7 @@ Training materials, user documentation, and operational handover for court staff
 
 ---
 
-#### STORY-027: Support knowledge base
+### Story-027: Support knowledge base
 
 **As a** Support Agent
 **I want** a knowledge base for user issues
@@ -1007,12 +974,12 @@ Training materials, user documentation, and operational handover for court staff
 
 ## Sprint Plan
 
-### Sprint 1: Platform Foundation (Weeks 1-2)
+### Sprint 1: Foundation (Weeks 1-2)
 
 **Velocity**: 20 story points
 **Theme**: Technical foundation and security
 
-#### Must Have Items (20 points):
+#### Must Have Stories (20 points):
 
 | ID | Title | Type | Points |
 |----|-------|------|--------|
@@ -1027,20 +994,34 @@ Training materials, user documentation, and operational handover for court staff
 - TASK-NFR-SEC-002: RBAC authorization (5 points - starts week 1)
 - TASK-NFR-SEC-003: Data encryption (5 points - starts week 2)
 
-**Sprint Goals**:
-- [x] AKS cluster operational in UK South
-- [x] API Management configured with OAuth 2.0
-- [x] SQL Database deployed with encryption
-- [x] Blob Storage configured with CMK
-- [x] Redis Cache for session management
-- [x] Azure AD SSO working
+### Sprint Goals:
+- AKS cluster operational in UK South
+- API Management configured with OAuth 2.0
+- SQL Database deployed with encryption
+- Blob Storage configured with CMK
+- Redis Cache for session management
+- Azure AD SSO working
 
-**Dependencies Satisfied**: None (foundation sprint)
+### Dependencies Satisfied:
+✅ None (foundation sprint)
 
-**Dependencies Created for Sprint 2**:
-- Infrastructure ready for services
-- Authentication working
-- Storage available
+### Dependencies Created for Sprint 2:
+→ Infrastructure ready for services
+→ Authentication working
+→ Storage available
+
+### Risks:
+⚠️ Azure provisioning delays
+⚠️ Security configuration complexity
+
+### Definition of Done:
+- [ ] Code reviewed and approved
+- [ ] Unit tests written (80% coverage minimum)
+- [ ] Integration tests written for critical paths
+- [ ] Security scan passed (no critical/high issues)
+- [ ] Deployed to dev environment
+- [ ] Demo-able to stakeholders
+- [ ] Documentation updated
 
 ---
 
@@ -1058,13 +1039,18 @@ Training materials, user documentation, and operational handover for court staff
 | TASK-INT-001 | Case Management integration | Technical | 4 |
 | TASK-INT-006 | Azure AI Services integration | Technical | 3 |
 
-**Sprint Goals**:
-- [ ] Documents can be uploaded via API
-- [ ] AI classification working with Azure Document Intelligence
-- [ ] Case Management API connected
-- [ ] Azure AI Services credentials configured
+### Sprint Goals:
+- Documents can be uploaded via API
+- AI classification working with Azure Document Intelligence
+- Case Management API connected
+- Azure AI Services credentials configured
 
-**Dependencies Satisfied**: Sprint 1 infrastructure
+### Dependencies Satisfied:
+✅ Sprint 1 infrastructure
+
+### Dependencies Created for Sprint 3:
+→ Document classification available for UI
+→ AI integration patterns established
 
 ---
 
@@ -1083,13 +1069,14 @@ Training materials, user documentation, and operational handover for court staff
 | TASK-NFR-C-002 | Immutable audit logging | Technical | 5 |
 | TASK-NFR-001 | Document processing response time | Technical | 2 |
 
-**Sprint Goals**:
-- [ ] Clerks can review and approve AI classifications
-- [ ] AI outputs clearly labelled
-- [ ] Audit trail operational
-- [ ] Response times meeting NFR-P-001
+### Sprint Goals:
+- Clerks can review and approve AI classifications
+- AI outputs clearly labelled
+- Audit trail operational
+- Response times meeting NFR-P-001
 
-**Dependencies Satisfied**: Sprint 2 AI classification
+### Dependencies Satisfied:
+✅ Sprint 2 AI classification
 
 ---
 
@@ -1107,13 +1094,14 @@ Training materials, user documentation, and operational handover for court staff
 | TASK-INT-004 | Court Scheduling integration | Technical | 5 |
 | TASK-NFR-SEC-004 | UK data residency enforcement | Technical | 2 |
 
-**Sprint Goals**:
-- [ ] Real-time transcription working
-- [ ] Speaker identification operational
-- [ ] Court session schedule integration
-- [ ] All audio processed in UK region only
+### Sprint Goals:
+- Real-time transcription working
+- Speaker identification operational
+- Court session schedule integration
+- All audio processed in UK region only
 
-**Dependencies Satisfied**: Sprint 1 infrastructure, Azure AI integration
+### Dependencies Satisfied:
+✅ Sprint 1 infrastructure, Azure AI integration
 
 ---
 
@@ -1131,13 +1119,14 @@ Training materials, user documentation, and operational handover for court staff
 | STORY-013 | Consent management for translation | Story | 5 |
 | TASK-NFR-002 | Translation latency optimisation | Technical | 2 |
 
-**Sprint Goals**:
-- [ ] Translation working for all 10 languages
-- [ ] Legal glossary integrated
-- [ ] Consent workflow operational
-- [ ] Latency under 2 seconds
+### Sprint Goals:
+- Translation working for all 10 languages
+- Legal glossary integrated
+- Consent workflow operational
+- Latency under 2 seconds
 
-**Dependencies Satisfied**: Sprint 4 transcription
+### Dependencies Satisfied:
+✅ Sprint 4 transcription
 
 ---
 
@@ -1155,13 +1144,14 @@ Training materials, user documentation, and operational handover for court staff
 | STORY-017 | Search filters and facets | Story | 5 |
 | TASK-INFRA-006 | Azure AI Search provisioning | Technical | 2 |
 
-**Sprint Goals**:
-- [ ] Documents indexed and searchable
-- [ ] Semantic search working
-- [ ] Filters and facets operational
-- [ ] Search response under 5 seconds
+### Sprint Goals:
+- Documents indexed and searchable
+- Semantic search working
+- Filters and facets operational
+- Search response under 5 seconds
 
-**Dependencies Satisfied**: Sprint 2 document processing
+### Dependencies Satisfied:
+✅ Sprint 2 document processing
 
 ---
 
@@ -1180,13 +1170,14 @@ Training materials, user documentation, and operational handover for court staff
 | TASK-INT-005 | Interpreter Booking integration | Technical | 5 |
 | TASK-NFR-C-004 | AI transparency implementation | Technical | 2 |
 
-**Sprint Goals**:
-- [ ] Feedback mechanism operational
-- [ ] Fallback modes tested
-- [ ] Interpreter escalation working
-- [ ] Transparency requirements met
+### Sprint Goals:
+- Feedback mechanism operational
+- Fallback modes tested
+- Interpreter escalation working
+- Transparency requirements met
 
-**Dependencies Satisfied**: All core features
+### Dependencies Satisfied:
+✅ All core features
 
 ---
 
@@ -1204,147 +1195,254 @@ Training materials, user documentation, and operational handover for court staff
 | TASK-INFRA-009 | Disaster recovery setup | Technical | 5 |
 | TASK-NFR-M-001 | Observability dashboards | Technical | 5 |
 
-**Sprint Goals**:
-- [ ] Runbooks complete and tested
-- [ ] Security vulnerabilities addressed
-- [ ] DR tested successfully
-- [ ] Monitoring dashboards live
-- [ ] Ready for UAT
+### Sprint Goals:
+- Runbooks complete and tested
+- Security vulnerabilities addressed
+- DR tested successfully
+- Monitoring dashboards live
+- Ready for UAT
 
-**Dependencies Satisfied**: All core features
-
----
-
-## Future Sprints (Beyond Week 16)
-
-**Remaining Backlog**: 138 story points
-**Estimated Duration**: 7 additional sprints
-
-### High Priority Items for Sprint 9+
-
-| ID | Title | Points | Priority |
-|----|-------|--------|----------|
-| STORY-018 | Case law citation detection | 5 | Should |
-| STORY-019 | Document similarity analysis | 8 | Could |
-| STORY-020 | Search results ranking | 5 | Should |
-| STORY-021 | Search analytics | 3 | Should |
-| STORY-022 | User training portal | 5 | Should |
-| STORY-023 | In-app guidance tooltips | 3 | Should |
-| STORY-012 | Language configuration | 3 | Should |
-| TASK-NFR-U-001 | WCAG 2.2 AA accessibility | 5 | Must |
-| TASK-NFR-C-003 | Scottish Gov standards compliance | 3 | Should |
+### Dependencies Satisfied:
+✅ All core features
 
 ---
 
-## Appendix A: Requirements Traceability Matrix
+## Appendices
 
-| Requirement | Type | User Stories/Tasks | Sprint | Status |
-|-------------|------|-------------------|--------|--------|
-| BR-001 | Business | STORY-001,002,003,015,016 | 2,3,6 | Planned |
-| BR-002 | Business | STORY-008,009,010,011,012,013 | 4,5 | Planned |
-| BR-003 | Business | STORY-003,004,005,007 | 3,7 | Planned |
-| BR-004 | Business | STORY-005,013, TASK-NFR-C-* | 3,5 | Planned |
-| BR-005 | Business | STORY-022,024,025 | 9,10 | Planned |
-| BR-006 | Business | STORY-022,023,024,026,027 | 8-10 | Planned |
-| FR-001 | Functional | STORY-001 | 2 | Planned |
-| FR-002 | Functional | STORY-002 | 2 | Planned |
-| FR-003 | Functional | STORY-003 | 3 | Planned |
-| FR-004 | Functional | STORY-008,009 | 4 | Planned |
-| FR-005 | Functional | STORY-010,011 | 5 | Planned |
-| FR-006 | Functional | STORY-012 | 5 | Planned |
-| FR-007 | Functional | STORY-016,017,020,021 | 6,9 | Planned |
-| FR-008 | Functional | STORY-015 | 6 | Planned |
-| FR-009 | Functional | STORY-018 | 6 | Planned |
-| FR-010 | Functional | STORY-019 | 9 | Planned |
-| FR-011 | Functional | STORY-004 | 3 | Planned |
-| FR-012 | Functional | STORY-005 | 3 | Planned |
-| FR-013 | Functional | STORY-006 | 7 | Planned |
-| FR-014 | Functional | STORY-007 | 7 | Planned |
-| FR-015 | Functional | STORY-013,014 | 5,7 | Planned |
-| INT-001 | Integration | TASK-INT-001 | 2 | Planned |
-| INT-002 | Integration | TASK-INT-002 | 2 | Planned |
-| INT-003 | Integration | TASK-INT-003 | 1 | Planned |
-| INT-004 | Integration | TASK-INT-004 | 4 | Planned |
-| INT-005 | Integration | TASK-INT-005 | 7 | Planned |
-| INT-006 | Integration | TASK-INT-006 | 2 | Planned |
-| NFR-SEC-* | Security | TASK-NFR-SEC-* | 1,2,8 | Planned |
-| NFR-C-* | Compliance | TASK-NFR-C-* | 3,5,7,8 | Planned |
-| NFR-P-* | Performance | TASK-NFR-001,002,003 | 3,5,6 | Planned |
-| NFR-M-* | Maintainability | TASK-NFR-M-* | 7,8 | Planned |
+### A. Requirements Traceability Matrix
+
+| Requirement | Type | User Stories | Sprint | Status | Notes |
+|-------------|------|-------------|--------|--------|-------|
+| BR-001 | Business | Story-001,002,003,015,016 | 2,3,6 | Planned | Document Intelligence, Search |
+| BR-002 | Business | Story-008,009,010,011,012,013 | 4,5 | Planned | Translation Services |
+| BR-003 | Business | Story-003,004,005,007 | 3,7 | Planned | Court Record Integrity |
+| BR-004 | Business | Story-005,013, TASK-NFR-C-* | 3,5 | Planned | Regulatory Compliance |
+| BR-005 | Business | Story-022,024,025 | 9,10 | Planned | Value for Money |
+| BR-006 | Business | Story-022,023,024,026,027 | 8-10 | Planned | Staff Adoption |
+| FR-001 | Functional | Story-001 | 2 | Planned | Document Upload |
+| FR-002 | Functional | Story-002 | 2 | Planned | AI Classification |
+| FR-003 | Functional | Story-003 | 3 | Planned | Human Review |
+| FR-004 | Functional | Story-008,009 | 4 | Planned | Speech-to-Text |
+| FR-005 | Functional | Story-010,011 | 5 | Planned | Translation |
+| FR-006 | Functional | Story-012 | 5 | Planned | Language Config |
+| FR-007 | Functional | Story-016,017,020,021 | 6,9 | Planned | Semantic Search |
+| FR-008 | Functional | Story-015 | 6 | Planned | Document Indexing |
+| FR-009 | Functional | Story-018 | 6 | Planned | Citation Detection |
+| FR-010 | Functional | Story-019 | 9 | Planned | Document Similarity |
+| FR-011 | Functional | Story-004 | 3 | Planned | AI Output Labelling |
+| FR-012 | Functional | Story-005 | 3 | Planned | Audit Trail |
+| FR-013 | Functional | Story-006 | 7 | Planned | Quality Feedback |
+| FR-014 | Functional | Story-007 | 7 | Planned | Manual Fallback |
+| FR-015 | Functional | Story-013,014 | 5,7 | Planned | Consent Management |
+| INT-001 | Integration | TASK-INT-001 | 2 | Planned | Case Management |
+| INT-002 | Integration | TASK-INT-002 | 2 | Planned | Document Management |
+| INT-003 | Integration | TASK-INT-003 | 1 | Planned | Identity Provider |
+| INT-004 | Integration | TASK-INT-004 | 4 | Planned | Court Scheduling |
+| INT-005 | Integration | TASK-INT-005 | 7 | Planned | Interpreter Booking |
+| INT-006 | Integration | TASK-INT-006 | 2 | Planned | Azure AI Services |
+| NFR-SEC-* | Security | TASK-NFR-SEC-* | 1,2,8 | Planned | Security Controls |
+| NFR-C-* | Compliance | TASK-NFR-C-* | 3,5,7,8 | Planned | Compliance |
+| NFR-P-* | Performance | TASK-NFR-001,002,003 | 3,5,6 | Planned | Performance |
+| NFR-M-* | Maintainability | TASK-NFR-M-* | 7,8 | Planned | Maintainability |
 
 **Coverage Summary**:
 - Total Requirements: 49
-- Mapped to Stories/Tasks: 49 (100%)
+- Mapped to Stories: 49 (100%)
 - Scheduled in Sprints 1-8: 40 (82%)
 - Remaining for Future Sprints: 9 (18%)
 
 ---
 
-## Appendix B: Epic Dependency Graph
+### B. Dependency Graph
 
-```mermaid
-flowchart TB
-    E5["**Epic 5: Platform Infrastructure**<br/>Sprint 1"]
-    E4["**Epic 4: Security & Compliance**<br/>Sprints 1-8, cross-cutting"]
-    E1["**Epic 1: Document Intelligence**<br/>Sprints 2-3"]
-    E2["**Epic 2: Real-Time Translation**<br/>Sprints 4-5"]
-    E3["**Epic 3: Cognitive Search**<br/>Sprint 6"]
-    E6["**Epic 6: Staff Training**<br/>Sprints 9-10"]
-
-    E5 --> E4
-    E5 --> E1
-    E5 --> E2
-    E1 --> E3
-    E2 --> E6
-
-    style E5 fill:#3b82f6,color:#fff
-    style E4 fill:#ef4444,color:#fff
-    style E1 fill:#22c55e,color:#fff
-    style E2 fill:#22c55e,color:#fff
-    style E3 fill:#a855f7,color:#fff
-    style E6 fill:#fbbf24,color:#000
+```
+Sprint 1 (Foundation)
+  ├─ TASK-INFRA-001: AKS Cluster
+  │    ↓ (blocks)
+  │  Sprint 2: All services deployment
+  │
+  ├─ TASK-INFRA-004: Blob Storage
+  │    ↓ (blocks)
+  │  Sprint 2: STORY-001 (Document Upload)
+  │
+  └─ TASK-NFR-SEC-001: Azure AD SSO
+       ↓ (blocks)
+     Sprint 2+: All authenticated features
 ```
 
 ---
 
-## Appendix C: Definition of Done
+### C. Epic Overview
 
-### Story Level
+| Epic ID | Epic Name | Priority | Stories | Points | Sprints | Status | Dependencies |
+|---------|-----------|----------|---------|--------|---------|--------|--------------|
+| EPIC-001 | Document Intelligence | Must Have | 10 | 58 | 2-3 | Planned | None |
+| EPIC-002 | Real-Time Translation | Must Have | 10 | 53 | 4-5 | Planned | EPIC-001 |
+| EPIC-003 | Cognitive Search | Must Have | 9 | 47 | 6 | Planned | EPIC-001 |
+| EPIC-004 | Security & Compliance | Must Have | 12 | 52 | 1-8 | Planned | None |
+| EPIC-005 | Platform Infrastructure | Must Have | 11 | 48 | 1+ | Planned | None |
+| EPIC-006 | Staff Training | Should Have | 10 | 40 | 8-10 | Planned | EPIC-001,002,003 |
 
-- [ ] Code complete and peer reviewed
-- [ ] Unit tests passing (80% coverage minimum)
-- [ ] Integration tests written for API endpoints
-- [ ] Manual testing completed
-- [ ] Acceptance criteria verified and signed off
-- [ ] Security scan passed (no critical/high issues)
-- [ ] Accessibility verified (WCAG 2.2 AA)
-- [ ] Documentation updated
-
-### Sprint Level
-
-- [ ] All committed stories Done
-- [ ] Sprint demo completed to stakeholders
-- [ ] Retrospective held
-- [ ] Backlog refined for next sprint
-- [ ] Deployed to staging environment
-
-### Release Level
-
-- [ ] All acceptance criteria met
-- [ ] Security testing passed (penetration test)
-- [ ] Performance testing passed (NFR compliance)
-- [ ] UAT sign-off obtained
-- [ ] Operational readiness confirmed
-- [ ] Training delivered to pilot users
-- [ ] Runbooks tested
+**Total**: 6 epics, 62 items, 298 story points
 
 ---
 
-## Generation Metadata
+### D. Story Points Distribution
+
+```
+Sprint 1:  ████████████████████ 20 points
+Sprint 2:  ████████████████████ 20 points
+Sprint 3:  ████████████████████ 20 points
+Sprint 4:  ████████████████████ 20 points
+Sprint 5:  ████████████████████ 20 points
+Sprint 6:  ████████████████████ 20 points
+Sprint 7:  ████████████████████ 20 points
+Sprint 8:  ████████████████████ 20 points
+Total: 160 points allocated / 298 points total
+Remaining: 138 points (7 more sprints needed)
+```
+
+---
+
+### E. Risk-Based Prioritization
+
+**High Risk Items (Addressed Early)**:
+- Sprint 1: TASK-NFR-SEC-001 - Azure AD SSO (security foundation)
+- Sprint 2: TASK-NFR-SEC-006 - Court record protection (compliance critical)
+- Sprint 3: STORY-005 - Audit trail (GDPR requirement)
+
+**Medium Risk Items**:
+- Sprint 5: STORY-013 - Consent management (legal requirement)
+- Sprint 7: STORY-007 - Manual fallback mode (resilience)
+
+**Low Risk Items**:
+- Sprint 9: STORY-019 - Document similarity (enhancement)
+
+---
+
+### F. Definition of Done (from Architecture Principles)
+
+Every story must meet these criteria before marking "Done":
+
+#### Code Quality
+- [ ] Code reviewed by 2+ team members
+- [ ] No merge conflicts
+- [ ] Follows coding standards (linting passed)
+- [ ] No code smells or technical debt introduced
+
+#### Testing
+- [ ] Unit tests written (minimum 80% coverage)
+- [ ] Integration tests written for API endpoints
+- [ ] Manual testing completed
+- [ ] Acceptance criteria verified and signed off
+
+#### Security
+- [ ] Security scan passed (no critical/high vulnerabilities)
+- [ ] OWASP Top 10 checks completed
+- [ ] Secrets not hardcoded (use environment variables)
+- [ ] Authentication and authorization tested
+
+#### Performance
+- [ ] Performance tested (meets NFR thresholds)
+- [ ] No N+1 query issues
+- [ ] Caching implemented where appropriate
+- [ ] Response times within acceptable limits
+
+#### Compliance
+- [ ] GDPR requirements met (if handling user data)
+- [ ] Accessibility tested (WCAG 2.1 AA)
+- [ ] Audit logging in place (if required)
+
+#### Documentation
+- [ ] API documentation updated (OpenAPI/Swagger)
+- [ ] Code comments for complex logic
+- [ ] README updated if needed
+- [ ] Runbook updated (if operational changes)
+
+#### Deployment
+- [ ] Deployed to dev environment
+- [ ] Deployed to staging environment
+- [ ] Database migrations tested (if applicable)
+- [ ] Configuration updated in all environments
+
+#### Stakeholder
+- [ ] Demoed to Product Owner at sprint review
+- [ ] Acceptance criteria validated by PO
+- [ ] User feedback incorporated (if available)
+
+---
+
+## Future Sprints (Beyond Sprint 8)
+
+**Remaining Backlog**: 138 story points
+**Estimated Duration**: 7 sprints (at 20 points/sprint)
+
+**High Priority Items for Sprint 9+**:
+1. Story-018: Case law citation detection (5 points) - Epic: Cognitive Search
+2. Story-019: Document similarity analysis (8 points) - Epic: Cognitive Search
+3. Story-020: Search results ranking (5 points) - Epic: Cognitive Search
+4. Story-021: Search analytics (3 points) - Epic: Cognitive Search
+5. Story-022: User training portal (5 points) - Epic: Staff Training
+
+**Could Have Items (Deferred)**:
+- Story-024: Video tutorials (5 points) - Resource dependent
+- Story-027: Support knowledge base (3 points) - Lower priority
+
+---
+
+## Backlog Maintenance
+
+### Velocity Tracking
+After each sprint, update:
+- Actual velocity vs planned
+- Velocity trend (improving, stable, declining)
+- Adjust future sprint capacity accordingly
+
+### Backlog Grooming Sessions
+- **Weekly**: Refine next 2 sprints (add details, update estimates)
+- **Bi-weekly**: Groom backlog beyond 2 sprints (reprioritize)
+- **Monthly**: Review epic priorities (business changes)
+
+### When to Re-Generate Backlog
+- Requirements significantly changed
+- New epics added
+- Business priorities shifted
+- Architecture redesigned
+
+---
+
+## Integration with Other ArcKit Commands
+
+**This backlog was generated from**:
+- `/arckit.requirements` - Source of all stories
+- `/arckit.hld` - Component mapping
+- `/arckit.stakeholders` - User personas
+- `/arckit.risk-register` - Risk priorities
+
+**Use this backlog with**:
+- `/arckit.traceability` - Track requirements through implementation
+- `/arckit.analyze` - Validate backlog completeness
+
+---
+
+**Important Notes**:
+
+⚠️ **Story Points Are Estimates**: AI-generated estimates should be validated by your team based on actual velocity and capacity. Use team poker for consensus estimation.
+
+⚠️ **Velocity Will Vary**: Initial velocity (20 points) is assumed. Track actual velocity after Sprint 1 and adjust future sprints accordingly.
+
+⚠️ **Dependencies May Change**: Technical dependencies are identified automatically but may need adjustment based on your team's approach and constraints.
+
+⚠️ **Regular Refinement Required**: This backlog is a starting point. Teams should refine weekly and adapt based on learnings.
+
+---
 
 **Generated by**: ArcKit `/arckit.backlog` command
-**Generated on**: 2026-01-17
-**ArcKit Version**: 0.6.0
+**Generated on**: 2026-01-27
+**ArcKit Version**: 0.11.2
 **Project**: SCTS GenAI Programme (Project 001)
-**AI Model**: Claude Opus 4.5
-**Input Artifacts**: requirements.md, high-level-design.md, stakeholder-drivers.md, risk-register.md
+**Model**: Claude Opus 4.5
+
+---
+
+**End of Backlog**

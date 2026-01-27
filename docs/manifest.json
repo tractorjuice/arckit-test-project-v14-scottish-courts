@@ -1,5 +1,5 @@
 {
-  "generated": "2026-01-25T12:00:00Z",
+  "generated": "2026-01-27T12:00:00Z",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v14-scottish-courts",
@@ -130,17 +130,7 @@
         {
           "path": "projects/001-scts-genai-programme/PROJECT-STORY.md",
           "title": "Project Story",
-          "category": "Reporting"
-        },
-        {
-          "path": "projects/001-scts-genai-programme/CLIENT-ARTIFACT-SUMMARY-TABLE.md",
-          "title": "Artifact Summary Table",
-          "category": "Reporting"
-        },
-        {
-          "path": "projects/001-scts-genai-programme/CLIENT-EMAIL-ARTIFACT-OVERVIEW.md",
-          "title": "Email Artifact Overview",
-          "category": "Reporting"
+          "category": "Overview"
         }
       ],
       "diagrams": [

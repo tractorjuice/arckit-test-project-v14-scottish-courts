@@ -1,23 +1,26 @@
 # Data Protection Impact Assessment (DPIA)
 
+> **Template Status**: Beta | **Version**: 0.11.2 | **Command**: `/arckit.dpia`
+
 ## Document Control
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-DPIA-v1.0 |
+| **Document ID** | ARC-001-DPIA-v1.1 |
 | **Document Type** | Data Protection Impact Assessment |
 | **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL-SENSITIVE |
 | **Status** | DRAFT |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Created Date** | 2026-01-17 |
-| **Last Modified** | 2026-01-17 |
+| **Last Modified** | 2026-01-27 |
 | **Review Cycle** | Annual |
 | **Next Review Date** | 2027-01-17 |
 | **Owner** | Chief Digital Information Officer, SCTS |
-| **Reviewed By** | [PENDING] |
-| **Approved By** | [PENDING] |
+| **Reviewed By** | PENDING |
+| **Approved By** | PENDING |
 | **Distribution** | DPO, Legal Services, CDiO, Chief Executive |
+| **Project Name** | SCTS GenAI Programme |
 | **Assessment Date** | 2026-01-17 |
 | **Data Protection Officer** | Data Protection Officer, SCTS |
 | **Data Controller** | Scottish Courts and Tribunals Service |
@@ -27,7 +30,8 @@
 
 | Version | Date | Author | Changes | Approved By | Approval Date |
 |---------|------|--------|---------|-------------|---------------|
-| 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.dpia` command | [PENDING] | [PENDING] |
+| 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.dpia` command | PENDING | PENDING |
+| 1.1 | 2026-01-27 | ArcKit AI | Updated to template v0.11.2 format | PENDING | PENDING |
 
 ## Executive Summary
 
@@ -313,15 +317,15 @@
 
 **DPO Name**: Data Protection Officer, SCTS
 
-**Date Consulted**: [PENDING - To be completed]
+**Date Consulted**: PENDING - To be completed
 
 **DPO Advice**:
-- [PENDING]
+- PENDING
 
 **DPO Recommendations**:
-- [PENDING]
+- PENDING
 
-**How DPO Advice Addressed**: [PENDING]
+**How DPO Advice Addressed**: PENDING
 
 ### 3.2 Data Subject Consultation
 
@@ -332,7 +336,7 @@
 - [x] Privacy notice + feedback mechanism
 - [ ] Not consulted
 
-**Date(s) Consulted**: [PENDING - Planned for PoC phase 2026-Q2]
+**Date(s) Consulted**: PENDING - Planned for PoC phase 2026-Q2
 
 **Planned Consultation**:
 - User acceptance testing with court clerks (primary users)
@@ -345,11 +349,11 @@
 
 | Stakeholder | Role | Date Consulted | Feedback Summary |
 |-------------|------|----------------|------------------|
-| Lord President | Judicial oversight | [PENDING] | Judicial independence concerns |
-| Chief Executive | Executive sponsor | [PENDING] | Efficiency and compliance balance |
-| Legal Services Director | Compliance | [PENDING] | Legal review requirements |
-| Data Protection Officer | Privacy | [PENDING] | DPIA and consent processes |
-| ICO | Regulatory guidance | [If required] | TBD |
+| Lord President | Judicial oversight | PENDING | Judicial independence concerns |
+| Chief Executive | Executive sponsor | PENDING | Efficiency and compliance balance |
+| Legal Services Director | Compliance | PENDING | Legal review requirements |
+| Data Protection Officer | Privacy | PENDING | DPIA and consent processes |
+| ICO | Regulatory guidance | If required | TBD |
 
 ---
 
@@ -620,9 +624,9 @@ This condition applies because:
 
 | Role | Name | Decision | Date | Signature |
 |------|------|----------|------|-----------|
-| **Data Protection Officer** | [DPO NAME] | [PENDING] | [DATE] | ____________ |
-| **Data Controller** | Chief Executive, SCTS | [PENDING] | [DATE] | ____________ |
-| **Senior Responsible Owner** | Chief Digital Information Officer | [PENDING] | [DATE] | ____________ |
+| **Data Protection Officer** | [DPO NAME] | PENDING | [DATE] | ____________ |
+| **Data Controller** | Chief Executive, SCTS | PENDING | [DATE] | ____________ |
+| **Senior Responsible Owner** | Chief Digital Information Officer | PENDING | [DATE] | ____________ |
 
 ### 8.2 Conditions of Approval
 
@@ -636,7 +640,7 @@ This condition applies because:
 
 ### 8.3 Final Decision
 
-**Decision**: [PENDING]
+**Decision**: PENDING
 
 **Effective Date**: [DATE processing can commence]
 
@@ -716,6 +720,20 @@ This condition applies because:
 | AI bias differential per language | <10% variance | Quarterly | AI Architect |
 | Human override rate | Monitor (no target) | Monthly | Court Admin |
 
+### 10.4 Change Management
+
+**Change Control Process**:
+1. Any change to processing must be assessed for DPIA impact
+2. If change is significant (new data, new purpose, new risk), DPIA must be updated
+3. Updated DPIA must be re-approved by DPO and Data Controller
+4. Data subjects must be notified of significant changes
+
+**Change Log**:
+
+| Change Date | Change Description | DPIA Impact | Updated Sections | Approved By |
+|-------------|-------------------|-------------|------------------|-------------|
+| 2026-01-27 | Template update to v0.11.2 | Minor | Document Control, Appendices | ArcKit AI |
+
 ---
 
 ## 11. Traceability to ArcKit Artifacts
@@ -738,6 +756,29 @@ This condition applies because:
 | E-003: AI_PROCESSING_RESULT | HIGH | FR-002, FR-005 | AI outputs | DPIA-002, DPIA-003, DPIA-004 | Public Task + Substantial Public Interest |
 | E-007: PARTICIPANT | VERY HIGH | FR-015 | Consent tracking | DPIA-010 | Consent + Public Task |
 | E-009: SEARCH_INDEX_ENTRY | HIGH | FR-007 | Cognitive search | DPIA-001, DPIA-005 | Public Task |
+
+### 11.3 Traceability Matrix: Stakeholder → Data Subject → Rights
+
+| Stakeholder | Data Subject Type | Volume | Rights Processes Implemented | Vulnerability Safeguards |
+|-------------|-------------------|--------|------------------------------|--------------------------|
+| Court users/litigants | Parties | 50,000+ | SAR, Rectification, Erasure | Human interpreter option |
+| Witnesses | Witnesses | 20,000+ | SAR, Rectification, Erasure | Vulnerable witness protocols |
+| Non-English speakers | Language minority | 5,000+ | SAR, Rectification, Erasure, Consent | Human interpreter backup |
+| Children | Minors | 2,000+ | SAR, Rectification, Erasure | Parental consent, enhanced safeguards |
+
+### 11.4 Downstream Artifacts Informed by DPIA
+
+**This DPIA informs**:
+
+| Artifact | How DPIA Informs It |
+|----------|---------------------|
+| **Risk Register** | DPIA risks (DPIA-001, etc.) added as data protection/compliance risks |
+| **Secure by Design Assessment** | DPIA mitigations become security control requirements |
+| **Vendor HLD Review** | Vendor design must address DPIA risks and implement mitigations |
+| **Vendor DLD Review** | Detailed technical controls must match DPIA mitigation requirements |
+| **AI Playbook Assessment** | DPIA algorithmic bias findings inform AI ethics assessment |
+| **Service Assessment (GDS)** | DPIA demonstrates Point 5 (data and privacy) compliance |
+| **Procurement (SOW)** | DPIA requirements flow into vendor RFP requirements |
 
 ---
 
@@ -777,6 +818,20 @@ This condition applies because:
 - [x] Applicable: Limited (AI makes recommendations, not decisions)
 - [x] Safeguards: Human review of all AI outputs (FR-003)
 - [x] Process: Can request human-only processing for translation
+
+### 12.2 Rights Fulfillment Procedures
+
+**Standard Operating Procedures**:
+1. **Receipt**: Rights requests received via SCTS DPO email/web form
+2. **Verification**: Identity verified using multi-factor verification
+3. **Logging**: Request logged with unique reference number
+4. **Acknowledgement**: Acknowledgement sent within 5 days
+5. **Retrieval**: Data retrieved from AI systems and DMS
+6. **Review**: Legal/DPO review for exemptions or complexities
+7. **Response**: Response provided within 30 days
+8. **Escalation**: Complex requests escalated to DPO
+
+**Training**: Staff trained on rights fulfillment - Annual refresher
 
 ---
 
@@ -953,10 +1008,10 @@ No international transfers occur.
 ## Generation Metadata
 
 **Generated by**: ArcKit `/arckit.dpia` command
-**Generated on**: 2026-01-17
-**ArcKit Version**: 0.6.0
+**Generated on**: 2026-01-27
+**ArcKit Version**: 0.11.2
 **Project**: SCTS GenAI Programme (Project 001)
-**AI Model**: Claude Opus 4.5
+**Model**: Claude Opus 4.5
 
 **Traceability**: This DPIA is traceable to architecture principles, data model, requirements, stakeholders, and AI Playbook assessment via the ArcKit governance framework.
 
@@ -984,17 +1039,58 @@ No international transfers occur.
 
 | Article 35 Requirement | Addressed in Section | Complete? |
 |------------------------|---------------------|-----------|
-| Systematic description of processing | Section 2 | |
-| Purposes of processing | Section 2.3, 2.4 | |
-| Assessment of necessity and proportionality | Section 4 | |
-| Assessment of risks to data subjects | Section 5 | |
-| Measures to address risks | Section 6 | |
-| Safeguards, security measures | Section 6 | |
-| Demonstrate compliance with GDPR | Throughout | |
+| Systematic description of processing | Section 2 | Yes |
+| Purposes of processing | Section 2.3, 2.4 | Yes |
+| Assessment of necessity and proportionality | Section 4 | Yes |
+| Assessment of risks to data subjects | Section 5 | Yes |
+| Measures to address risks | Section 6 | Yes |
+| Safeguards, security measures | Section 6 | Yes |
+| Demonstrate compliance with GDPR | Throughout | Yes |
 
 ---
 
-## Appendix C: References
+## Appendix C: Data Protection Principles Compliance
+
+**GDPR Article 5 Principles**:
+
+| Principle | Assessment | Evidence |
+|-----------|------------|----------|
+| **(a) Lawfulness, fairness, transparency** | COMPLIANT | Privacy notice provided, lawful basis identified in Section 4.1 |
+| **(b) Purpose limitation** | COMPLIANT | Purposes clearly defined in Section 2.4; function creep controls in Section 6 |
+| **(c) Data minimization** | COMPLIANT | Only necessary data collected (Section 4.3); no unnecessary fields |
+| **(d) Accuracy** | COMPLIANT | Rectification process in Section 12.1; data validation in Section 6.1 |
+| **(e) Storage limitation** | COMPLIANT | Retention periods defined in Section 2.2; automated deletion implemented |
+| **(f) Integrity and confidentiality** | COMPLIANT | Security measures in Section 6.1; encryption, access controls implemented |
+| **Accountability** | COMPLIANT | DPIA completed; DPO involved; policies documented |
+
+---
+
+## Appendix D: Glossary
+
+| Term | Definition |
+|------|------------|
+| **Data Subject** | An identified or identifiable natural person whose personal data is being processed |
+| **Data Controller** | The organisation that determines the purposes and means of processing personal data |
+| **Data Processor** | An organisation that processes personal data on behalf of the controller |
+| **Personal Data** | Any information relating to an identified or identifiable natural person |
+| **Special Category Data** | Sensitive personal data (race, health, biometric, etc.) requiring Article 9 basis |
+| **Processing** | Any operation performed on personal data (collection, storage, use, disclosure, deletion) |
+| **Profiling** | Automated processing to evaluate personal aspects (predict performance, behaviour, preferences) |
+| **Pseudonymization** | Processing that prevents identification without additional information kept separately |
+| **Anonymization** | Irreversibly removing identifying information so re-identification is not possible |
+| **Lawful Basis** | Legal ground for processing under GDPR Article 6 (consent, contract, legal obligation, etc.) |
+| **DPIA** | Data Protection Impact Assessment - required for high-risk processing |
+| **ICO** | Information Commissioner's Office - UK data protection supervisory authority |
+| **UK GDPR** | UK General Data Protection Regulation (retained EU GDPR post-Brexit) |
+| **DPA 2018** | Data Protection Act 2018 - UK law supplementing GDPR |
+| **SCC** | Standard Contractual Clauses - mechanism for international data transfers |
+| **SCTS** | Scottish Courts and Tribunals Service |
+| **ATRS** | Algorithmic Transparency Recording Standard |
+| **Human-in-the-loop** | Human review required before AI outputs have real-world effect |
+
+---
+
+## Appendix E: References
 
 - UK GDPR Article 35: https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/
 - ICO DPIA Guidance: https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/what-is-a-dpia/

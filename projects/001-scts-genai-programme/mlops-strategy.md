@@ -1,29 +1,32 @@
 # MLOps Strategy: SCTS GenAI Programme
 
+> **Template Status**: Experimental | **Version**: 0.11.2 | **Command**: `/arckit.mlops`
+
 ## Document Control
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-MLOPS-v1.0 |
+| **Document ID** | ARC-001-MLOPS-v1.1 |
 | **Document Type** | MLOps Strategy |
 | **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL |
 | **Status** | DRAFT |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Created Date** | 2026-01-20 |
-| **Last Modified** | 2026-01-20 |
+| **Last Modified** | 2026-01-27 |
 | **Review Cycle** | Quarterly |
-| **Next Review Date** | 2026-04-20 |
+| **Next Review Date** | 2026-04-27 |
 | **Owner** | Senior AI Technical Architect |
-| **Reviewed By** | [PENDING] |
-| **Approved By** | [PENDING] |
-| **Distribution** | CDi Function, AI Team, Data Protection Officer |
+| **Reviewed By** | PENDING |
+| **Approved By** | PENDING |
+| **Distribution** | CDi Function, AI Team, Data Protection Officer, Platform Team |
 
 ## Revision History
 
 | Version | Date | Author | Changes | Approved By | Approval Date |
 |---------|------|--------|---------|-------------|---------------|
-| 1.0 | 2026-01-20 | ArcKit AI | Initial creation from `/arckit.mlops` command | [PENDING] | [PENDING] |
+| 1.0 | 2026-01-20 | ArcKit AI | Initial creation from `/arckit.mlops` command | PENDING | PENDING |
+| 1.1 | 2026-01-27 | ArcKit AI | Updated to template v0.11.2 format; expanded glossary | PENDING | PENDING |
 
 ---
 
@@ -1273,24 +1276,73 @@ gantt
 
 ---
 
-## 16. Appendices
+## 16. Requirements Traceability
 
-### Appendix A: Glossary
+| Requirement ID | Requirement | MLOps Element | Status |
+|----------------|-------------|---------------|--------|
+| FR-013 | AI model retraining capability | Training Pipeline | ✅ |
+| FR-014 | Model rollback capability | Deployment Pipeline | ✅ |
+| NFR-M-001 | Monitoring coverage | Monitoring Framework | ✅ |
+| NFR-M-002 | Model version tracking | Model Registry | ✅ |
+| NFR-C-004 | Bias monitoring | Fairness Monitoring | ✅ |
+| BR-002 | Language equality | Bias Testing | ✅ |
+| BR-003 | Human oversight | Human-in-the-Loop | ✅ |
+
+---
+
+## Appendix A: Glossary
 
 | Term | Definition |
 |------|------------|
-| **MLOps** | Machine Learning Operations - practices for ML lifecycle management |
-| **Model Registry** | Centralised repository for model versions and metadata |
-| **Feature Store** | Centralised repository for ML features with online/offline serving |
-| **Data Drift** | Change in input data distribution over time |
-| **Concept Drift** | Change in relationship between inputs and outputs |
-| **Model Card** | Documentation of model characteristics and governance |
-| **ATRS** | Algorithmic Transparency Recording Standard |
+| **ADWIN** | Adaptive Windowing - algorithm for detecting change in data streams |
+| **AES-256** | Advanced Encryption Standard with 256-bit key - encryption algorithm |
+| **AI** | Artificial Intelligence - simulation of human intelligence by machines |
+| **AKS** | Azure Kubernetes Service - managed container orchestration platform |
+| **API** | Application Programming Interface - software communication protocol |
+| **ASR** | Automatic Speech Recognition - speech-to-text technology |
+| **ATRS** | Algorithmic Transparency Recording Standard - UK Gov transparency framework |
 | **BLEU** | Bilingual Evaluation Understudy - translation quality metric |
-| **WER** | Word Error Rate - speech recognition accuracy metric |
+| **CAF** | Cyber Assessment Framework - NCSC security assessment standard |
+| **CDiO** | Chief Digital Information Officer - senior technology executive |
+| **CI/CD** | Continuous Integration/Continuous Deployment - automated build and deployment |
+| **DPA 2018** | Data Protection Act 2018 - UK data protection legislation |
+| **DPO** | Data Protection Officer - privacy compliance role |
+| **DR** | Disaster Recovery - business continuity planning |
+| **DVC** | Data Version Control - version control for datasets |
+| **EWMA** | Exponentially Weighted Moving Average - statistical smoothing method |
+| **FTE** | Full-Time Equivalent - workforce measurement unit |
+| **G-Cloud** | UK Government framework for procuring cloud services |
+| **GPU** | Graphics Processing Unit - parallel processing hardware |
+| **HA** | High Availability - system design for continuous operation |
+| **HPA** | Hyperparameter Tuning - optimising model configuration |
+| **IaC** | Infrastructure as Code - managing infrastructure through code |
+| **KS Test** | Kolmogorov-Smirnov Test - statistical test for distribution comparison |
+| **LIME** | Local Interpretable Model-agnostic Explanations - model explainability technique |
+| **ML** | Machine Learning - subset of AI using statistical learning |
+| **MLflow** | Open-source ML lifecycle management platform |
+| **MLOps** | Machine Learning Operations - practices for ML lifecycle management |
+| **Model Card** | Documentation of model characteristics and governance |
+| **Model Registry** | Centralised repository for model versions and metadata |
+| **NCSC** | National Cyber Security Centre - UK Government cybersecurity agency |
 | **nDCG** | Normalised Discounted Cumulative Gain - ranking quality metric |
+| **NER** | Named Entity Recognition - extracting entities from text |
+| **NMT** | Neural Machine Translation - deep learning translation |
+| **OAuth 2.0** | Open Authorization - industry-standard authorisation protocol |
+| **OCR** | Optical Character Recognition - text extraction from images |
+| **p50/p95/p99** | Percentile latency measurements (median, 95th, 99th) |
+| **PSI** | Population Stability Index - drift detection metric |
+| **RBAC** | Role-Based Access Control - permission management system |
+| **SCTS** | Scottish Courts and Tribunals Service |
+| **SHAP** | SHapley Additive exPlanations - model explainability technique |
+| **SLA** | Service Level Agreement - performance commitment |
+| **UAT** | User Acceptance Testing - validation by end users |
+| **UK GDPR** | UK General Data Protection Regulation - data protection law |
+| **VNet** | Virtual Network - Azure network isolation |
+| **WER** | Word Error Rate - speech recognition accuracy metric |
 
-### Appendix B: Reference Documents
+---
+
+## Appendix B: Reference Documents
 
 | Document | Location | Purpose |
 |----------|----------|---------|
@@ -1302,7 +1354,9 @@ gantt
 | DevOps Strategy | `projects/001-scts-genai-programme/devops-strategy.md` | CI/CD integration |
 | Research Findings | `projects/001-scts-genai-programme/research-findings.md` | Platform selection |
 
-### Appendix C: Traceability Matrix
+---
+
+## Appendix C: Traceability Matrix
 
 | MLOps Component | Requirement | Principle | ATRS Section |
 |-----------------|-------------|-----------|--------------|
@@ -1317,29 +1371,19 @@ gantt
 
 ---
 
-## Sign-Off
+## Approval
 
-### Review and Approval
-
-| Role | Name | Decision | Date | Signature |
-|------|------|----------|------|-----------|
-| **Programme Owner** | Chief Digital Information Officer | [PENDING] | | ____________ |
-| **Technical Lead** | Senior AI Technical Architect | [PENDING] | | ____________ |
-| **Data Protection** | Data Protection Officer | [PENDING] | | ____________ |
-| **Security** | Information Security Officer | [PENDING] | | ____________ |
+| Role | Name | Signature | Date |
+|------|------|-----------|------|
+| Programme Owner (CDiO) | | | |
+| Technical Lead (AI Architect) | | | |
+| Data Protection Officer | | | |
+| Information Security Officer | | | |
 
 ---
-
-## Generation Metadata
 
 **Generated by**: ArcKit `/arckit.mlops` command
-**Generated on**: 2026-01-20
-**ArcKit Version**: 0.6.0
+**Generated on**: 2026-01-27
+**ArcKit Version**: 0.11.2
 **Project**: SCTS GenAI Programme (Project 001)
-**AI Model**: Claude Opus 4.5
-
-**Traceability**: This MLOps strategy is traceable to architecture principles, requirements, data model, AI Playbook assessment, and ATRS record via the ArcKit governance framework.
-
----
-
-**END OF MLOPS STRATEGY**
+**Model**: Claude Opus 4.5

@@ -1,30 +1,33 @@
 # Requirements Traceability Matrix: SCTS GenAI Programme
 
+> **Template Status**: Live | **Version**: 0.11.2 | **Command**: `/arckit.traceability`
+
 ## Document Control
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-TRAC-v1.1 |
+| **Document ID** | ARC-001-TRAC-v1.2 |
 | **Document Type** | Requirements Traceability Matrix |
 | **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL-SENSITIVE |
 | **Status** | DRAFT |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Created Date** | 2026-01-17 |
-| **Last Modified** | 2026-01-18 |
+| **Last Modified** | 2026-01-27 |
 | **Review Cycle** | Monthly |
-| **Next Review Date** | 2026-02-18 |
+| **Next Review Date** | 2026-02-27 |
 | **Owner** | Chief Digital Information Officer, SCTS |
-| **Reviewed By** | [PENDING] |
-| **Approved By** | [PENDING] |
+| **Reviewed By** | PENDING |
+| **Approved By** | PENDING |
 | **Distribution** | CDi Function, Architecture Team, Legal Services, DPO |
 
 ## Revision History
 
 | Version | Date | Author | Changes | Approved By | Approval Date |
 |---------|------|--------|---------|-------------|---------------|
-| 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.traceability` command | [PENDING] | [PENDING] |
-| 1.1 | 2026-01-18 | ArcKit AI | Updated with HLD design coverage, ADR traceability | [PENDING] | [PENDING] |
+| 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.traceability` command | PENDING | PENDING |
+| 1.1 | 2026-01-18 | ArcKit AI | Updated with HLD design coverage, ADR traceability | PENDING | PENDING |
+| 1.2 | 2026-01-27 | ArcKit AI | Updated to template v0.11.2 format | PENDING | PENDING |
 
 ## Document Purpose
 
@@ -32,15 +35,65 @@ This Requirements Traceability Matrix (RTM) provides bidirectional traceability 
 - **Stakeholder Drivers** → Business Requirements → Functional Requirements → Design Artifacts → Tests
 - **Tests** → Design Artifacts → Requirements → Stakeholder Drivers
 
+It ensures all requirements are addressed in design, all design elements trace to requirements, coverage gaps are identified, and provides audit evidence for governance compliance.
+
 ---
 
-## Executive Summary
+## 1. Overview
 
-### Traceability Score
+### 1.1 Purpose
+
+This Requirements Traceability Matrix (RTM) provides end-to-end traceability from business requirements through design, implementation, and testing. It ensures:
+- All requirements are addressed in design
+- All design elements trace to requirements
+- All requirements are tested
+- Coverage gaps are identified and tracked
+
+### 1.2 Traceability Scope
+
+This matrix traces:
+```
+Stakeholder Drivers (SD)
+  ↓
+Goals & Outcomes (G, O)
+  ↓
+Business Requirements (BR)
+  ↓
+Functional Requirements (FR) + Non-Functional Requirements (NFR)
+  ↓
+Data Model Entities (E)
+  ↓
+System Components (HLD)
+  ↓
+Architecture Decisions (ADR)
+  ↓
+Detailed Design (DLD)
+  ↓
+Test Cases (TC)
+```
+
+### 1.3 Document References
+
+| Document | Version | Date | Link |
+|----------|---------|------|------|
+| Requirements Document | 1.0 | 2026-01-17 | `requirements.md` |
+| Stakeholder Drivers | 1.0 | 2026-01-17 | `stakeholder-drivers.md` |
+| High-Level Design (HLD) | 1.0 | 2026-01-18 | `high-level-design.md` |
+| Data Model | 1.0 | 2026-01-17 | `data-model.md` |
+| Risk Register | 1.0 | 2026-01-17 | `risk-register.md` |
+| ADR-001 | 1.0 | 2026-01-18 | `decisions/ADR-001-azure-ai-platform.md` |
+| Detailed Design (DLD) | N/A | N/A | Not yet created |
+| Test Plan | N/A | N/A | Not yet created |
+
+---
+
+## 2. Executive Summary
+
+### 2.1 Traceability Score
 
 **Overall Traceability Score: 72/100** (Acceptable - Design coverage achieved, test coverage pending)
 
-### Coverage Summary
+### 2.2 Coverage Summary
 
 ```mermaid
 flowchart TB
@@ -71,7 +124,7 @@ flowchart TB
     style TC fill:#ef4444,color:#fff
 ```
 
-### Traceability Scope
+### 2.3 Traceability Scope
 
 | Artifact Type | Document | Item Count | Coverage | Status |
 |---------------|----------|------------|----------|--------|
@@ -91,7 +144,7 @@ flowchart TB
 | Detailed Design | N/A | Not yet created | N/A | ⏳ Planned |
 | Test Cases | N/A | Not yet created | 0% | ⏳ Planned |
 
-### Key Findings
+### 2.4 Key Findings
 
 | Finding | Count | Status |
 |---------|-------|--------|
@@ -106,9 +159,9 @@ flowchart TB
 
 ---
 
-## Forward Traceability Matrix
+## 3. Forward Traceability Matrix
 
-### Stakeholder Drivers → Goals → Outcomes → Business Requirements
+### 3.1 Stakeholder Drivers → Goals → Outcomes → Business Requirements
 
 | Stakeholder Driver | Goal(s) | Outcome(s) | Business Requirement(s) |
 |-------------------|---------|------------|------------------------|
@@ -126,7 +179,7 @@ flowchart TB
 | **SD-12**: Vulnerable witnesses | G-2 | O-1 | BR-002: Language support |
 | **SD-13**: ICO/Regulators | G-5 | O-4 | BR-004: Compliance |
 
-### Business Requirements → Functional Requirements
+### 3.2 Business Requirements → Functional Requirements
 
 | Business Req | Priority | Functional Requirements | Coverage |
 |--------------|----------|------------------------|----------|
@@ -137,7 +190,7 @@ flowchart TB
 | **BR-005**: Deliver staff training | HIGH | FR-014 | ✅ 1 FR |
 | **BR-006**: No job losses from automation | HIGH | FR-003 (human-in-loop) | ✅ 1 FR |
 
-### Requirements → HLD Design Components
+### 3.3 Requirements → HLD Design Components
 
 | Req ID | Requirement | Priority | HLD Container | HLD Section | Status |
 |--------|-------------|----------|---------------|-------------|--------|
@@ -157,7 +210,7 @@ flowchart TB
 | **FR-014** | Manual Fallback | HIGH | All Services (Graceful Degradation) | Design Philosophy | ✅ Covered |
 | **FR-015** | Consent Management | CRITICAL | Speech Service (Consent Manager) | Component Architecture | ✅ Covered |
 
-### NFR → HLD Design Elements
+### 3.4 NFR → HLD Design Elements
 
 | NFR ID | Requirement | HLD Coverage | Status |
 |--------|-------------|--------------|--------|
@@ -185,7 +238,7 @@ flowchart TB
 | **NFR-M-002** | Model versioning | Model governance design | ✅ Covered |
 | **NFR-M-003** | Documentation | Throughout | ✅ Covered |
 
-### Integration Requirements → HLD
+### 3.5 Integration Requirements → HLD
 
 | INT ID | Requirement | HLD Section | Status |
 |--------|-------------|-------------|--------|
@@ -196,7 +249,7 @@ flowchart TB
 | **INT-005** | Interpreter Booking System | Integration Architecture | ✅ Covered |
 | **INT-006** | Azure AI Services | Container Diagram | ✅ Covered |
 
-### Architecture Decision Traceability
+### 3.6 Architecture Decision Traceability
 
 | ADR ID | Decision | Requirements Addressed | HLD Impact |
 |--------|----------|----------------------|------------|
@@ -204,9 +257,9 @@ flowchart TB
 
 ---
 
-## Backward Traceability Matrix
+## 4. Backward Traceability Matrix
 
-### HLD Components → Requirements
+### 4.1 HLD Components → Requirements
 
 | HLD Component | Technology | Requirements Served | Count |
 |---------------|------------|---------------------|-------|
@@ -221,7 +274,7 @@ flowchart TB
 | **Search Index** | Azure AI Search | FR-007, FR-008 | 2 |
 | **Azure AI Services** | Document Intelligence, Speech, Translator, Search | FR-002, FR-004, FR-005, FR-007, ADR-001 | 5 |
 
-### Data Entities → Requirements
+### 4.2 Data Entities → Requirements
 
 | Entity ID | Entity Name | Requirement Sources | Count |
 |-----------|-------------|---------------------|-------|
@@ -235,7 +288,7 @@ flowchart TB
 | **E-008** | AUDIT_LOG | FR-012, NFR-C-002, BR-003 | 3 |
 | **E-009** | SEARCH_INDEX_ENTRY | FR-007, FR-008, FR-009 | 3 |
 
-### Functional Requirements → Stakeholder Drivers
+### 4.3 Functional Requirements → Stakeholder Drivers
 
 | FR ID | Description | Primary Stakeholder(s) |
 |-------|-------------|------------------------|
@@ -257,9 +310,9 @@ flowchart TB
 
 ---
 
-## Cross-Reference Matrices
+## 5. Cross-Reference Matrices
 
-### Requirements Priority vs Implementation Phase
+### 5.1 Requirements Priority vs Implementation Phase
 
 | Requirement ID | Priority | Implementation Phase | HLD Coverage | Test Coverage | Status |
 |----------------|----------|---------------------|--------------|---------------|--------|
@@ -285,7 +338,7 @@ flowchart TB
 | FR-014 | HIGH | Phase 2 | ✅ Covered | ❌ 0% | ⚠️ Design only |
 | FR-015 | CRITICAL | Phase 2 | ✅ Covered | ❌ 0% | ⚠️ Design only |
 
-### Requirements vs Risk Register
+### 5.2 Requirements vs Risk Register
 
 | Requirement | Associated Risks | Risk Level | Design Mitigation |
 |-------------|-----------------|------------|-------------------|
@@ -300,7 +353,7 @@ flowchart TB
 | NFR-SEC-* | R-007 (Security breach) | CRITICAL | Zero-trust, encryption |
 | NFR-C-001 (GDPR) | R-010 (GDPR breach) | CRITICAL | DPIA, data minimisation |
 
-### Requirements vs Governance Assessments
+### 5.3 Requirements vs Governance Assessments
 
 | Requirement Category | DPIA | Secure by Design | ATRS | AI Playbook |
 |---------------------|------|------------------|------|-------------|
@@ -314,15 +367,15 @@ flowchart TB
 
 ---
 
-## Gap Analysis
+## 6. Gap Analysis
 
-### Requirements With Design Coverage
+### 6.1 Requirements With Design Coverage
 
 | Gap ID | Requirement | Design Coverage | Test Coverage | Action |
 |--------|-------------|-----------------|---------------|--------|
 | - | All 49 requirements | ✅ 100% HLD | ❌ 0% Tests | Create test plan |
 
-### Requirements Without Test Coverage (ALL)
+### 6.2 Requirements Without Test Coverage (ALL)
 
 | Requirement ID | Priority | Test Cases Required | Current Coverage | Action |
 |----------------|----------|---------------------|------------------|--------|
@@ -343,7 +396,7 @@ flowchart TB
 | FR-015 | CRITICAL | 10-15 test cases | 0% | Create consent tests |
 | **Total** | | **~130 test cases** | **0%** | Create test plan |
 
-### NFR Test Coverage Gap
+### 6.3 NFR Test Coverage Gap
 
 | NFR Category | Test Type Required | Estimated Test Cases | Current Coverage |
 |--------------|-------------------|----------------------|------------------|
@@ -356,7 +409,7 @@ flowchart TB
 | Maintainability (NFR-M-*) | Documentation review, runbook testing | 5-10 | 0% |
 | **Total** | | **~100 test cases** | **0%** |
 
-### Integration Test Coverage Gap
+### 6.4 Integration Test Coverage Gap
 
 | Integration | Test Type | Estimated Test Cases | Current Coverage |
 |-------------|-----------|---------------------|------------------|
@@ -368,7 +421,7 @@ flowchart TB
 | INT-006 (Cloud AI) | API + resilience testing | 15-20 | 0% |
 | **Total** | | **~60 test cases** | **0%** |
 
-### Architecture Decision Coverage
+### 6.5 Architecture Decision Coverage
 
 | Decision Area | ADR Coverage | Gaps |
 |---------------|--------------|------|
@@ -379,9 +432,9 @@ flowchart TB
 
 ---
 
-## Coverage Metrics
+## 7. Coverage Metrics
 
-### Requirements Coverage Summary
+### 7.1 Requirements Coverage Summary
 
 | Metric | Value | Target | Status |
 |--------|-------|--------|--------|
@@ -396,7 +449,7 @@ flowchart TB
 | CRITICAL requirements with test coverage | 0% | 100% | ❌ Urgent |
 | HIGH requirements with test coverage | 0% | 100% | ❌ Urgent |
 
-### Traceability Completeness by Phase
+### 7.2 Traceability Completeness by Phase
 
 | Phase | Requirements | HLD Coverage | DLD Coverage | Test Coverage | Readiness |
 |-------|--------------|--------------|--------------|---------------|-----------|
@@ -404,11 +457,21 @@ flowchart TB
 | Phase 2 (Translation) | FR-004, FR-005, FR-006, FR-014, FR-015 | ✅ 100% | ❌ 0% | ❌ 0% | ⚠️ Design done |
 | Phase 3 (Cognitive Search) | FR-007, FR-008, FR-009, FR-010 | ✅ 100% | ❌ 0% | ❌ 0% | ⚠️ Design done |
 
+### 7.3 Metrics and KPIs
+
+| Metric | Current Value | Target | Status |
+|--------|---------------|--------|--------|
+| Requirements with Design Coverage | 49/49 (100%) | 100% | ✅ On Track |
+| Requirements with Test Coverage | 0/49 (0%) | 100% | ❌ Behind |
+| Orphan Components (no requirement trace) | 0 | 0 | ✅ On Track |
+| Orphan Tests (no requirement trace) | 0 | 0 | ✅ On Track |
+| Outstanding Gaps | 49 (tests) | 0 | ❌ Behind |
+
 ---
 
-## Dependency Matrix
+## 8. Dependency Matrix
 
-### Requirement Dependencies
+### 8.1 Requirement Dependencies
 
 ```mermaid
 graph TD
@@ -487,7 +550,7 @@ graph TD
     FR012 --> AUDIT
 ```
 
-### Critical Path Requirements
+### 8.2 Critical Path Requirements
 
 | Requirement | Depends On | Required By | Critical Path |
 |-------------|------------|-------------|---------------|
@@ -503,9 +566,9 @@ graph TD
 
 ---
 
-## Recommendations
+## 9. Recommendations
 
-### Priority 1: Create Test Plan (URGENT)
+### 9.1 Priority 1: Create Test Plan (URGENT)
 
 | # | Recommendation | Owner | Target Date | Rationale |
 |---|----------------|-------|-------------|-----------|
@@ -514,7 +577,7 @@ graph TD
 | 3 | Create integration test plan for all 6 INTs (~60 test cases) | QA Lead | 2026-03-15 | Integration validation |
 | 4 | Prioritise CRITICAL requirements for first test sprint | QA Lead | 2026-02-15 | 30 CRITICAL requirements untested |
 
-### Priority 2: Create DLD (Before Implementation)
+### 9.2 Priority 2: Create DLD (Before Implementation)
 
 | # | Recommendation | Owner | Target Date | Rationale |
 |---|----------------|-------|-------------|-----------|
@@ -522,7 +585,7 @@ graph TD
 | 6 | Create API specifications (OpenAPI) | AI Technical Architect | 2026-02-28 | Integration contracts |
 | 7 | Create database schema specifications | AI Technical Architect | 2026-02-28 | Data implementation |
 
-### Priority 3: Additional ADRs
+### 9.3 Priority 3: Additional ADRs
 
 | # | Recommendation | Owner | Target Date | Rationale |
 |---|----------------|-------|-------------|-----------|
@@ -532,16 +595,75 @@ graph TD
 
 ---
 
-## Generation Metadata
+## 10. Action Items
 
-| Field | Value |
-|-------|-------|
-| **Generated by** | ArcKit v0.6.0 |
-| **AI Model** | Claude Opus 4.5 |
-| **Generation Date** | 2026-01-18 |
-| **Command** | `/arckit.traceability` |
-| **Source Documents** | requirements.md, high-level-design.md, stakeholder-drivers.md, data-model.md, risk-register.md, ADR-001 |
+### 10.1 Gap Resolution
+
+| ID | Gap Description | Owner | Priority | Target Date | Status |
+|----|-----------------|-------|----------|-------------|--------|
+| GAP-001 | All requirements missing test coverage | QA Lead | CRITICAL | 2026-03-15 | Open |
+| GAP-002 | DLD not yet created | AI Technical Architect | HIGH | 2026-02-28 | Open |
+| GAP-003 | Additional ADRs needed | Architecture Team | MEDIUM | 2026-02-28 | Open |
+
+### 10.2 Review Checklist
+
+- [x] All business requirements traced to functional requirements
+- [x] All functional requirements traced to design components
+- [x] All design components traced back to requirements (no orphans)
+- [ ] All requirements have test coverage defined
+- [x] All gaps identified and action plan in place
+- [x] All NFRs addressed in design and test plan
+- [x] Change impact analysis complete
 
 ---
 
-**END OF TRACEABILITY MATRIX**
+## 11. Review and Approval
+
+| Role | Name | Review Date | Approval | Signature | Date |
+|------|------|-------------|----------|-----------|------|
+| Product Owner | CDiO | | [ ] Approve [ ] Reject | _________ | |
+| Enterprise Architect | AI Technical Architect | | [ ] Approve [ ] Reject | _________ | |
+| QA Lead | [To be assigned] | | [ ] Approve [ ] Reject | _________ | |
+| Project Manager | Programme Lead | | [ ] Approve [ ] Reject | _________ | |
+
+---
+
+## Appendix A: Full Requirements List
+
+See: `projects/001-scts-genai-programme/requirements.md`
+
+## Appendix B: Design Documents
+
+- High-Level Design (HLD): `projects/001-scts-genai-programme/high-level-design.md`
+- Architecture Decisions: `projects/001-scts-genai-programme/decisions/`
+- Detailed Design (DLD): Not yet created
+
+## Appendix C: Test Plan
+
+Not yet created - see Recommendations section.
+
+## Appendix D: Glossary
+
+| Term | Definition |
+|------|------------|
+| ADR | Architecture Decision Record - documents significant design choices |
+| BR | Business Requirement - high-level business need |
+| DLD | Detailed Level Design - implementation-level design document |
+| DR | Data Requirement - requirements for data handling |
+| FR | Functional Requirement - specific system capability |
+| HLD | High Level Design - architecture and component design |
+| INT | Integration Requirement - requirements for external system integration |
+| NFR | Non-Functional Requirement - quality attributes (performance, security, etc.) |
+| RTM | Requirements Traceability Matrix - this document |
+| SD | Stakeholder Driver - underlying motivations and concerns of stakeholders |
+| TC | Technical Constraint - boundaries that limit design choices |
+| TC (Test) | Test Case - individual test scenario |
+
+---
+
+**Generated by**: ArcKit `/arckit.traceability` command
+**Generated on**: 2026-01-27
+**ArcKit Version**: 0.11.2
+**Project**: SCTS GenAI Programme (Project 001)
+**Model**: Claude Opus 4.5
+**Generation Context**: Based on requirements.md, high-level-design.md, stakeholder-drivers.md, data-model.md, risk-register.md, ADR-001

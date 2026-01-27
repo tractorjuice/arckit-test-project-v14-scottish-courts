@@ -1,23 +1,32 @@
 # Data Model: SCTS GenAI Programme
 
-## Document Information
+> **Template Status**: Live | **Version**: 0.11.2 | **Command**: `/arckit.data-model`
+
+## Document Control
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-DATA-v1.0 |
-| **Project** | SCTS GenAI Programme (Project 001) |
+| **Document ID** | ARC-001-DATA-v1.1 |
 | **Document Type** | Data Model |
+| **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL-SENSITIVE |
-| **Version** | 1.0 |
 | **Status** | DRAFT |
-| **Date** | 2026-01-17 |
+| **Version** | 1.1 |
+| **Created Date** | 2026-01-17 |
+| **Last Modified** | 2026-01-27 |
+| **Review Cycle** | Quarterly |
+| **Next Review Date** | 2026-04-27 |
 | **Owner** | Chief Digital Information Officer, SCTS |
+| **Reviewed By** | PENDING |
+| **Approved By** | PENDING |
+| **Distribution** | Project Team, Architecture Board, Data Protection Officer |
 
 ## Revision History
 
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.data-model` command |
+| Version | Date | Author | Changes | Approved By | Approval Date |
+|---------|------|--------|---------|-------------|---------------|
+| 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.data-model` command | PENDING | PENDING |
+| 1.1 | 2026-01-27 | ArcKit AI | Updated to template v0.11.2 format; added glossary | PENDING | PENDING |
 
 ---
 
@@ -36,13 +45,13 @@ All personal data processing is subject to UK GDPR requirements, with special at
 
 ### Model Statistics
 
-- **Total Entities**: 8 entities defined (E-001 through E-008)
+- **Total Entities**: 9 entities defined (E-001 through E-009)
 - **Total Attributes**: 67 attributes across all entities
 - **Total Relationships**: 9 relationships mapped
 - **Data Classification**:
   - 🟢 Public: 0 entities
   - 🟡 Internal: 3 entities (AI operational data)
-  - 🟠 Confidential: 4 entities (contain PII)
+  - 🟠 Confidential: 5 entities (contain PII)
   - 🔴 Restricted: 1 entity (special category data - court proceedings with health/criminal data)
 
 ### Compliance Summary
@@ -783,22 +792,22 @@ All data processing occurs within UK data centres as per requirement TC-4 (UK da
 
 | Requirement ID | Requirement Description | Entity | Attributes | Status |
 |----------------|------------------------|--------|------------|--------|
-| FR-001 | Document Upload and Ingestion | E-002, E-004 | request_type, source_document_id | Implemented |
-| FR-002 | AI Document Classification | E-003 | result_type, result_data, confidence_score | Implemented |
-| FR-003 | Human Review and Override | E-003 | human_reviewed, human_decision, reviewed_by | Implemented |
-| FR-004 | Speech-to-Text Transcription | E-002, E-003 | request_type='transcription', result_data | Implemented |
-| FR-005 | Real-Time Translation | E-006 | source_language, target_language | Implemented |
-| FR-007 | Semantic Search | E-009 | embedding_vector, extracted_text | Implemented |
-| FR-008 | Document Indexing | E-009 | All attributes | Implemented |
-| FR-009 | Case Law Citation Detection | E-009 | citations | Implemented |
-| FR-011 | AI Output Labelling | E-003 | confidence_score, model_version | Implemented |
-| FR-012 | Audit Trail | E-008 | All attributes | Implemented |
-| FR-015 | Consent Management | E-006, E-007 | consent_given, consent_timestamp | Implemented |
-| INT-002 | DMS Integration | E-004 | source_document_id | Implemented |
-| INT-003 | Identity Provider | E-001 | user_id, role | Implemented |
-| INT-004 | Court Scheduling | E-005 | session_id, case_reference | Implemented |
-| NFR-SEC-002 | Access Control | E-008 | ip_address, user_agent | Implemented |
-| NFR-C-002 | Audit Logging | E-008 | All audit attributes | Implemented |
+| FR-001 | Document Upload and Ingestion | E-002, E-004 | request_type, source_document_id | ✅ Implemented |
+| FR-002 | AI Document Classification | E-003 | result_type, result_data, confidence_score | ✅ Implemented |
+| FR-003 | Human Review and Override | E-003 | human_reviewed, human_decision, reviewed_by | ✅ Implemented |
+| FR-004 | Speech-to-Text Transcription | E-002, E-003 | request_type='transcription', result_data | ✅ Implemented |
+| FR-005 | Real-Time Translation | E-006 | source_language, target_language | ✅ Implemented |
+| FR-007 | Semantic Search | E-009 | embedding_vector, extracted_text | ✅ Implemented |
+| FR-008 | Document Indexing | E-009 | All attributes | ✅ Implemented |
+| FR-009 | Case Law Citation Detection | E-009 | citations | ✅ Implemented |
+| FR-011 | AI Output Labelling | E-003 | confidence_score, model_version | ✅ Implemented |
+| FR-012 | Audit Trail | E-008 | All attributes | ✅ Implemented |
+| FR-015 | Consent Management | E-006, E-007 | consent_given, consent_timestamp | ✅ Implemented |
+| INT-002 | DMS Integration | E-004 | source_document_id | ✅ Implemented |
+| INT-003 | Identity Provider | E-001 | user_id, role | ✅ Implemented |
+| INT-004 | Court Scheduling | E-005 | session_id, case_reference | ✅ Implemented |
+| NFR-SEC-002 | Access Control | E-008 | ip_address, user_agent | ✅ Implemented |
+| NFR-C-002 | Audit Logging | E-008 | All audit attributes | ✅ Implemented |
 
 **Coverage Summary**:
 - **Total Data Requirements**: 16 mapped
@@ -807,10 +816,42 @@ All data processing occurs within UK data centres as per requirement TC-4 (UK da
 
 ---
 
-## Generation Metadata
+## Appendix A: Glossary
+
+| Term | Definition |
+|------|------------|
+| **AD** | Active Directory - Microsoft directory service for identity management |
+| **ACID** | Atomicity, Consistency, Isolation, Durability - Database transaction properties |
+| **CDiO** | Chief Digital Information Officer |
+| **CRUD** | Create, Read, Update, Delete - Basic data operations |
+| **DMS** | Document Management System |
+| **DPA 2018** | Data Protection Act 2018 - UK implementation of GDPR |
+| **DPIA** | Data Protection Impact Assessment - Risk assessment for data processing |
+| **DPO** | Data Protection Officer |
+| **ERD** | Entity-Relationship Diagram |
+| **FK** | Foreign Key - Database reference to another table |
+| **GDPR** | General Data Protection Regulation - EU/UK data protection law |
+| **ICO** | Information Commissioner's Office - UK data protection regulator |
+| **ISO 639-1** | Two-letter language codes (e.g., en, cy, gd) |
+| **ISO 8601** | International date/time format standard |
+| **JSON** | JavaScript Object Notation - Data interchange format |
+| **PII** | Personally Identifiable Information |
+| **PK** | Primary Key - Unique identifier in database |
+| **RFC 5322** | Email format standard |
+| **RPO** | Recovery Point Objective - Maximum acceptable data loss |
+| **RTO** | Recovery Time Objective - Maximum acceptable downtime |
+| **SAML** | Security Assertion Markup Language - SSO authentication protocol |
+| **SAR** | Subject Access Request - GDPR right to access personal data |
+| **SCTS** | Scottish Courts and Tribunals Service |
+| **SSO** | Single Sign-On |
+| **UK** | Unique Key - Database constraint for uniqueness |
+| **UTC** | Coordinated Universal Time |
+| **UUID** | Universally Unique Identifier |
+
+---
 
 **Generated by**: ArcKit `/arckit.data-model` command
-**Generated on**: 2026-01-17
-**ArcKit Version**: 0.6.0
+**Generated on**: 2026-01-27
+**ArcKit Version**: 0.11.2
 **Project**: SCTS GenAI Programme (Project 001)
-**AI Model**: Claude Opus 4.5
+**Model**: Claude Opus 4.5

@@ -1,23 +1,32 @@
 # High-Level Design: SCTS GenAI Programme
 
-## Document Information
+> **Template Status**: Beta | **Version**: 0.11.2 | **Command**: `/arckit.diagram`
+
+## Document Control
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-HLD-v1.0 |
-| **Project** | SCTS GenAI Programme (Project 001) |
+| **Document ID** | ARC-001-HLD-v1.1 |
 | **Document Type** | High-Level Design |
+| **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL-SENSITIVE |
-| **Version** | 1.0 |
 | **Status** | DRAFT |
-| **Date** | 2026-01-17 |
+| **Version** | 1.1 |
+| **Created Date** | 2026-01-17 |
+| **Last Modified** | 2026-01-27 |
+| **Review Cycle** | Quarterly |
+| **Next Review Date** | 2026-04-27 |
 | **Owner** | Senior AI Technical Architect, SCTS |
+| **Reviewed By** | PENDING |
+| **Approved By** | PENDING |
+| **Distribution** | CDi Function, AI Team, Architecture Board, Security Team |
 
 ## Revision History
 
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.hld-review` command |
+| Version | Date | Author | Changes | Approved By | Approval Date |
+|---------|------|--------|---------|-------------|---------------|
+| 1.0 | 2026-01-17 | ArcKit AI | Initial creation from `/arckit.hld-review` command | PENDING | PENDING |
+| 1.1 | 2026-01-27 | ArcKit AI | Updated to template v0.11.2 format; expanded glossary | PENDING | PENDING |
 
 ---
 
@@ -1224,49 +1233,103 @@ flowchart TB
 
 ---
 
-## Appendices
-
-### Appendix A: Glossary
+## Appendix A: Glossary
 
 | Term | Definition |
 |------|------------|
-| **AKS** | Azure Kubernetes Service |
+| **ACR** | Azure Container Registry - managed Docker container registry |
+| **AES-256** | Advanced Encryption Standard with 256-bit key length |
+| **AI** | Artificial Intelligence |
+| **AKS** | Azure Kubernetes Service - managed Kubernetes container orchestration |
 | **API** | Application Programming Interface |
+| **APIM** | Azure API Management - managed API gateway service |
+| **ASR** | Automatic Speech Recognition |
+| **BM25** | Best Matching 25 - ranking function used in information retrieval |
+| **C4** | Context, Container, Component, Code - software architecture diagramming model |
+| **CAF** | Cyber Assessment Framework (NCSC) |
 | **CDN** | Content Delivery Network |
-| **CMK** | Customer-Managed Key |
+| **CI/CD** | Continuous Integration / Continuous Deployment |
+| **CMK** | Customer-Managed Key for encryption |
+| **DLP** | Data Loss Prevention |
+| **DMS** | Document Management System |
+| **DPA 2018** | Data Protection Act 2018 (UK) |
+| **DPIA** | Data Protection Impact Assessment |
 | **DR** | Disaster Recovery |
+| **FTE** | Full-Time Equivalent |
+| **G-Cloud** | UK Government framework for cloud services procurement |
+| **GDPR** | General Data Protection Regulation (UK) |
 | **GRS** | Geo-Redundant Storage |
-| **HPA** | Horizontal Pod Autoscaler |
+| **HA** | High Availability |
+| **HLD** | High-Level Design |
+| **HPA** | Horizontal Pod Autoscaler (Kubernetes) |
+| **HSM** | Hardware Security Module |
+| **IaC** | Infrastructure as Code |
+| **IdP** | Identity Provider |
+| **JWT** | JSON Web Token |
+| **K8s** | Kubernetes |
 | **MFA** | Multi-Factor Authentication |
-| **NSG** | Network Security Group |
+| **ML** | Machine Learning |
+| **mTLS** | Mutual Transport Layer Security |
+| **NCSC** | National Cyber Security Centre |
+| **NER** | Named Entity Recognition |
+| **NFR** | Non-Functional Requirement |
+| **NMT** | Neural Machine Translation |
+| **NSG** | Network Security Group (Azure) |
+| **OAuth** | Open Authorization protocol |
+| **OCR** | Optical Character Recognition |
+| **OpenAPI** | Specification for describing REST APIs |
+| **p50/p95/p99** | Percentile metrics (50th, 95th, 99th) |
+| **PII** | Personally Identifiable Information |
+| **PoC** | Proof of Concept |
 | **RBAC** | Role-Based Access Control |
+| **REST** | Representational State Transfer |
 | **RTO** | Recovery Time Objective |
 | **RPO** | Recovery Point Objective |
 | **SAML** | Security Assertion Markup Language |
+| **SAST** | Static Application Security Testing |
+| **DAST** | Dynamic Application Security Testing |
+| **SCTS** | Scottish Courts and Tribunals Service |
+| **SIEM** | Security Information and Event Management |
+| **SLA** | Service Level Agreement |
+| **SLI** | Service Level Indicator |
+| **SLO** | Service Level Objective |
+| **SPA** | Single Page Application |
+| **SPOF** | Single Point of Failure |
+| **SQL** | Structured Query Language |
+| **SRO** | Senior Responsible Owner |
+| **SSE** | Server-Side Encryption |
 | **SSO** | Single Sign-On |
+| **TCO** | Total Cost of Ownership |
 | **TDE** | Transparent Data Encryption |
 | **TLS** | Transport Layer Security |
+| **UAT** | User Acceptance Testing |
+| **UK GDPR** | UK General Data Protection Regulation |
+| **UPN** | User Principal Name |
+| **VNet** | Virtual Network (Azure) |
 | **WAF** | Web Application Firewall |
+| **WCAG** | Web Content Accessibility Guidelines |
+| **WebSocket** | Protocol for full-duplex communication over TCP |
+| **WORM** | Write Once Read Many (immutable storage) |
 
-### Appendix B: Reference Documents
+## Appendix B: Reference Documents
 
 | Document | ID | Purpose |
 |----------|-----|---------|
 | Requirements | ARC-001-REQ-v1.0 | Functional and non-functional requirements |
 | Architecture Principles | ARC-001-PRIN-v1.0 | Design principles and constraints |
-| Data Model | ARC-001-DATA-v1.0 | Entity definitions and relationships |
+| Data Model | ARC-001-DATA-v1.1 | Entity definitions and relationships |
 | Research Findings | ARC-001-RSCH-v1.0 | Technology evaluation and recommendations |
-| DPIA | ARC-001-DPIA-v1.0 | Data protection impact assessment |
-| Secure by Design | ARC-001-SBD-v1.0 | Security assessment |
+| DPIA | ARC-001-DPIA-v1.1 | Data protection impact assessment |
+| Secure by Design | ARC-001-SBD-v1.1 | Security assessment |
 | Risk Register | ARC-001-RISK-v1.0 | Risk identification and mitigation |
+| DevOps Strategy | ARC-001-DEVOPS-v1.1 | CI/CD and infrastructure automation |
+| MLOps Strategy | ARC-001-MLOPS-v1.1 | ML model lifecycle management |
+| FinOps Strategy | ARC-001-FINOPS-v1.1 | Cloud cost governance |
 
 ---
 
-## Generation Metadata
-
-**Generated by**: ArcKit `/arckit.hld-review` command (Option 2: Create HLD)
-**Generated on**: 2026-01-17
-**ArcKit Version**: 0.6.0
+**Generated by**: ArcKit `/arckit.diagram` command
+**Generated on**: 2026-01-27
+**ArcKit Version**: 0.11.2
 **Project**: SCTS GenAI Programme (Project 001)
 **AI Model**: Claude Opus 4.5
-**Input Artifacts**: requirements.md, architecture-principles.md, data-model.md, research-findings.md

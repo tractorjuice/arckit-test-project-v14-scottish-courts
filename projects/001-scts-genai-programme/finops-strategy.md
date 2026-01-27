@@ -1,23 +1,32 @@
 # FinOps Strategy: SCTS GenAI Programme
 
-## Document Information
+> **Template Status**: Experimental | **Version**: 0.11.2 | **Command**: `/arckit.finops`
+
+## Document Control
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-FINOPS-v1.0 |
-| **Project** | SCTS GenAI Programme (Project 001) |
+| **Document ID** | ARC-001-FINOPS-v1.1 |
 | **Document Type** | FinOps Strategy |
+| **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL |
-| **Version** | 1.0 |
 | **Status** | DRAFT |
-| **Date** | 2026-01-21 |
+| **Version** | 1.1 |
+| **Created Date** | 2026-01-21 |
+| **Last Modified** | 2026-01-27 |
+| **Review Cycle** | Quarterly |
+| **Next Review Date** | 2026-04-27 |
 | **Owner** | Chief Digital Information Officer, SCTS |
+| **Reviewed By** | PENDING |
+| **Approved By** | PENDING |
+| **Distribution** | FinOps Lead, Platform Team, Finance, Engineering Leads, Steering Committee |
 
 ## Revision History
 
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | 2026-01-21 | ArcKit AI | Initial creation from `/arckit.finops` command |
+| Version | Date | Author | Changes | Approved By | Approval Date |
+|---------|------|--------|---------|-------------|---------------|
+| 1.0 | 2026-01-21 | ArcKit AI | Initial creation from `/arckit.finops` command | PENDING | PENDING |
+| 1.1 | 2026-01-27 | ArcKit AI | Updated to template v0.11.2 format; expanded glossary | PENDING | PENDING |
 
 ---
 
@@ -998,9 +1007,7 @@ flowchart LR
 
 ---
 
-## Appendices
-
-### Appendix A: Azure Cost Management Configuration
+## Appendix A: Azure Cost Management Configuration
 
 **Cost Export Settings**:
 ```json
@@ -1027,7 +1034,9 @@ flowchart LR
 }
 ```
 
-### Appendix B: Budget Alert Configuration
+---
+
+## Appendix B: Budget Alert Configuration
 
 **Azure Budget Template**:
 ```json
@@ -1062,7 +1071,9 @@ flowchart LR
 }
 ```
 
-### Appendix C: Tagging Policy Example
+---
+
+## Appendix C: Tagging Policy Example
 
 **Azure Policy Definition (Require Tags)**:
 ```json
@@ -1105,25 +1116,58 @@ flowchart LR
 }
 ```
 
-### Appendix D: Glossary
+---
+
+## Appendix D: Glossary
 
 | Term | Definition |
 |------|------------|
-| **FinOps** | Cloud financial management discipline combining finance, technology, and business |
-| **Showback** | Reporting costs to teams without internal billing |
-| **Chargeback** | Billing costs to teams via internal transfer |
+| **ACR** | Azure Container Registry - managed Docker container registry service |
+| **AKS** | Azure Kubernetes Service - managed container orchestration platform |
+| **API** | Application Programming Interface - software communication protocol |
+| **CDiO** | Chief Digital Information Officer - senior technology executive |
+| **Chargeback** | Cost allocation model where teams are billed via internal transfer |
+| **CI/CD** | Continuous Integration/Continuous Deployment - automated build and deployment |
 | **Committed Coverage** | Percentage of spend covered by reserved instances or savings plans |
-| **Unit Economics** | Cost per business transaction (document, session, query) |
-| **Rightsizing** | Adjusting resource size to match actual usage |
-| **Savings Plan** | Commitment to consistent compute spend for discounted rates |
-| **G-Cloud** | UK Government framework for procuring cloud services |
+| **Cosmos DB** | Azure globally distributed multi-model database service |
 | **DORA** | Digital, Data and Technology (DDaT) spending controls |
+| **DPIA** | Data Protection Impact Assessment - GDPR privacy analysis |
+| **DTU** | Database Transaction Unit - Azure SQL performance measure |
+| **FinOps** | Cloud financial management discipline combining finance, technology, and business |
+| **FTE** | Full-Time Equivalent - workforce measurement unit |
+| **G-Cloud** | UK Government framework for procuring cloud services |
+| **GMT** | Greenwich Mean Time - UK standard time zone |
+| **HPA** | Horizontal Pod Autoscaler - Kubernetes auto-scaling component |
+| **IaC** | Infrastructure as Code - managing infrastructure through code |
+| **JSON** | JavaScript Object Notation - data interchange format |
+| **KPI** | Key Performance Indicator - measurable success metric |
+| **NFR** | Non-Functional Requirement - quality attribute specification |
+| **PoC** | Proof of Concept - feasibility demonstration |
+| **Power BI** | Microsoft business intelligence and analytics platform |
+| **RACI** | Responsible, Accountable, Consulted, Informed - responsibility matrix |
+| **RI** | Reserved Instance - discounted cloud capacity commitment |
+| **Rightsizing** | Adjusting resource size to match actual usage |
+| **ROI** | Return on Investment - profitability measure |
+| **Savings Plan** | Commitment to consistent compute spend for discounted rates |
+| **SCTS** | Scottish Courts and Tribunals Service |
+| **SG** | Scottish Government |
+| **Showback** | Cost allocation model where teams see costs without internal billing |
+| **SKU** | Stock Keeping Unit - specific Azure resource configuration |
+| **SLA** | Service Level Agreement - performance commitment |
+| **SME** | Small and Medium Enterprise - business size classification |
+| **SOBC** | Strategic Outline Business Case - initial investment justification |
+| **SP** | Savings Plan - Azure commitment discount programme |
+| **SRE** | Site Reliability Engineering - operations discipline |
+| **TBD** | To Be Determined - value pending future analysis |
+| **Unit Economics** | Cost per business transaction (document, session, query) |
 
-### Appendix E: References
+---
+
+## Appendix E: References
 
 - Architecture Principles (ARC-001-PRIN-v1.0)
 - Requirements Document (ARC-001-REQ-v1.0)
-- DevOps Strategy (ARC-001-DEVOPS-v1.0)
+- DevOps Strategy (ARC-001-DEVOPS-v1.1)
 - Stakeholder Drivers Analysis (ARC-001-STKE-v1.0)
 - FinOps Foundation Framework (https://www.finops.org/framework/)
 - Azure Cost Management Documentation
@@ -1133,7 +1177,7 @@ flowchart LR
 ---
 
 **Generated by**: ArcKit `/arckit.finops` command
-**Generated on**: 2026-01-21
-**ArcKit Version**: 0.6.0
+**Generated on**: 2026-01-27
+**ArcKit Version**: 0.11.2
 **Project**: SCTS GenAI Programme (Project 001)
-**AI Model**: Claude Opus 4.5
+**Model**: Claude Opus 4.5
