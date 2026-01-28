@@ -957,6 +957,50 @@
                         });
                     }
 
+                    if (project.research) {
+                        project.research.forEach(doc => {
+                            allDocuments.push({
+                                ...doc,
+                                project: projectName,
+                                category: 'Research',
+                                searchText: `${doc.title} research ${projectName}`.toLowerCase()
+                            });
+                        });
+                    }
+
+                    if (project.reviews) {
+                        project.reviews.forEach(doc => {
+                            allDocuments.push({
+                                ...doc,
+                                project: projectName,
+                                category: 'Reviews',
+                                searchText: `${doc.title} review hld dld ${projectName}`.toLowerCase()
+                            });
+                        });
+                    }
+
+                    if (project.wardleyMaps) {
+                        project.wardleyMaps.forEach(doc => {
+                            allDocuments.push({
+                                ...doc,
+                                project: projectName,
+                                category: 'Wardley Maps',
+                                searchText: `${doc.title} wardley map strategy ${projectName}`.toLowerCase()
+                            });
+                        });
+                    }
+
+                    if (project.dataContracts) {
+                        project.dataContracts.forEach(doc => {
+                            allDocuments.push({
+                                ...doc,
+                                project: projectName,
+                                category: 'Data Contracts',
+                                searchText: `${doc.title} data contract ${projectName}`.toLowerCase()
+                            });
+                        });
+                    }
+
                     if (project.decisions) {
                         project.decisions.forEach(doc => {
                             allDocuments.push({
@@ -1204,6 +1248,30 @@
                 });
             }
 
+            // Reviews (HLD, DLD)
+            if (project.reviews && project.reviews.length > 0) {
+                listHtml += `<li class="app-nav-category">Reviews</li>`;
+                project.reviews.forEach(doc => {
+                    listHtml += `<li><a href="#${doc.path}" data-path="${doc.path}">${doc.title}</a></li>`;
+                });
+            }
+
+            // Research
+            if (project.research && project.research.length > 0) {
+                listHtml += `<li class="app-nav-category">Research</li>`;
+                project.research.forEach(doc => {
+                    listHtml += `<li><a href="#${doc.path}" data-path="${doc.path}">${doc.title}</a></li>`;
+                });
+            }
+
+            // Wardley Maps
+            if (project.wardleyMaps && project.wardleyMaps.length > 0) {
+                listHtml += `<li class="app-nav-category">Wardley Maps</li>`;
+                project.wardleyMaps.forEach(doc => {
+                    listHtml += `<li><a href="#${doc.path}" data-path="${doc.path}">${doc.title}</a></li>`;
+                });
+            }
+
             // Diagrams
             if (project.diagrams && project.diagrams.length > 0) {
                 listHtml += `<li class="app-nav-category">Diagrams</li>`;
@@ -1216,6 +1284,14 @@
             if (project.decisions && project.decisions.length > 0) {
                 listHtml += `<li class="app-nav-category">Decisions</li>`;
                 project.decisions.forEach(doc => {
+                    listHtml += `<li><a href="#${doc.path}" data-path="${doc.path}">${doc.title}</a></li>`;
+                });
+            }
+
+            // Data Contracts
+            if (project.dataContracts && project.dataContracts.length > 0) {
+                listHtml += `<li class="app-nav-category">Data Contracts</li>`;
+                project.dataContracts.forEach(doc => {
                     listHtml += `<li><a href="#${doc.path}" data-path="${doc.path}">${doc.title}</a></li>`;
                 });
             }
@@ -1415,9 +1491,18 @@
                 // Setup keyboard shortcuts
                 setupKeyboardShortcuts();
 
-                // Handle initial hash
+                // Handle initial hash or load default document
                 if (window.location.hash) {
                     const path = window.location.hash.slice(1);
+                    loadDocument(path);
+
+                    // Mark as active
+                    const link = document.querySelector(`a[data-path="${path}"]`);
+                    if (link) link.classList.add('active');
+                } else if (manifest.defaultDocument) {
+                    // Load default document (Architecture Principles)
+                    const path = manifest.defaultDocument;
+                    window.location.hash = path;
                     loadDocument(path);
 
                     // Mark as active
@@ -1441,6 +1526,10 @@
                 manifest.projects.forEach(p => {
                     if (p.documents) count += p.documents.length;
                     if (p.diagrams) count += p.diagrams.length;
+                    if (p.research) count += p.research.length;
+                    if (p.reviews) count += p.reviews.length;
+                    if (p.wardleyMaps) count += p.wardleyMaps.length;
+                    if (p.dataContracts) count += p.dataContracts.length;
                     if (p.decisions) count += p.decisions.length;
                     if (p.vendors) {
                         p.vendors.forEach(v => {
