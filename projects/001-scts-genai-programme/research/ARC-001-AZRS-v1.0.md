@@ -1,6 +1,6 @@
 # Azure Technology Research: SCTS GenAI Programme
 
-> **Template Status**: Alpha | **Version**: 1.0.1 | **Command**: `/arckit.azure-research`
+> **Template Status**: Experimental | **Version**: 1.0.1 | **Command**: `/arckit.azure-research`
 
 ## Document Control
 
