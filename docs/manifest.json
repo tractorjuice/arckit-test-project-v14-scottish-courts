@@ -156,6 +156,11 @@
           "path": "projects/001-scts-genai-programme/research/ARC-001-AZRS-v1.1.md",
           "title": "Azure Technology Research v1.1",
           "documentId": "ARC-001-AZRS-v1.1"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/research/ARC-001-AWRS-v1.0.md",
+          "title": "AWS Technology Research",
+          "documentId": "ARC-001-AWRS-v1.0"
         }
       ],
       "reviews": [
