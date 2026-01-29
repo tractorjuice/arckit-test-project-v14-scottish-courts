@@ -6,14 +6,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-DEVOPS-v1.1 |
+| **Document ID** | ARC-001-DEVOPS-v1.2 |
 | **Document Type** | DevOps Strategy |
 | **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL |
 | **Status** | DRAFT |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Created Date** | 2026-01-20 |
-| **Last Modified** | 2026-01-27 |
+| **Last Modified** | 2026-01-29 |
 | **Review Cycle** | Quarterly |
 | **Next Review Date** | 2026-04-27 |
 | **Owner** | Senior AI Technical Architect, SCTS |
@@ -27,6 +27,7 @@
 |---------|------|--------|---------|-------------|---------------|
 | 1.0 | 2026-01-20 | ArcKit AI | Initial creation from `/arckit.devops` command | PENDING | PENDING |
 | 1.1 | 2026-01-27 | ArcKit AI | Updated to template v0.11.2 format; added glossary | PENDING | PENDING |
+| 1.2 | 2026-01-29 | ArcKit AI | Updated to align with Azure Research (ARC-001-AZRS-v1.0); added Azure AI services deployment | PENDING | PENDING |
 
 ---
 
@@ -51,6 +52,8 @@ This DevOps strategy establishes the engineering practices, tooling, and automat
 
 ### Technology Stack Overview
 
+> **Reference**: See [Azure Technology Research (ARC-001-AZRS-v1.0)](research/ARC-001-AZRS-v1.0.md) for detailed Azure service analysis, pricing, and Well-Architected assessment.
+
 | Layer | Technology | Rationale |
 |-------|------------|-----------|
 | **Source Control** | Azure DevOps Git | Existing SCTS tooling, integration with Azure |
@@ -61,6 +64,19 @@ This DevOps strategy establishes the engineering practices, tooling, and automat
 | **Secret Management** | Azure Key Vault | HSM-backed, FIPS 140-2 compliant |
 | **GitOps** | ArgoCD | Declarative deployments, audit trail |
 | **Monitoring** | Azure Monitor + Prometheus | Native + OSS flexibility |
+
+### Azure AI Services (from ARC-001-AZRS-v1.0)
+
+| Service | Purpose | Tier | Monthly Est. |
+|---------|---------|------|--------------|
+| Azure AI Document Intelligence | Document classification & extraction | S0 | £2,363 |
+| Azure AI Speech | Real-time transcription & diarisation | S0 | £1,020 |
+| Azure AI Translator | Multi-language translation (10 languages) | S1 | £484 |
+| Azure AI Search | Semantic search & knowledge mining | S1 + replica | £470 |
+| Microsoft Entra ID | Identity & SSO | P1 | £600 |
+| Azure Key Vault | Secrets & certificates | Standard | £10 |
+| Azure Monitor | Logging, metrics, alerts | Standard | £200 |
+| **Total Infrastructure** | | | **£5,702/month** |
 
 ### Key Metrics Targets
 
