@@ -64,10 +64,10 @@ This document presents Azure-specific technology research findings for the SCTS 
 
 | Criteria | Status | Notes |
 |----------|--------|-------|
-| **UK Region Availability** | :white_check_mark: UK South, UK West | Primary: UK South, DR: UK West |
-| **G-Cloud Listing** | :white_check_mark: G-Cloud 14 | Framework: RM1557.14 |
-| **Data Classification** | :white_check_mark: OFFICIAL / OFFICIAL-SENSITIVE | Azure Government for SECRET |
-| **NCSC Cloud Security Principles** | :white_check_mark: 14/14 principles met | [Azure UK Compliance](https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-uk-g-cloud) |
+| **UK Region Availability** | ✓ UK South, UK West | Primary: UK South, DR: UK West |
+| **G-Cloud Listing** | ✓ G-Cloud 14 | Framework: RM1557.14 |
+| **Data Classification** | ✓ OFFICIAL / OFFICIAL-SENSITIVE | Azure Government for SECRET |
+| **NCSC Cloud Security Principles** | ✓ 14/14 principles met | [Azure UK Compliance](https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-uk-g-cloud) |
 
 ---
 
@@ -131,22 +131,22 @@ This document presents Azure-specific technology research findings for the SCTS 
 
 | Control | Status | Implementation |
 |---------|--------|----------------|
-| NS-1: Network Security | :white_check_mark: | Private endpoints, VNet integration |
-| IM-1: Identity Management | :white_check_mark: | Managed Identity, Azure AD authentication |
-| DP-1: Data Protection | :white_check_mark: | Customer-managed keys in Key Vault |
-| LT-1: Logging and Threat Detection | :white_check_mark: | Diagnostic logs to Log Analytics |
+| NS-1: Network Security | ✓ | Private endpoints, VNet integration |
+| IM-1: Identity Management | ✓ | Managed Identity, Azure AD authentication |
+| DP-1: Data Protection | ✓ | Customer-managed keys in Key Vault |
+| LT-1: Logging and Threat Detection | ✓ | Diagnostic logs to Log Analytics |
 
 **UK Region Availability**:
-- :white_check_mark: UK South (Primary) - Full feature availability
-- :white_check_mark: UK West (DR) - Full feature availability
+- ✓ UK South (Primary) - Full feature availability
+- ✓ UK West (DR) - Full feature availability
 - No regional limitations for custom models
 
 **Compliance Certifications**:
-- :white_check_mark: ISO 27001, 27017, 27018
-- :white_check_mark: SOC 1, 2, 3
-- :white_check_mark: UK Cyber Essentials Plus
-- :white_check_mark: UK G-Cloud
-- :white_check_mark: GDPR compliant
+- ✓ ISO 27001, 27017, 27018
+- ✓ SOC 1, 2, 3
+- ✓ UK Cyber Essentials Plus
+- ✓ UK G-Cloud
+- ✓ GDPR compliant
 
 ---
 
@@ -177,16 +177,16 @@ This document presents Azure-specific technology research findings for the SCTS 
 
 | Language | Speech-to-Text | Diarisation | Notes |
 |----------|----------------|-------------|-------|
-| English (UK) | :white_check_mark: | :white_check_mark: | Native support, custom legal model recommended |
-| Polish | :white_check_mark: | :white_check_mark: | Full support |
-| Urdu | :white_check_mark: | :white_check_mark: | Full support |
-| Punjabi | :white_check_mark: | :white_check_mark: | Full support |
-| Arabic | :white_check_mark: | :white_check_mark: | Full support (Modern Standard) |
-| Mandarin Chinese | :white_check_mark: | :white_check_mark: | Full support |
-| Cantonese | :white_check_mark: | :white_check_mark: | Full support |
-| Romanian | :white_check_mark: | :white_check_mark: | Full support |
-| Bengali | :white_check_mark: | :white_check_mark: | Full support |
-| Russian | :white_check_mark: | :white_check_mark: | Full support |
+| English (UK) | ✓ | ✓ | Native support, custom legal model recommended |
+| Polish | ✓ | ✓ | Full support |
+| Urdu | ✓ | ✓ | Full support |
+| Punjabi | ✓ | ✓ | Full support |
+| Arabic | ✓ | ✓ | Full support (Modern Standard) |
+| Mandarin Chinese | ✓ | ✓ | Full support |
+| Cantonese | ✓ | ✓ | Full support |
+| Romanian | ✓ | ✓ | Full support |
+| Bengali | ✓ | ✓ | Full support |
+| Russian | ✓ | ✓ | Full support |
 
 **Pricing Tiers**:
 
@@ -243,8 +243,8 @@ transcriber.transcribed.connect(handle_transcribed)
 | **Performance Efficiency** | 5/5 | <500ms latency meets NFR-P-002 |
 
 **UK Region Availability**:
-- :white_check_mark: UK South - Full feature availability including custom speech
-- :white_check_mark: UK West - Full feature availability
+- ✓ UK South - Full feature availability including custom speech
+- ✓ UK West - Full feature availability
 
 ---
 
@@ -325,8 +325,8 @@ translation_config.set_property(
 ```
 
 **UK Region Availability**:
-- :white_check_mark: UK South - Full feature availability
-- :white_check_mark: UK West - Full feature availability
+- ✓ UK South - Full feature availability
+- ✓ UK West - Full feature availability
 - Custom Translator models can be trained and deployed in UK regions
 
 ---
@@ -405,15 +405,15 @@ translation_config.set_property(
 
 | Requirement | Target | Azure AI Search Capability |
 |-------------|--------|---------------------------|
-| NFR-P-003 Simple query | <2 seconds | :white_check_mark: <200ms typical |
-| NFR-P-003 Complex query | <5 seconds | :white_check_mark: <1 second typical |
-| NFR-P-003 Typeahead | <200ms | :white_check_mark: Supported |
-| Precision@10 | >70% | :white_check_mark: Semantic ranking improves by 30-40% |
-| Index size | 5M documents | :white_check_mark: S2 tier supports 100GB+ |
+| NFR-P-003 Simple query | <2 seconds | ✓ <200ms typical |
+| NFR-P-003 Complex query | <5 seconds | ✓ <1 second typical |
+| NFR-P-003 Typeahead | <200ms | ✓ Supported |
+| Precision@10 | >70% | ✓ Semantic ranking improves by 30-40% |
+| Index size | 5M documents | ✓ S2 tier supports 100GB+ |
 
 **UK Region Availability**:
-- :white_check_mark: UK South - All features including semantic ranker, agentic retrieval
-- :white_check_mark: UK West - All features available
+- ✓ UK South - All features including semantic ranker, agentic retrieval
+- ✓ UK West - All features available
 - Free tier semantic ranker available in UK South
 
 ---
@@ -586,13 +586,13 @@ graph TB
 
 | Framework | Alignment | Notes |
 |-----------|-----------|-------|
-| **NCSC Cloud Security Principles** | :white_check_mark: 14/14 | [Full attestation](https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-uk-g-cloud) |
-| **Cyber Essentials Plus** | :white_check_mark: Certified | Azure controls map to CE+ requirements |
-| **Scottish Cyber Resilience Framework** | :white_check_mark: Aligned | Azure security baselines exceed requirements |
-| **UK GDPR** | :white_check_mark: Compliant | UK data residency, DPA signed |
-| **OFFICIAL** | :white_check_mark: Suitable | Standard Azure services with baseline controls |
-| **OFFICIAL-SENSITIVE** | :white_check_mark: Suitable | Additional controls: Private Link, CMK, PIM |
-| **SECRET** | :warning: Azure Government UK | Separate sovereign cloud required |
+| **NCSC Cloud Security Principles** | ✓ 14/14 | [Full attestation](https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-uk-g-cloud) |
+| **Cyber Essentials Plus** | ✓ Certified | Azure controls map to CE+ requirements |
+| **Scottish Cyber Resilience Framework** | ✓ Aligned | Azure security baselines exceed requirements |
+| **UK GDPR** | ✓ Compliant | UK data residency, DPA signed |
+| **OFFICIAL** | ✓ Suitable | Standard Azure services with baseline controls |
+| **OFFICIAL-SENSITIVE** | ✓ Suitable | Additional controls: Private Link, CMK, PIM |
+| **SECRET** | ⚠ Azure Government UK | Separate sovereign cloud required |
 
 ### Data Residency Configuration
 
@@ -610,11 +610,11 @@ graph TB
 **Recommendations for SCTS**:
 1. Enable Defender for Cloud on all subscriptions (Standard tier)
 2. Enable Defender plans for:
-   - :white_check_mark: App Service
-   - :white_check_mark: SQL
-   - :white_check_mark: Storage
-   - :white_check_mark: Key Vault
-   - :white_check_mark: Containers (if using AKS)
+   - ✓ App Service
+   - ✓ SQL
+   - ✓ Storage
+   - ✓ Key Vault
+   - ✓ Containers (if using AKS)
 3. Configure Security Policy aligned to Azure Security Benchmark
 4. Enable Continuous Export to Log Analytics workspace (UK South)
 5. Configure regulatory compliance dashboard for:
@@ -1003,15 +1003,15 @@ stages:
 ### Scottish Government Specific
 
 **Scottish Government AI Strategy Alignment**:
-- :white_check_mark: Human-in-the-loop approach (BR-003, FR-003)
-- :white_check_mark: Transparency and explainability (FR-011, NFR-C-004)
-- :white_check_mark: Data protection compliance (NFR-C-001)
-- :white_check_mark: Scottish data residency (UK South/West regions)
+- ✓ Human-in-the-loop approach (BR-003, FR-003)
+- ✓ Transparency and explainability (FR-011, NFR-C-004)
+- ✓ Data protection compliance (NFR-C-001)
+- ✓ Scottish data residency (UK South/West regions)
 
 **Scottish Cyber Resilience Framework**:
-- :white_check_mark: Azure Security Benchmark exceeds SCR requirements
-- :white_check_mark: Microsoft Defender for Cloud provides continuous monitoring
-- :white_check_mark: Azure Policy enforces compliance baselines
+- ✓ Azure Security Benchmark exceeds SCR requirements
+- ✓ Microsoft Defender for Cloud provides continuous monitoring
+- ✓ Azure Policy enforces compliance baselines
 
 ### Data Residency Guarantees
 
