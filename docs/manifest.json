@@ -1,5 +1,5 @@
 {
-  "generated": "2026-01-29T12:00:00Z",
+  "generated": "2026-01-29T12:30:00Z",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v14-scottish-courts",
@@ -37,12 +37,6 @@
           "title": "Requirements",
           "category": "Discovery",
           "documentId": "ARC-001-REQ-v1.0"
-        },
-        {
-          "path": "projects/001-scts-genai-programme/ARC-001-AZRS-v1.0.md",
-          "title": "Azure Technology Research",
-          "category": "Discovery",
-          "documentId": "ARC-001-AZRS-v1.0"
         },
         {
           "path": "projects/001-scts-genai-programme/ARC-001-PLAN-v1.0.md",
@@ -152,6 +146,11 @@
           "path": "projects/001-scts-genai-programme/research/ARC-001-RSCH-001-v1.0.md",
           "title": "Research Findings",
           "documentId": "ARC-001-RSCH-001-v1.0"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/research/ARC-001-AZRS-v1.0.md",
+          "title": "Azure Technology Research",
+          "documentId": "ARC-001-AZRS-v1.0"
         }
       ],
       "reviews": [
