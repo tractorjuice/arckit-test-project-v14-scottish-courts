@@ -1,5 +1,5 @@
 {
-  "generated": "2026-01-29T14:30:00Z",
+  "generated": "2026-01-29T15:30:00Z",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v14-scottish-courts",
@@ -172,6 +172,18 @@
           "path": "projects/001-scts-genai-programme/decisions/ARC-001-ADR-001-v1.0.md",
           "title": "ADR-001: Azure AI Platform Selection",
           "documentId": "ARC-001-ADR-001-v1.0"
+        }
+      ],
+      "diagrams": [
+        {
+          "path": "projects/001-scts-genai-programme/diagrams/ARC-001-DIAG-001-v1.0.md",
+          "title": "Azure AI Platform - C4 Container Diagram",
+          "documentId": "ARC-001-DIAG-001-v1.0"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/diagrams/ARC-001-DIAG-002-v1.0.md",
+          "title": "Azure Infrastructure Deployment Diagram",
+          "documentId": "ARC-001-DIAG-002-v1.0"
         }
       ],
       "dataContracts": [],
