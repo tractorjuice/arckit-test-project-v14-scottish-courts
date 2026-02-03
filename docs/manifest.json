@@ -1,5 +1,5 @@
 {
-  "generated": "2026-01-29T16:00:00Z",
+  "generated": "2026-02-03T12:00:00Z",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v14-scottish-courts",
@@ -161,6 +161,16 @@
           "path": "projects/001-scts-genai-programme/research/ARC-001-AWRS-v1.0.md",
           "title": "AWS Technology Research",
           "documentId": "ARC-001-AWRS-v1.0"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/research/ARC-001-AWRS-v1.1.md",
+          "title": "AWS Technology Research v1.1",
+          "documentId": "ARC-001-AWRS-v1.1"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/research/ARC-001-AZRS-v1.2.md",
+          "title": "Azure Technology Research v1.2",
+          "documentId": "ARC-001-AZRS-v1.2"
         }
       ],
       "reviews": [
@@ -182,6 +192,11 @@
           "path": "projects/001-scts-genai-programme/decisions/ARC-001-ADR-001-v1.0.md",
           "title": "ADR-001: Azure AI Platform Selection",
           "documentId": "ARC-001-ADR-001-v1.0"
+        },
+        {
+          "path": "projects/001-scts-genai-programme/decisions/ARC-001-ADR-002-v1.0.md",
+          "title": "ADR-002: Azure vs AWS Platform Selection",
+          "documentId": "ARC-001-ADR-002-v1.0"
         }
       ],
       "diagrams": [
