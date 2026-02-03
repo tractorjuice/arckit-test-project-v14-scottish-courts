@@ -4,11 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is **arckit-test-project-v14-scottish-courts** - a test repository demonstrating ArcKit governance artifacts for the Scottish Courts and Tribunals Service (SCTS) GenAI Programme.
+This is an ArcKit-managed enterprise architecture governance project for the **Scottish Courts and Tribunals Service (SCTS) GenAI Programme**.
 
-**This is NOT the main arc-kit CLI repository** - it's a generated project containing architecture documentation artifacts. The CLI source code lives at [github.com/tractorjuice/arc-kit](https://github.com/tractorjuice/arc-kit).
-
-## Project Status
+**This is NOT the main arc-kit CLI repository** — it's a generated project containing architecture documentation artifacts. The CLI source code lives at [github.com/tractorjuice/arc-kit](https://github.com/tractorjuice/arc-kit).
 
 | Field | Value |
 |-------|-------|
@@ -16,148 +14,89 @@ This is **arckit-test-project-v14-scottish-courts** - a test repository demonstr
 | **Phase** | Alpha Complete |
 | **Governance Score** | 82/100 (Grade B) |
 | **Artifacts** | 25+ documents |
-| **ArcKit Version** | 0.11.0 |
+| **ArcKit Version** | 1.1.0 (43 commands) |
 
-## Repository Structure
+## How This Repository Works
 
+All work is driven by **slash commands** (`/arckit.*`) that read templates from `.arckit/templates/` and generate markdown artifacts into `projects/001-scts-genai-programme/`. There is no build system, test suite, or application code — this repository is pure architecture documentation.
+
+### Generating Artifacts
+
+Run slash commands in Claude Code. Each command:
+1. Checks prerequisites (e.g., principles must exist before requirements)
+2. Creates/finds the project via `.arckit/scripts/bash/create-project.sh --json`
+3. Reads the template from `.arckit/templates/{type}-template.md`
+4. Generates the artifact following template structure
+5. Writes output using the Write tool (avoids 32K token limit)
+6. Shows a summary only
+
+For large documents, append: `but write directly to file, show me only a summary`
+
+### Command Execution Order
+
+Commands have mandatory (M), recommended (R), and optional (O) dependencies. See `DEPENDENCY-MATRIX.md` for the full DSM and `WORKFLOW-DIAGRAMS.md` for visual paths.
+
+**Recommended order for this UK Government AI project:**
 ```
-.arckit/
-├── memory/                    # Global context
-│   └── architecture-principles.md   # 20 architecture principles
-├── templates/                 # 40+ document templates
-└── scripts/bash/              # Project management scripts
-
-.claude/commands/              # 40 slash commands (arckit.*.md)
-.gemini/commands/              # Gemini equivalents (TOML)
-.codex/prompts/                # Codex prompts
-
-projects/001-scts-genai-programme/   # Generated artifacts
-├── stakeholder-drivers.md           # 13 stakeholders, 6 goals
-├── requirements.md                  # 49 requirements
-├── risk-register.md                 # 20 risks (Orange Book)
-├── data-model.md                    # 9 entities, GDPR compliant
-├── high-level-design.md             # C4 architecture
-├── dpia.md                          # Data Protection Impact Assessment
-├── tcop-review.md                   # Technology Code of Practice
-├── secure-by-design-assessment.md   # NCSC CAF
-├── ai-playbook-assessment.md        # UK AI Playbook (79%)
-├── atrs-record.md                   # Algorithmic Transparency Record
-├── backlog.md                       # 184 user stories
-├── devops-strategy.md               # CI/CD and infrastructure
-├── mlops-strategy.md                # ML lifecycle management
-├── finops-strategy.md               # Cloud cost governance
-├── operational-readiness.md         # Runbooks, DR/BCP, support model
-├── traceability-matrix.md           # Requirements traceability
-├── decisions/ADR-*.md               # Architecture decisions
-├── wardley-maps/                    # Strategic maps
-└── PROJECT-STORY.md                 # Complete narrative
-
-docs/                          # GitHub Pages site
-├── index.html
-└── manifest.json
-
-source-documents/              # Input reference documents
+plan → principles → stakeholders → risk → sobc → requirements → datascout →
+data-model → research → wardley → gcloud-search → evaluate → hld-review →
+dld-review → backlog → servicenow → devops → mlops → operationalize →
+traceability → tcop → ai-playbook → atrs → secure → principles-compliance →
+analyze → service-assessment → story → pages
 ```
 
-## Common Commands
+**The three most-consumed artifacts:**
+- `requirements.md` — consumed by 37 commands (mandatory for most)
+- `architecture-principles.md` — consumed by 20 commands
+- `stakeholder-drivers.md` — consumed by 21 commands
 
-**Project Management:**
+### Delegated Agents
+
+Four research commands use delegated agents in `.claude/agents/`:
+- `arckit-research.md` — general technology research
+- `arckit-azure-research.md` — Azure research via Microsoft Learn MCP
+- `arckit-aws-research.md` — AWS research via AWS Knowledge MCP
+- `arckit-datascout.md` — external data source discovery
+
+### Scripts
+
 ```bash
-./.arckit/scripts/bash/create-project.sh --name "Project Name"  # Create new project
-./.arckit/scripts/bash/list-projects.sh                         # List projects
-```
-
-**Generate Artifacts (slash commands in Claude Code):**
-```
-/arckit.principles      # Architecture principles (do first)
-/arckit.stakeholders    # Stakeholder analysis
-/arckit.requirements    # Business/technical requirements
-/arckit.risk            # Risk register (Orange Book)
-/arckit.sobc            # Strategic Outline Business Case
-/arckit.data-model      # Data model with ERD
-/arckit.research        # Technology research
-/arckit.wardley         # Wardley maps
-/arckit.diagram         # Architecture diagrams (Mermaid)
-/arckit.backlog         # Sprint backlog from requirements
-/arckit.traceability    # Requirements traceability matrix
-/arckit.analyze         # Governance quality analysis
-/arckit.pages           # Generate GitHub Pages site
-```
-
-**UK Government Compliance:**
-```
-/arckit.tcop            # Technology Code of Practice (13 points)
-/arckit.secure          # Secure by Design (NCSC CAF)
-/arckit.dpia            # Data Protection Impact Assessment
-/arckit.ai-playbook     # AI Playbook compliance
-/arckit.atrs            # Algorithmic Transparency Record
-/arckit.service-assessment  # GDS Service Standard (14 points)
-```
-
-**Operations & Delivery:**
-```
-/arckit.devops          # CI/CD pipelines, IaC, container orchestration
-/arckit.mlops           # ML model lifecycle, training, serving, monitoring
-/arckit.finops          # Cloud cost management, optimization, forecasting
-/arckit.operationalize  # Runbooks, DR/BCP, on-call, support model
-```
-
-## Slash Command Pattern
-
-Commands read templates from `.arckit/templates/` and generate artifacts in `projects/NNN-*/`:
-
-```yaml
----
-description: Brief description
----
-
-## User Input
-$ARGUMENTS
-
-## Instructions
-1. Check prerequisites (principles exist)
-2. Create/find project via create-project.sh --json
-3. Read template from .arckit/templates/{type}-template.md
-4. Generate artifact using template structure
-5. Use Write tool to save (avoids 32K token limit)
-6. Show summary only
+.arckit/scripts/bash/create-project.sh --name "Name"    # Create new project (returns JSON)
+.arckit/scripts/bash/list-projects.sh                    # List all projects
+.arckit/scripts/bash/generate-document-id.sh             # Generate ARC-{PID}-{TYPE}-v*.md IDs
+.arckit/scripts/bash/check-prerequisites.sh              # Check command prerequisites
+.arckit/scripts/bash/migrate-filenames.sh                # Migrate to new naming convention
 ```
 
 ## Key Patterns
 
-**Token Limit Handling**: For large documents, use Write tool directly:
-```
-/arckit.requirements but write directly to file, show me only a summary
-```
+**Document ID convention**: `ARC-{PROJECT_ID}-{TYPE}-v{VERSION}.md`
+- Multi-instance types (ADR, DIAG, WARD, DMC): `ARC-{PID}-{TYPE}-{NUM}-v{VERSION}.md`
+- Architecture principles use project ID 000: `ARC-000-PRIN-v1.0.md`
 
-**Template-Driven**: All artifacts follow templates in `.arckit/templates/`
+**Traceability chain**: Stakeholders → Goals → Requirements (BR/FR/NFR/INT/DR) → Data Model → Components → User Stories
 
-**Traceability Chain**: Stakeholders → Goals → Requirements (BR/FR/NFR/INT/DR) → Data Model → Components → User Stories
+**Requirement ID prefixes**:
+- BR-xxx: Business, FR-xxx: Functional, NFR-xxx: Non-Functional (NFR-P-xxx Performance, NFR-SEC-xxx Security), INT-xxx: Integration, DR-xxx: Data
 
-**Requirement ID Prefixes**:
-- BR-xxx: Business Requirements
-- FR-xxx: Functional Requirements
-- NFR-xxx: Non-Functional (NFR-P-xxx Performance, NFR-SEC-xxx Security)
-- INT-xxx: Integration Requirements
-- DR-xxx: Data Requirements
+**Wardley Map format**: OnlineWardleyMaps syntax for https://create.wardleymaps.ai
 
-**Wardley Map Format**: OnlineWardleyMaps syntax for https://create.wardleymaps.ai
+**Multi-AI support**: Commands exist for Claude (`.claude/commands/`), Gemini (`.gemini/commands/`), and Codex (`.codex/prompts/`)
 
 ## Project Context: SCTS GenAI Programme
 
 The Scottish Courts and Tribunals Service GenAI Programme introduces:
-- **Document Intelligence** - AI-powered classification and entity extraction
-- **Speech Services** - Real-time transcription with speaker diarisation
-- **Translation Services** - 10 priority languages
-- **Cognitive Search** - Semantic search across court documents
+- **Document Intelligence** — AI-powered classification and entity extraction
+- **Speech Services** — Real-time transcription with speaker diarisation
+- **Translation Services** — 10 priority languages
+- **Cognitive Search** — Semantic search across court documents
 
-**Design Principles**:
+**Design constraints**:
 - Human-in-the-loop for all consequential decisions
 - AI augments but never replaces judicial decision-making
 - UK data residency (Azure UK South/West)
 - Zero modifications to court records by AI
-
-**Technology**: Microsoft Azure AI Services via G-Cloud
+- Technology: Microsoft Azure AI Services via G-Cloud
 
 ## Critical Actions Before Production
 
