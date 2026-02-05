@@ -302,10 +302,10 @@
           "documentId": "ARC-001-PLAN-v1.0"
         },
         {
-          "path": "projects/001-scts-genai-programme/ARC-001-BLOG-v1.0.md",
+          "path": "projects/001-scts-genai-programme/ARC-001-BKLG-v1.0.md",
           "title": "Product Backlog",
           "category": "Planning",
-          "documentId": "ARC-001-BLOG-v1.0"
+          "documentId": "ARC-001-BKLG-v1.0"
         },
         {
           "path": "projects/001-scts-genai-programme/ARC-001-DATA-v1.0.md",
@@ -438,9 +438,9 @@
       ],
       "reviews": [
         {
-          "path": "projects/001-scts-genai-programme/reviews/ARC-001-HLD-v1.0.md",
+          "path": "projects/001-scts-genai-programme/reviews/ARC-001-HLDR-v1.0.md",
           "title": "High-Level Design Review",
-          "documentId": "ARC-001-HLD-v1.0"
+          "documentId": "ARC-001-HLDR-v1.0"
         }
       ],
       "wardleyMaps": [

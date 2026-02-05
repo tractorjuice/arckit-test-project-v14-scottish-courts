@@ -6,7 +6,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-HLD-v1.1 |
+| **Document ID** | ARC-001-HLDR-v1.1 |
 | **Document Type** | High-Level Design |
 | **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL-SENSITIVE |

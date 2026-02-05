@@ -6,7 +6,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-BLOG-v1.1 |
+| **Document ID** | ARC-001-BKLG-v1.1 |
 | **Document Type** | Product Backlog |
 | **Project** | SCTS GenAI Programme (Project 001) |
 | **Classification** | OFFICIAL |

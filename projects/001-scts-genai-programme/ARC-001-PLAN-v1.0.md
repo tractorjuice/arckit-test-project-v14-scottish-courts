@@ -72,8 +72,8 @@
 - ✅ Secure by Design Assessment (ARC-001-SBD-v1.0)
 - ✅ Risk Register (ARC-001-RISK-v1.0)
 - ✅ Traceability Matrix (ARC-001-TRACE-v1.0)
-- ✅ High-Level Design (ARC-001-HLD-v1.0)
-- ✅ Product Backlog (ARC-001-BLOG-v1.1)
+- ✅ High-Level Design (ARC-001-HLDR-v1.0)
+- ✅ Product Backlog (ARC-001-BKLG-v1.1)
 
 **Next Steps**: Discovery Assessment gate, then Alpha phase execution
 
@@ -731,10 +731,10 @@ flowchart TB
 | Secure by Design | ARC-001-SBD-v1.0 | ✅ Complete |
 | Risk Register | ARC-001-RISK-v1.0 | ✅ Complete |
 | Traceability Matrix | ARC-001-TRACE-v1.0 | ✅ Complete |
-| High-Level Design | ARC-001-HLD-v1.0 | ✅ Complete |
-| Product Backlog | ARC-001-BLOG-v1.1 | ✅ Complete |
+| High-Level Design | ARC-001-HLDR-v1.0 | ✅ Complete |
+| Product Backlog | ARC-001-BKLG-v1.1 | ✅ Complete |
 | Project Plan | ARC-001-PLAN-v1.1 | ✅ Complete |
-| Detailed Design | ARC-001-DLD-v1.0 | ⏳ Pending |
+| Detailed Design | ARC-001-DLDR-v1.0 | ⏳ Pending |
 
 ---
 

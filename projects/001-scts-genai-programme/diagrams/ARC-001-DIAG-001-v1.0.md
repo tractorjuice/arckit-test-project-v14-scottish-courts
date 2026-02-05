@@ -413,7 +413,7 @@ C4Container
 **Architecture Principles**: `projects/000-global/ARC-000-PRIN-v1.0.md`
 **Azure Research**: `projects/001-scts-genai-programme/research/ARC-001-AZRS-v1.0.md`
 **Wardley Map**: `projects/001-scts-genai-programme/wardley-maps/ARC-001-WARD-001-v1.0.md`
-**HLD Review**: `projects/001-scts-genai-programme/reviews/ARC-001-HLD-v1.0.md`
+**HLD Review**: `projects/001-scts-genai-programme/reviews/ARC-001-HLDR-v1.0.md`
 **TCoP Assessment**: `projects/001-scts-genai-programme/ARC-001-TCOP-v1.0.md`
 **AI Playbook Assessment**: `projects/001-scts-genai-programme/ARC-001-AIPB-v1.0.md`
 **ATRS Record**: `projects/001-scts-genai-programme/ARC-001-ATRS-v1.0.md`
